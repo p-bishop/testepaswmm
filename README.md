@@ -85,17 +85,13 @@ The run information file contains data relating to the model run, such as model 
 	<startDateTime date="2020-03-29" time="12:00:00"/>
 	<endDateTime date="2020-03-31" time="12:00:00"/>
 	<time0 date="2020-03-31" time="12:00:00"/>
-	<lastObservationDateTime date="2020-03-31" time="12:00:00"/>
-<workDir>C:Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull</workDir>
-	<inputNetcdfFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\input\rain.nc</inputNetcdfFile>
-	<inputRatingCurveFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\input\Dam_rating_curve.xml</inputRatingCurveFile>
-	<inputTimeSeriesFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\/DonFull\input\Control_rules.xml</inputTimeSeriesFile>
+	<lastObservationDateTime date="2020-03-31" time="12:00:00"/>		<workDir>C:Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull</workDir>	<inputNetcdfFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\input\rain.nc</inputNetcdfFile><inputRatingCurveFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\input\Dam_rating_curve.xml</inputRatingCurveFile>	<inputTimeSeriesFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\/DonFull\input\Control_rules.xml</inputTimeSeriesFile>
 	<outputDiagnosticFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\log\run_diagnostics.xml</outputDiagnosticFile>
 			<properties>
 				<string key="model-executable" value="C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\bin\swmm5.exe"/> 
 				<string key="swmm_input_file" value="C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\model\DonFull.inp"/>
 			</properties>
-		</Run>
+</Run>
 ```		        
 		  
 		  
@@ -106,29 +102,29 @@ FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. 
 - File path: Defined by <inputRatingCurveFile> in run_info.xml  
   
 - File contents (example):  
-
-		<?xml version="1.0" encoding="UTF-8"?>
-		<RatingCurves xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_ratingcurves.xsd">
-		<ratingCurve>
-		<header>
-			<locationId>LocationX</locationId>
-			<startDate date="2018-01-01" time="00:00:00"/>
-			<stageUnit>m</stageUnit>
-		</header>
-		<table>
-			<interpolationMethod>linear</interpolationMethod>
-			<minStage>1</minStage>
-			<maxStage>6</maxStage>
-			<row stage="1" discharge="0"/>
-			<row stage="2" discharge="0"/>
-			<row stage="3" discharge="10"/>
-			<row stage="4" discharge="15"/>
-			<row stage="5" discharge="20"/>
-			<row stage="6" discharge="40"/>
-		</table>
-		</ratingCurve>
-		</RatingCurves>
-  
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<RatingCurves xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_ratingcurves.xsd">
+<ratingCurve>
+<header>
+	<locationId>LocationX</locationId>
+	<startDate date="2018-01-01" time="00:00:00"/>
+	<stageUnit>m</stageUnit>
+</header>
+<table>
+	<interpolationMethod>linear</interpolationMethod>
+	<minStage>1</minStage>
+	<maxStage>6</maxStage>
+	<row stage="1" discharge="0"/>
+	<row stage="2" discharge="0"/>
+	<row stage="3" discharge="10"/>
+	<row stage="4" discharge="15"/>
+	<row stage="5" discharge="20"/>
+	<row stage="6" discharge="40"/>
+</table>
+</ratingCurve>
+</RatingCurves>
+ ``` 
 Note that the validity period (use of the <startDate> attribute) of the rating curve is not currently supported by the model adapter; this parameter is ignored.  
   
 1. **Read Control Rules (optional)**  
@@ -141,7 +137,7 @@ FEWS can export time-dependent control rules in XML format. The model adapter do
 
 				<?xml version="1.0" encoding="UTF-8"?>
 				<TimeSeries xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_timeseries.xsd" version="1.5">
-
+`
 				<timeZone>-5.0</timeZone>
 				<series>
 				<header>
@@ -506,6 +502,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYyNzY1NDY5LC02MDM4NDEyODcsLTE2Nz
+eyJoaXN0b3J5IjpbNDk2Mjk2NzcxLC02MDM4NDEyODcsLTE2Nz
 g5NDc4MTldfQ==
 -->
