@@ -64,14 +64,14 @@ A FEWS simulation is composed of the following components. First, FEWS initiates
   
 _Figure 2 Summary of steps of the model adapter_  
   
- 1. **Pre-Adapter**  
+ ## 1. **Pre-Adapter**  
   
 The pre-adapter can be initiated with the following command:  
 
 		epaswmm.exe --run_info <path to run_info.xml file> pre  
 The following steps explain the behavior of this pre-adapter.  
   
-1. **Read the run information file**  
+**1. Read the run information file**  
   
 The run information file contains data relating to the model run, such as model start time.  
   
@@ -95,7 +95,7 @@ The run information file contains data relating to the model run, such as model 
 ```		        
 		  
 		  
-1. **Read Dam Rating Curve (optional)**  
+**2. Read Dam Rating Curve (optional)**  
   
 FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. If an <inputRatingCurveFile> is provided in the run information file, the adapter recognizes this as a dam rating curve, and proceeds to update the &quot;Curves&quot; section of the EPASWM model input file (see step 5). Only a single rating curve for each location (<locationID>) is allowed.  
   
@@ -127,7 +127,7 @@ FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. 
  ``` 
 Note that the validity period (use of the <startDate> attribute) of the rating curve is not currently supported by the model adapter; this parameter is ignored.  
   
-1. **Read Control Rules (optional)**  
+**3. Read Control Rules (optional)**  
   
 FEWS can export time-dependent control rules in XML format. The model adapter does not currently support other types of control rules (e.g. rules dependent on a node water level or a link discharge). If an <InputTimeSeriesFile> with the name &quot;Control_rules.xml&quot; is provided in the Run Information file, the adapter recognizes this as control rules, and proceeds to update the &quot;Controls&quot; section of the EPA SWMMS WMM model input file (see step 5).  
   
@@ -507,8 +507,8 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MzkyODg5NywtNjAzODQxMjg3LC03Mj
-E0MzE2MjYsLTExODQ1Nzg5ODIsNjc5OTk1MDQyLC0xNDU0Mzg1
-NjUwLDE2NzExNTg3OTQsLTE0NzE3MTQwMTAsMTExMDY0MTEzNC
-wyMDE2NzE4NDEwXX0=
+eyJoaXN0b3J5IjpbMzQyMzUzNTM4LC02MDM4NDEyODcsLTcyMT
+QzMTYyNiwtMTE4NDU3ODk4Miw2Nzk5OTUwNDIsLTE0NTQzODU2
+NTAsMTY3MTE1ODc5NCwtMTQ3MTcxNDAxMCwxMTEwNjQxMTM0LD
+IwMTY3MTg0MTBdfQ==
 -->
