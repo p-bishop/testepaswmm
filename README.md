@@ -2,7 +2,7 @@
 
 - [**Directory Sturcture and Contents**](#--directory-sturcture-and-contents--)
 - [**External Model Adapter Workflow**](#--external-model-adapter-workflow--)
-  * [**1. **Pre-Adapter**](#1---pre-adapter--)
+  * [**1. Pre-Adapter**](#1---pre-adapter--)
     + [**1. Read the run information file**](#--1-read-the-run-information-file--)
     + [**2. Read Dam Rating Curve (optional)**](#--2-read-dam-rating-curve--optional---)
     + [**3. Read Control Rules (optional)**](#--3-read-control-rules--optional---)
@@ -10,7 +10,7 @@
     + [**5. Update EPA SWMM Input File**](#--5-update-epa-swmm-input-file--)
     + [**6. Write Rainfall Time Series (EPA SWMM Format)**](#--6-write-rainfall-time-series--epa-swmm-format---)
     + [**7. Write Run Diagnostics File**](#--7-write-model-adapter-messages-to-the-run-diagnostics-file--)
-  * [**2. **Model Run**](#2---model-run--)
+  * [**2. Model Run**](#2---model-run--)
   * [**3. Post-Adapter**](#--3-post-adapter--)
     + [**1. Read EPA SWMM Model Outputs**](#--1-read-epa-swmm-model-outputs--)
     + [**2. Write EPA SWMM Model Outputs in FEWS format**](#--2-write-epa-swmm-model-outputs-in-fews-format--)
@@ -516,5 +516,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTg4NzU5NzZdfQ==
+eyJoaXN0b3J5IjpbLTE2MjczODk4MzIsLTE5NTg4NzU5NzZdfQ
+==
 -->
