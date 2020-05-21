@@ -103,51 +103,51 @@ FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. 
 - File path: Defined by \&lt;inputRatingCurveFile\&gt; in run\_info.xml  
   
 - File contents (example):  
-<?xml version="1.0" encoding="UTF-8"?>
+	<?xml version="1.0" encoding="UTF-8"?>
 
-<RatingCurves xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	<RatingCurves xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
-xmlns="http://www.wldelft.nl/fews/PI"
+	xmlns="http://www.wldelft.nl/fews/PI"
 
-xsi:schemaLocation="http://www.wldelft.nl/fews/PI
+	xsi:schemaLocation="http://www.wldelft.nl/fews/PI
 
-http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_run.xsd" version="1.5">
+	http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_run.xsd" version="1.5">
 
-<ratingCurve>
+	<ratingCurve>
 
-<header>
+	<header>
 
-<locationId>LocationX</locationId>
+	<locationId>LocationX</locationId>
 
-<startDate date="2018-01-01" time="00:00:00"/>
+	<startDate date="2018-01-01" time="00:00:00"/>
 
-<stageUnit>m</stageUnit>
+	<stageUnit>m</stageUnit>
 
-</header>
+	</header>
 
-<table>
+	<table>
 
-<interpolationMethod>linear</interpolationMethod>
+	<interpolationMethod>linear</interpolationMethod>
 
-<minStage>1</minStage>
+	<minStage>1</minStage>
 
-<maxStage>6</maxStage>
+	<maxStage>6</maxStage>
 
-<row stage="1" discharge="0"/>
+	<row stage="1" discharge="0"/>
 
-<row stage="2" discharge="0"/>
+	<row stage="2" discharge="0"/>
 
-<row stage="3" discharge="10"/>
+	<row stage="3" discharge="10"/>
 
-<row stage="4" discharge="15"/>
+	<row stage="4" discharge="15"/>
 
-<row stage="5" discharge="20"/>
+	<row stage="5" discharge="20"/>
 
-<row stage="6" discharge="40"/>
+	<row stage="6" discharge="40"/>
 
-</table>
+	</table>
 
-</ratingCurve>
+	</ratingCurve>
 
 	</RatingCurves>
   
@@ -569,5 +569,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MDk3NTY0MiwyMDE2NzE4NDEwXX0=
+eyJoaXN0b3J5IjpbMTExMDY0MTEzNCwyMDE2NzE4NDEwXX0=
 -->
