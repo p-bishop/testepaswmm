@@ -225,13 +225,7 @@ The &quot; **Controls**&quot; section is updated as follows:
 - Other types of action clauses (e.g. ```THEN PUMP STATUS = ON```) are not currently supported.  
   
 - One rule is added for each line in the control rules file (```Control_rules.xml```). If rules for multiple locations exist (i.e. multiple ```<series>``` exist), the pre-fix of the control rule&#39;s number is incremented, e.g. ```AdapterRule1.1, AdapterRule1.2, ..., AdapterRule2.1, AdapterRule2.2, ...```) in the EPA SWMM input file.  
-- The format of each control rule added is as follows:  
-```
-Rule AdapterRule<[RULE#>  
-IF SIMULATION DATE = <event date>  
-AND SIMULATION CLOCKTIME = <event time>  
-THEN <parameterId> <locationId> SETTING = <event time>  
-  ```
+
  - For example, the control rule file provided in step 3 would be appended to the bottom of the &quot;Controls&quot; section as follows:  
 ```
 Rule AdapterRule1.1
@@ -304,7 +298,7 @@ LocationX                      5            20
 LocationX                      6            40  
   ```
   
-**1. Write Rainfall Time Series (EPA SWMM Format)**  
+**6. Write Rainfall Time Series (EPA SWMM Format)**  
   
 The rainfall data that was imported in step 4 is written to the rainfall file (rain.dat), with the following format:  
   
@@ -325,15 +319,15 @@ DON_11 2013 7 9 16 40 0
   
 As described in Section 6 (Model Set-up Considerations), the rainfall format (intensity vs. depth) must be configured in the model input file to align with the format exported by FEWS.  
   
-1. **Write model adapter messages to the run diagnostics file**  
+**7. Write model adapter messages to the run diagnostics file**  
   
 Model adapter warnings and errors messages during the Pre-Adapter steps are written to the run diagnostics file. More details are provided in section 4.4 (Messaging and Error Handling). FEWS will read this file upon completion of the Pre-Adapter execution and will report those to the FEWS interface.  
   
- 1. **Model Run**  
+## 2. **Model Run**  
   
 Typically, model execution will be initiated by FEWS. However, to facilitate testing of the model adapter, the model may be run with the following command:  
   
-	epaswmm.exe --run_info <path to run_info.xml file> run_  
+	epaswmm.exe --run_info <path to run_info.xml file> run  
   
 1. Writes a batch file for manual model runs:  
  - File Path: ```model/run_model.bat```  
@@ -508,7 +502,7 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMjA1MjQyMCwtNjAzODQxMjg3LC03Mj
+eyJoaXN0b3J5IjpbMjAwNjE2OTU1MywtNjAzODQxMjg3LC03Mj
 E0MzE2MjYsLTExODQ1Nzg5ODIsNjc5OTk1MDQyLC0xNDU0Mzg1
 NjUwLDE2NzExNTg3OTQsLTE0NzE3MTQwMTAsMTExMDY0MTEzNC
 wyMDE2NzE4NDEwXX0=
