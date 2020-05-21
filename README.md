@@ -110,11 +110,7 @@ FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. 
 
 		<RatingCurves xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
-		xmlns="http://www.wldelft.nl/fews/PI"
-
-		xsi:schemaLocation="http://www.wldelft.nl/fews/PI
-
-		http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_run.xsd" version="1.5">
+		xmlns="http://www.wldelft.nl/fews/PI"xsi:schemaLocation="http://www.wldelft.nl/fews/PI		http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_run.xsd" version="1.5">
 
 		<ratingCurve>
 
@@ -572,6 +568,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAxNDk4NTc2LC0xNDcxNzE0MDEwLDEwMT
+eyJoaXN0b3J5IjpbODYwOTE3MTkyLC0xNDcxNzE0MDEwLDEwMT
 U3NjExMDBdfQ==
 -->
