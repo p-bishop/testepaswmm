@@ -286,35 +286,37 @@ LocationX                     10        10
 ```
  - After Update:   
 ```
-  ;;Name           Type       X-Value    Y-Value     
-                ;;-------------- ---------- ---------- ----------  
-                ;  
-                ;  
-                ;Rating Curve  
-                LocationX     Rating      1     0  
-                LocationX                      2     0  
-                LocationX                      3     10  
-                LocationX                      4     15  
-                LocationX                      5     20  
-                LocationX                      6     40  
+;;Name           Type       X-Value    Y-Value     
+;;-------------- ---------- ---------- ----------  
+;  
+;  
+;Rating Curve  
+LocationX         Rating       1             0  
+LocationX                      2             0  
+LocationX                      3            10  
+LocationX                      4            15  
+LocationX                      5            20  
+LocationX                      6            40  
   ```
-1. **Write Rainfall Time Series (EPA SWMM Format)**  
+  
+**1. Write Rainfall Time Series (EPA SWMM Format)**  
   
 The rainfall data that was imported in step 4 is written to the rainfall file (rain.dat), with the following format:  
   
- ;Rainfall (mm) <RAINGAGE ID> <YYYY> <M> <D> <H> <M> <QUANTITY>   
+ ;Rainfall (mm) \<RAINGAGE ID\> \<YYYY\> \<M\> \<D\> \<H\> \<M\> \<QUANTITY\>   
   
 A sample of the time series is shown here:  
-                ;Rainfall (mm)  
-                DON_1 2013 7 8 6 20 0.019  
-                DON_1 2013 7 8 6 25 0  
-                DON_1 2013 7 8 6 30 0.019  
-                ...  
-                DON_11 2013 7 8 6 25 0  
-                DON_11 2013 7 9 16 30 0  
-                DON_11 2013 7 9 16 35 0  
-                DON_11 2013 7 9 16 40 0  
-  
+```
+;Rainfall (mm)  
+DON_1 2013 7 8 6 20 0.019  
+DON_1 2013 7 8 6 25 0  
+DON_1 2013 7 8 6 30 0.019  
+ ...  
+DON_11 2013 7 8 6 25 0  
+DON_11 2013 7 9 16 30 0  
+DON_11 2013 7 9 16 35 0  
+DON_11 2013 7 9 16 40 0  
+  1
   
 As described in Section 6 (Model Set-up Considerations), the rainfall format (intensity vs. depth) must be configured in the model input file to align with the format exported by FEWS.  
   
@@ -565,5 +567,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYzOTk2MDkxLDU1ODkwODExMF19
+eyJoaXN0b3J5IjpbLTk2NDk1NjYyMCw1NTg5MDgxMTBdfQ==
 -->
