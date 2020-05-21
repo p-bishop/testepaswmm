@@ -160,20 +160,20 @@ FEWS can export time-dependent control rules in XML format. The model adapter do
   
 Additional information on how this information is written to control rules in the model input file is included in step 5.  
   
-The <parameterID> refers to the EPA SWMM object to which the rule will apply. As such, this parameter should be one of the following EPA SWMM object types: pump, orifice, weir or outlet.  
+The ```<parameterID>``` refers to the EPA SWMM object to which the rule will apply. As such, this parameter should be one of the following EPA SWMM object types: pump, orifice, weir or outlet.  
   
 EPA SWMM control rules may also use a “priority” level at the end of the rule. While there is potential to use the “flag” attribute (e.g. flag = “8”) to set priority levels of control rules in the model, this feature is not currently implemented and the “flag” attribute is ignored by the model adapter.  
   
-1. **Read Rainfall Time Series**  
+ **4. Read Rainfall Time Series**  
   
-Delft-FEWS exports a rainfall time series file in NetCDF format. The station_id and station_names (e.g. DON_1) in this file correspond to the rain gage name in the &quot;Raingages&quot; section of the EPA SWMM input file. The station_name field is ignored by the model adapter as this is for display purposes within the FEWS interface.  
+Delft-FEWS exports a rainfall time series file in NetCDF format. The ```station_id```  (e.g. DON_1) in this file correspond to the rain gage name in the &quot;Raingages&quot; section of the EPA SWMM input file. The ```station_name``` field is ignored by the model adapter as this is for display purposes within the FEWS interface.  
   
 - File path: defined by ```<inputNetcdfFile>``` in the ```run_info.xml``` file  
 - File contents (example, showing a sample of rowsfirst and last rows):  
   
 _Figure 3 - Example rainfall time series file contents_  
   
-1. **Update EPA SWMM Input File**  
+**5. Update EPA SWMM Input File**  
   
 The EPA SWMM input file contains some sections with constant values (e.g. subcatchment parameters). Other sections contain data that needs to be updated for the model run. This step explains how these sections are updated.  
   
@@ -190,7 +190,7 @@ The rainfall time series is written to an external file in step 6.
   
 The &quot;**Options**&quot; section is updated as follows:  
 
-| **Parameter i n EPA SWMM model input file** | **FEWS parameter in the run information file** | **Result in EPA SWMM model input file** |  
+| Parameter in EPA SWMM model input file | FEWS parameter in the run information file | Result in EPA SWMM model input file |  
 | --- | :-: | --- |  
 | ```START_DATE``` |```<startDateTime date="2020-04-23"time="15:00:00"/> ```| ```START DATE 04/23/2020``` |  
 ```START_TIME``` | ""  |```START_TIME 15:00:00``` |  
@@ -508,8 +508,8 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDMzMDExMzEsLTYwMzg0MTI4NywtNz
-IxNDMxNjI2LC0xMTg0NTc4OTgyLDY3OTk5NTA0MiwtMTQ1NDM4
-NTY1MCwxNjcxMTU4Nzk0LC0xNDcxNzE0MDEwLDExMTA2NDExMz
-QsMjAxNjcxODQxMF19
+eyJoaXN0b3J5IjpbNzA2MzA3ODg0LC02MDM4NDEyODcsLTcyMT
+QzMTYyNiwtMTE4NDU3ODk4Miw2Nzk5OTUwNDIsLTE0NTQzODU2
+NTAsMTY3MTE1ODc5NCwtMTQ3MTcxNDAxMCwxMTEwNjQxMTM0LD
+IwMTY3MTg0MTBdfQ==
 -->
