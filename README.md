@@ -194,22 +194,12 @@ The &quot;**Options**&quot; section is updated as follows:
 
 | **Parameter i n EPA SWMM model input file** | **FEWS parameter in the run information file** | **Result in EPA SWMM model input file** |  
 | --- | --- | --- |  
-| START_DATE | <startDateTime date=&quot;2020-04-23&quot;time=&quot;15:00:00&quot;/> | START DATE 04/23/2020 |  
-START_TIME |  <startDateTime date=&quot;2020-04-23&quot;time=&quot;15:00:00&quot;/> START_TIME 15:00:00 |  
-| REPORT_START_DATE | |REPORT_START_DATE 04/23/2020 |  
-| REPORT_START_TIME | | REPORT_START_TIME 15:00:00 |  
-| END_DATE | \<endDateTime date=&quot;2020-04-29&quot; time=&quot;15:00:00&quot;/> | END_DATE 04/29/2020 |  
-| END_TIME | |END_TIME 15:00:00 |  
-
-[cols="^.^,^.^,^.^"]
-|===
-|Layer1 |Layer2 |Layer3
-
-.4+|L1 Name .2+|L2 Name A |L3 Name A
-|L3 Name B
-.2+|L2 Name B |L3 Name C
-|L3 Name D
-|===
+| START_DATE |<startDateTime date=&quot;2020-04-23&quot;time=&quot;15:00:00&quot;/> | START DATE 04/23/2020 |  
+START_TIME |<startDateTime date=&quot;2020-04-23&quot;time=&quot;15:00:00&quot;/> |START_TIME 15:00:00 |  
+| REPORT_START_DATE |<startDateTime date=&quot;2020-04-23&quot;time=&quot;15:00:00&quot;/>|REPORT_START_DATE 04/23/2020 |  
+| REPORT_START_TIME |<startDateTime date=&quot;2020-04-23&quot;time=&quot;15:00:00&quot;/>| REPORT_START_TIME 15:00:00 |  
+| END_DATE | <endDateTime date=&quot;2020-04-29&quot;time=&quot;15:00:00&quot;> | END_DATE 04/29/2020 |  
+| END_TIME | <endDateTime date=&quot;2020-04-29&quot;time=&quot;15:00:00&quot;>|END_TIME 15:00:00 |  
 
 
 The &quot;_ **Controls** _&quot; section is updated as follows:  
@@ -575,5 +565,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg1MjA3ODI1LC05ODgzMTA1NDldfQ==
+eyJoaXN0b3J5IjpbMTk2NTE0MDY4OSwtOTg4MzEwNTQ5XX0=
 -->
