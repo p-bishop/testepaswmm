@@ -194,12 +194,12 @@ The &quot;**Options**&quot; section is updated as follows:
 
 | **Parameter i n EPA SWMM model input file** | **FEWS parameter in the run information file** | **Result in EPA SWMM model input file** |  
 | --- | :-: | --- |  
-| START_DATE |<startDateTime date="2020-04-23"time=&quot;15:00:00&quot;/> | START DATE 04/23/2020 |  
-START_TIME | ""  |START_TIME 15:00:00 |  
-| REPORT_START_DATE |""|REPORT_START_DATE 04/23/2020 |  
-| REPORT_START_TIME |""| REPORT_START_TIME 15:00:00 |  
-| END_DATE | <endDateTime date=&quot;2020-04-29&quot;&nbsp;time=&quot;15:00:00&quot;/> | END_DATE 04/29/2020 |  
-| END_TIME | ""|END_TIME 15:00:00 |  
+| ```START_DATE``` |```<startDateTime date="2020-04-23"time=&quot;15:00:00&quot;/> ```| ```START DATE 04/23/2020``` |  
+```START_TIME``` | ""  |```START_TIME 15:00:00``` |  
+| ```REPORT_START_DATE``` |""|```REPORT_START_DATE 04/23/2020``` |  
+| ```REPORT_START_TIME``` |""| ```REPORT_START_TIME 15:00:00``` |  
+| ```END_DATE``` | ```<endDateTime date=&quot;2020-04-29&quot;&nbsp;time=&quot;15:00:00&quot;/>``` | ```END_DATE  04/29/2020 |  
+| ```END_TIME``` | ""|```END_TIME 15:00:00``` |  
 
 
 The &quot; **Controls**&quot; section is updated as follows:  
@@ -209,8 +209,8 @@ The &quot; **Controls**&quot; section is updated as follows:
  
 | Clause Type | Example |
 | :-- |  :-- |  
-| Condition clause | IF SIMULATION DATE = 04/23/2020 <br>AND SIMULATION CLOCKTIME = 15:00:00 |  
-| Action clause | THEN OUTLET OL341 SETTING = 0.5 |  
+| Condition clause | ```IF SIMULATION DATE = 04/23/2020``` <br>```AND SIMULATION CLOCKTIME = 15:00:00 ```|  
+| Action clause | ```THEN OUTLET OL341 SETTING = 0.5``` |  
   
   
  - The condition clause of the control rule is built from the <event date> and <event time> variables of the control rules file (Control_rules.xml), with the following format:  
@@ -555,7 +555,7 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzg3MjAwOTUsLTExODQ1Nzg5ODIsNj
+eyJoaXN0b3J5IjpbLTIwNzc3Mzk0MDksLTExODQ1Nzg5ODIsNj
 c5OTk1MDQyLC0xNDU0Mzg1NjUwLDE2NzExNTg3OTQsLTE0NzE3
 MTQwMTAsMTExMDY0MTEzNCwyMDE2NzE4NDEwXX0=
 -->
