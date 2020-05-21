@@ -306,7 +306,7 @@ LocationX                      6            40
   
 The rainfall data that was imported in step 4 is written to the rainfall file (rain.dat), with the following format:  
   
-``` ;Rainfall (mm) \<RAINGAGE ID\> \<YYYY\> \<M\> \<D\> \<H\> \<M\> \<QUANTITY\>   ```
+``` ;Rainfall (mm) <RAINGAGE ID> <YYYY> <M> <D> <H> <M> <QUANTITY>   ```
   
 A sample of the time series is shown here:  
 ```
@@ -373,11 +373,11 @@ Model adapter messages and EPA SWMM model output errors and warnings are written
   
 Pre- and post-adapter errors, warnings, and informational messages are written to log/pre_adapter.log, log/run_adapter.log and and log/post_adapter.log, respectively, with the following format:  
   
-\<LEVEL\>: External Adapter - \<Message\> (\<TIME\>)  
+```<LEVEL>: External Adapter - <Message> (<TIME>)```  
   
 For example:  
   
-INFO: External Adapter - No rating curve file provided in the run_info.xml. (2020-05-13 09:01:51,501)  
+```INFO: External Adapter - No rating curve file provided in the run_info.xml. (2020-05-13 09:01:51,501)  ```
   
 Two messaging levels are used: INFO and ERROR. If an error occurs, model execution stops after the error message is written to the log.  
   
@@ -419,10 +419,10 @@ _Table 2 – Examples of model adapter log and EPA SWMM model output messages tr
 | **Message** | **Message Location** | **Run Diagnostics Message** |  
 | --- | --- | --- |  
 | **INFO: External Adapter - No rating curve file provided in the run_info.xml.** | Model Adapter Log  
- (pre_adapter.log) | <line level=&quot;3&quot; description=&quot;INFO: External Adapter - No rating curve file provided in the run_info.xml.&quot;/>  
+ (pre_adapter.log) | ```<line level="3" description=&quot;INFO: External Adapter - No rating curve file provided in the run_info.xml.&quot;/>```  
  |  
 | **WARNING 03: negative offset ignored for Link C1** | Model Output file  
- (e.g. DonRiver.rpt) | <line level=&quot;2&quot; description=&quot;WARNING 03: negative offset ignored for Link C1&quot;/>  
+ (e.g. DonRiver.rpt) | ```<line level="2" description="WARNING 03: negative offset ignored for Link C1"/>```  
  |  
   
 1. **Run Time and File Size**  
@@ -558,7 +558,7 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3OTAyODUxMiwtNzIxNDMxNjI2LC0xMT
+eyJoaXN0b3J5IjpbMjAxODM0Mjk3NCwtNzIxNDMxNjI2LC0xMT
 g0NTc4OTgyLDY3OTk5NTA0MiwtMTQ1NDM4NTY1MCwxNjcxMTU4
 Nzk0LC0xNDcxNzE0MDEwLDExMTA2NDExMzQsMjAxNjcxODQxMF
 19
