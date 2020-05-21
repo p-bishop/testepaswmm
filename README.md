@@ -213,9 +213,7 @@ The &quot; **Controls**&quot; section is updated as follows:
  - A control rule in EPA SWMM consists of a condition clause and an action clause, for example:  
  
  
-| Clause Type | Example |
-| :-- |  :-- |  
-| Condition clause | ```IF SIMULATION DATE = 04/23/2020``` <br>```AND SIMULATION CLOCKTIME = 15:00:00 ```|  
+ - Condition clause  ```IF SIMULATION DATE = 04/23/2020``` <br>```AND SIMULATION CLOCKTIME = 15:00:00 ```|  
 | Action clause | ```THEN OUTLET OL341 SETTING = 0.5``` |  
   
   
@@ -511,5 +509,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczODM2MzUzMV19
+eyJoaXN0b3J5IjpbLTYwMjg5MzQ0MSwtNzM4MzYzNTMxXX0=
 -->
