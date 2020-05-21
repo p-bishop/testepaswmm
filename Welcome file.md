@@ -23,34 +23,34 @@ Folder and file contents are specified below, and the workflow is described in t
   
 **bin** : common executable files to all models  
   
-- EPA SWMM executable (SWMM5.exe; version 5.1.012)  
-- Compiled model adapter executable (epaswmm.exe)  
+- EPA SWMM executable (```SWMM5.exe```; version 5.1.012)  
+- Compiled model adapter executable (```epaswmm.exe```)  
   
 **Don** : all files relating to a specific EPA SWMM model (i.e. Don River Model).  
   
-- Run Information (run_info.xml) in FEWS XML format  
+- Run Information (```run_info.xml```) in FEWS XML format  
 - **dump** : zipped folders of the model folder when the model run fails  
 - **input** : model inputs, exported by FEWS:  
-  - Rainfall Timeseries (e.g. rain.nc ) in FEWS NetCDF Format  
-  - Rating Curves (e.g. dam_rating_curve.xml) in FEWS XML format (optional)  
-  - Control Rules (e.g. control_rules.xml) in FEWS XML format (optional)  
+  - Rainfall Timeseries (e.g. ```rain.nc```) in FEWS NetCDF Format  
+  - Rating Curves (e.g. ```dam_rating_curve.xml```) in FEWS XML format (optional)  
+  - Control Rules (e.g. ```control_rules.xml```) in FEWS XML format (optional)  
 - **inputStates** : placeholder directory for potential handling of hotstarts  
 - **log** :  
   - Model adapter logs:  
-    - Pre-adapter (pre_adapter.log)  
-    - Post-adapter (post_adapter.log)  
-    - Model run (run_adapter.log)  
+    - Pre-adapter (```pre_adapter.log```)  
+    - Post-adapter (```post_adapter.log```)  
+    - Model run (```run_adapter.log```)  
   - Output diagnostic file to be imported by FEWS (e.g. diag.xml)  
 - **model** : EPA SWMM model files  
-  - Model input file (e.g. DonRiver.inp)  
-  - Model rainfall data file(e.g. rain.dat)  
-  - Model output file(e.g. DonRiver.rpt)  
-  - Model run batch file (run_model.bat)  
-  - Unit conversion look-up (UDUNITS_lookup.csv)  
+  - Model input file (e.g. ```DonRiver.inp```)  
+  - Model rainfall data file(e.g. ```rain.dat```)  
+  - Model output file(e.g. ```DonRiver.rpt```)  
+  - Model run batch file (```run_model.bat```)  
+  - Unit conversion look-up (```UDUNITS_lookup.csv```)  
 - **output** : output from the model adapter (converted output for FEWS)  
   - EPA SWMM Model output in NetCDF format  
-    - Node (e.g. depths) results (e.g. DonRiver_outputswmm_nodes.nc)  
-    - Link (e.g. hydrographs) results (e.g. DonRiver_outputswmm_nodes.nc)  
+    - Node (e.g. depths) results (e.g. ```DonRiver_outputswmm_nodes.nc```)  
+    - Link (e.g. hydrographs) results (e.g. ```DonRiver_outputswmm_nodes.nc```)  
 - **outputStates** : placeholder directory for potential handling of hotstarts for future versions  
   
 # **External Model Adapter Workflow**  
@@ -503,8 +503,8 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NDk3NzAwLC02MDM4NDEyODcsLTcyMT
-QzMTYyNiwtMTE4NDU3ODk4Miw2Nzk5OTUwNDIsLTE0NTQzODU2
-NTAsMTY3MTE1ODc5NCwtMTQ3MTcxNDAxMCwxMTEwNjQxMTM0LD
-IwMTY3MTg0MTBdfQ==
+eyJoaXN0b3J5IjpbLTE4MzIxNDc3MzYsLTYwMzg0MTI4NywtNz
+IxNDMxNjI2LC0xMTg0NTc4OTgyLDY3OTk5NTA0MiwtMTQ1NDM4
+NTY1MCwxNjcxMTU4Nzk0LC0xNDcxNzE0MDEwLDExMTA2NDExMz
+QsMjAxNjcxODQxMF19
 -->
