@@ -107,47 +107,25 @@ FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. 
 - File contents (example):  
 
 		<?xml version="1.0" encoding="UTF-8"?>
-
-		<RatingCurves xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-
-		xmlns="http://www.wldelft.nl/fews/PI"xsi:schemaLocation="http://www.wldelft.nl/fews/PI		http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_run.xsd" version="1.5">
-
+		<RatingCurves xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_ratingcurves.xsd">
 		<ratingCurve>
-
 		<header>
-
-		<locationId>LocationX</locationId>
-
-		<startDate date="2018-01-01" time="00:00:00"/>
-
-		<stageUnit>m</stageUnit>
-
+			<locationId>LocationX</locationId>
+			<startDate date="2018-01-01" time="00:00:00"/>
+			<stageUnit>m</stageUnit>
 		</header>
-
 		<table>
-
-		<interpolationMethod>linear</interpolationMethod>
-
-		<minStage>1</minStage>
-
-		<maxStage>6</maxStage>
-
-		<row stage="1" discharge="0"/>
-
-		<row stage="2" discharge="0"/>
-
-		<row stage="3" discharge="10"/>
-
-		<row stage="4" discharge="15"/>
-
-		<row stage="5" discharge="20"/>
-
-		<row stage="6" discharge="40"/>
-
+			<interpolationMethod>linear</interpolationMethod>
+			<minStage>1</minStage>
+			<maxStage>6</maxStage>
+			<row stage="1" discharge="0"/>
+			<row stage="2" discharge="0"/>
+			<row stage="3" discharge="10"/>
+			<row stage="4" discharge="15"/>
+			<row stage="5" discharge="20"/>
+			<row stage="6" discharge="40"/>
 		</table>
-
 		</ratingCurve>
-
 		</RatingCurves>
   
 Note that the validity period (use of the \&lt;startDate\&gt; attribute) of the rating curve is not currently supported by the model adapter; this parameter is ignored.  
@@ -156,8 +134,8 @@ Note that the validity period (use of the \&lt;startDate\&gt; attribute) of the 
   
 FEWS can export time-dependent control rules in XML format. The model adapter does not currently support other types of control rules (e.g. rules dependent on a node water level or a link discharge). If an \&lt;InputTimeSeriesFile\&gt; with the name &quot;Control\_rules.xml&quot; is provided in the Run Information file, the adapter recognizes this as control rules, and proceeds to update the &quot;Controls&quot; section of the EPA SWMMS WMM model input file (see step 5).  
   
-- File path: defined by \&lt;inputTimeSeriesFile\&gt; in run\_info.xml  
-- File Name: Control\_rules.xml  
+- File path: defined by <inputTimeSeriesFile> in run_info.xml  
+- File Name: Control_rules.xml  
 - File Contents (example):  
   
                 <?xml version="1.0" encoding="UTF-8"?>  
@@ -568,6 +546,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYwOTE3MTkyLC0xNDcxNzE0MDEwLDEwMT
-U3NjExMDBdfQ==
+eyJoaXN0b3J5IjpbLTIzMzQwMzY2OCwtMTQ3MTcxNDAxMCwxMD
+E1NzYxMTAwXX0=
 -->
