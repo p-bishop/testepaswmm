@@ -62,7 +62,9 @@ The model adapter consists of two principal components:
 **2. Post-Adapter**: converts EPA SWMM model output files (.rpt) into FEWS formatted files (.nc), to be input into FEWS.  
   
 A FEWS simulation is composed of the following components. First, FEWS initiates the  **Pre-Adapter**. Next, FEWS initiates the model run using the updated EPA SWMM input files. Finally, FEWS initiates the **Post-Adapter** to retrieve model output files. The main steps of the EPA SWMM model adapter workflow are summarized in Figure 2 below and explained in more detail in the following sections. As a complement of information, the adapter messaging and error handling is described in section 4.4.  
-  
+
+  ![Summary of steps of the model adapter_ ](images/002.JPG)
+
 _Figure 2 Summary of steps of the model adapter_  
   
  ## 1. **Pre-Adapter**  
@@ -171,6 +173,8 @@ Delft-FEWS exports a rainfall time series file in NetCDF format. The ```station_
   
 - File path: defined by ```<inputNetcdfFile>``` in the ```run_info.xml``` file  
 - File contents (example, showing a sample of rowsfirst and last rows):  
+
+  ![Example rainfall time series file contents ](images/003.JPG)
   
 _Figure 3 - Example rainfall time series file contents_  
   
@@ -349,6 +353,9 @@ The following steps explain the behavior of the post-adapter.
 **1. Read EPA SWMM Model Outputs**  
   
 The EPASWM model run generates an output file (e.g. ```DonRiver.rpt```), which is converted to FEWS format by the Post Adapter. The following sections are read from the output file: ```Link Results``` and ```Node Results```, as shown in the examples below. Model errors and warnings will also be read, if present.  
+
+![Link Results ](images/004a.JPG) ![Node Results](images/004b.JPG)
+
   
 **2. Write EPA SWMM model outputs in FEWS format**  
   
@@ -504,5 +511,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MjczNDc2OV19
+eyJoaXN0b3J5IjpbLTczODM2MzUzMV19
 -->
