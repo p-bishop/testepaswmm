@@ -218,10 +218,11 @@ The &quot; **Controls**&quot; section is updated as follows:
 ```IF SIMULATION DATE = <event date>``` 
 ```AND SIMULATION CLOCKTIME = <event time>```  
   
- - Only time-based condition clauses are supported. Other condition clauses (e.g. ```IF NODE D123 > 1```) are not supported.- The action clause of the control rule is built from the ```<locationID>```, ```<parameterID>``` and ```<event value>```, with the following format:  
+ - Only time-based condition clauses are supported. Other condition clauses (e.g. ```IF NODE D123 > 1```) are not supported.
+ 
+ - The action clause of the control rule is built from the ```<locationID>```, ```<parameterID>``` and ```<event value>```, with the following format:  
   
 ```THEN <parameterId> <locationId> SETTING = <event value> ``` 
-  
 - Other types of action clauses (e.g. ```THEN PUMP STATUS = ON```) are not currently supported.  
   
 - One rule is added for each line in the control rules file (```Control_rules.xml```). If rules for multiple locations exist (i.e. multiple ```<series>``` exist), the pre-fix of the control rule&#39;s number is incremented, e.g. ```AdapterRule1.1, AdapterRule1.2, ..., AdapterRule2.1, AdapterRule2.2, ...```) in the EPA SWMM input file.  
@@ -508,5 +509,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA2MzA3ODg0LDE5NzM5Mjg4OTddfQ==
+eyJoaXN0b3J5IjpbLTEwMDgzMDQyMzAsMTk3MzkyODg5N119
 -->
