@@ -13,8 +13,8 @@
   * [2. **Model Run**](#2---model-run--)
   * [**3. Post-Adapter**](#--3-post-adapter--)
     + [**1. Read EPA SWMM Model Outputs**](#--1-read-epa-swmm-model-outputs--)
-    + [**2. Write EPA SWMM model outputs in FEWS format**](#--2-write-epa-swmm-model-outputs-in-fews-format--)
-    + [**3. Write model adapter and EPA SWMM messages to the run diagnostics file**](#--3-write-model-adapter-and-epa-swmm-messages-to-the-run-diagnostics-file--)
+    + [**2. Write EPA SWMM Model Outputs in FEWS format**](#--2-write-epa-swmm-model-outputs-in-fews-format--)
+    + [**3. Write Run Diagnostics File**](#--3-write-model-adapter-and-epa-swmm-messages-to-the-run-diagnostics-file--)
   * [**4. Messaging and Error Handling**](#--4-messaging-and-error-handling--)
     + [**1. Model Adapter Messaging**](#--1-model-adapter-messaging--)
     + [**2. Run Diagnostics File**](#--2-run-diagnostics-file--)
@@ -516,5 +516,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg2MzkwMzk2LC0xNjQyNDMxMzc4XX0=
+eyJoaXN0b3J5IjpbNzQyNzY5MDY1XX0=
 -->
