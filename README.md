@@ -298,7 +298,7 @@ LocationX                      5            20
 LocationX                      6            40  
   ```
   
-**1. Write Rainfall Time Series (EPA SWMM Format)**  
+**6. Write Rainfall Time Series (EPA SWMM Format)**  
   
 The rainfall data that was imported in step 4 is written to the rainfall file (rain.dat), with the following format:  
   
@@ -319,15 +319,15 @@ DON_11 2013 7 9 16 40 0
   
 As described in Section 6 (Model Set-up Considerations), the rainfall format (intensity vs. depth) must be configured in the model input file to align with the format exported by FEWS.  
   
-1. **Write model adapter messages to the run diagnostics file**  
+**7. Write model adapter messages to the run diagnostics file**  
   
 Model adapter warnings and errors messages during the Pre-Adapter steps are written to the run diagnostics file. More details are provided in section 4.4 (Messaging and Error Handling). FEWS will read this file upon completion of the Pre-Adapter execution and will report those to the FEWS interface.  
   
- 1. **Model Run**  
+## 2. **Model Run**  
   
 Typically, model execution will be initiated by FEWS. However, to facilitate testing of the model adapter, the model may be run with the following command:  
   
-	epaswmm.exe --run_info <path to run_info.xml file> run_  
+	epaswmm.exe --run_info <path to run_info.xml file> run  
   
 1. Writes a batch file for manual model runs:  
  - File Path: ```model/run_model.bat```  
@@ -502,6 +502,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDE2ODc3NTAsLTEwMDgzMDQyMzAsMT
-k3MzkyODg5N119
+eyJoaXN0b3J5IjpbMjAwNjE2OTU1MywtMTAwODMwNDIzMCwxOT
+czOTI4ODk3XX0=
 -->
