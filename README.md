@@ -217,7 +217,7 @@ The &quot; **Controls**&quot; section is updated as follows:
 ```IF SIMULATION DATE = <event date>``` 
 ```AND SIMULATION CLOCKTIME = <event time>```  
   
- - Only time-based condition clauses are supported. Other condition clauses (e.g. IF NODE D123 \> 1) are not supported.- The action clause of the control rule is built from the \<locationID\>, \<parameterID\> and <event value>, with the following format:  
+ - Only time-based condition clauses are supported. Other condition clauses (e.g. ```IF NODE D123 \> 1```) are not supported.- The action clause of the control rule is built from the \```<locationID\>, \>```, ```<parameterID\>``` and ```<event value>```, with the following format:  
   
 ```THEN <parameterId> <locationId> SETTING = <event value> ``` 
   
@@ -246,10 +246,10 @@ THEN OUTLET OL341 SETTING = 0.2
 
 The &quot; **Curves**&quot; section is updated as follows:  
   
- - A curve in the EPA SWMM model input file will be updated if its curve type is &quot;Rating&quot; and its curve name has a matching <locationID> in the XML file provided by FEWS. Other curve types (e.g. Storage) are currently not supported.
- - Only one curve per location (<locationID>) is supported. 
+ - A curve in the EPA SWMM model input file will be updated if its curve type is &quot;Rating&quot; and its curve name has a matching ```<locationID>``` in the XML file provided by FEWS. Other curve types (e.g. Storage) are currently not supported.
+ - Only one curve per location (```<locationID>```) is supported. 
  - Only curves existing in the EPA SWMM model input file will be updated (adding a new curve is not supported). This ensures that the user intentionally adds the curve to the model and understands its behavior before automating the procedure of updating the curve. 
- - Curve temporal validity (e.g. the <startDate>) is not considered; therefore curves are always active. 
+ - Curve temporal validity (e.g. the ```<startDate>```) is not considered; therefore curves are always active. 
  - If no rating curves are provided by FEWS, no change to the curves section of the model input file is made.  
 
 For example:  
@@ -351,7 +351,7 @@ The following steps explain the behavior of the post-adapter.
   
 1. **Read EPA SWMM Model Outputs**  
   
-The EPASWM model run generates an output file (e.g. DonRiver.rpt), which is converted to FEWS format by the Post Adapter. The following sections are read from the output file: Link Results and Node Results, as shown in the examples below. Model errors and warnings will also be read, if present.  
+The EPASWM model run generates an output file (e.g. ```DonRiver.rpt```), which is converted to FEWS format by the Post Adapter. The following sections are read from the output file: ```Link Results``` and ```Node Results```, as shown in the examples below. Model errors and warnings will also be read, if present.  
   
 1. **Write EPA SWMM model outputs in FEWS format**  
   
@@ -360,7 +360,7 @@ The following model results are written to the to NetCDF4 File Format using the 
 - Links: Date, Time, Flow CMS, Velocity m/sec, Depth m, Capacity/Setting  
 - Nodes: Date, Time, Inflow CMS, Flooding CMS, Depth m, Head m  
   
-To respect the CF 1.6 convention, the units in the EPA SWMM model output file (e.g. CMS; cubic metres per second) must be translated to a corresponding name for the NetCDF4 file (e.g. cubic_meter_per_second). For flexibility, this lookup can be customized in the units lookup file (model/UDUNITS_lookup.csv) if new unit conversions are required. All unit lookups required for the current model configuration have been provided.  
+To respect the CF 1.6 convention, the units in the EPA SWMM model output file (e.g. CMS; cubic metres per second) must be translated to a corresponding name for the NetCDF4 file (e.g. cubic_meter_per_second). For flexibility, this lookup can be customized in the units lookup file (```model/UDUNITS_lookup.csv```) if new unit conversions are required. All unit lookups required for the current model configuration have been provided.  
   
 The association between location in Delft-FEWS (e.g. stream gauge) and location in the EPA SWMM model (e.g. Link ID) was configured in the Delft-FEWS interface. No geographical information is currently passed to FEWS in the metadata section, assuming this information will be handled by FEWS, through the Link ID.  
   
@@ -386,7 +386,7 @@ These messages are transferred to FEWS using the run diagnostics file as describ
  1. **Run Diagnostics File**  
 When the model adapter either completes successfully or fails, a run diagnostics file is written for import by FEWS. This file includes all messages in the model adapter logs and all errors and warnings in the EPA SWMM output file.  
   
-- File path: defined by \<outputDiagnosticFile\> in run_info.xml  
+- File path: defined by \```<outputDiagnosticFile\>``` in ```run_info.xml ``` 
 - File contents (example):  
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -506,5 +506,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Nzg5NDc4MTldfQ==
+eyJoaXN0b3J5IjpbLTYwMzg0MTI4NywtMTY3ODk0NzgxOV19
 -->
