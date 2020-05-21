@@ -63,7 +63,7 @@ The model adapter consists of two principal components:
   
 A FEWS simulation is composed of the following components. First, FEWS initiates the  **Pre-Adapter**. Next, FEWS initiates the model run using the updated EPA SWMM input files. Finally, FEWS initiates the **Post-Adapter** to retrieve model output files. The main steps of the EPA SWMM model adapter workflow are summarized in Figure 2 below and explained in more detail in the following sections. As a complement of information, the adapter messaging and error handling is described in section 4.4.  
 
-  ![Summary of steps of the model adapter_ ](images/002.JPG)
+  ![Summary of steps of the model adapter_ ](images/002.jpg)
 
 _Figure 2 Summary of steps of the model adapter_  
   
@@ -508,9 +508,9 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkyOTc0NDE0LDEwOTI3MzQ3NjksLTEyOT
-E3NjU1MTQsLTE4MzIxNDc3MzYsLTYwMzg0MTI4NywtNzIxNDMx
-NjI2LC0xMTg0NTc4OTgyLDY3OTk5NTA0MiwtMTQ1NDM4NTY1MC
-wxNjcxMTU4Nzk0LC0xNDcxNzE0MDEwLDExMTA2NDExMzQsMjAx
-NjcxODQxMF19
+eyJoaXN0b3J5IjpbLTE2NDI0MzEzNzgsMTA5MjczNDc2OSwtMT
+I5MTc2NTUxNCwtMTgzMjE0NzczNiwtNjAzODQxMjg3LC03MjE0
+MzE2MjYsLTExODQ1Nzg5ODIsNjc5OTk1MDQyLC0xNDU0Mzg1Nj
+UwLDE2NzExNTg3OTQsLTE0NzE3MTQwMTAsMTExMDY0MTEzNCwy
+MDE2NzE4NDEwXX0=
 -->
