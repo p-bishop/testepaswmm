@@ -131,8 +131,8 @@ Note that the validity period (use of the <startDate> attribute) of the rating c
   
 FEWS can export time-dependent control rules in XML format. The model adapter does not currently support other types of control rules (e.g. rules dependent on a node water level or a link discharge). If an <InputTimeSeriesFile> with the name &quot;Control_rules.xml&quot; is provided in the Run Information file, the adapter recognizes this as control rules, and proceeds to update the &quot;Controls&quot; section of the EPA SWMMS WMM model input file (see step 5).  
   
-- File path: defined by ```<inputTimeSeriesFile> in run_info.xml  
-- File Name: Control_rules.xml  
+- File path: defined by ```<inputTimeSeriesFile>``` in ```run_info.xml```  
+- File Name: ```Control_rules.xml```  
 - File Contents (example):  
 
 ```
@@ -161,7 +161,7 @@ Additional information on how this information is written to control rules in th
   
 The <parameterID> refers to the EPA SWMM object to which the rule will apply. As such, this parameter should be one of the following EPA SWMM object types: pump, orifice, weir or outlet.  
   
-EPA SWMM control rules may also use a &quot;priority&quot; level at the end of the rule. While there is potential to use the &quot;flag&quot; attribute (e.g. flag = &quot;8&quot;) to set priority levels of control rules in the model, this feature is not currently implemented and Note that the &quot;flag&quot; attribute is not currently used by the adapter.s ignored by the model adapter.  
+EPA SWMM control rules may also use a &quot;priority&quot; level at the end of the rule. While there is potential to use the &quot;flag&quot; attribute (e.g. flag = &quot;8&quot;) to set priority levels of control rules in the model, this feature is not currently implemented and &quot;flag&quot; attribute is not currently used by the adapter.s ignored by the model adapter.  
   
 1. **Read Rainfall Time Series**  
   
@@ -507,5 +507,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MjgxMjU4MiwxOTczOTI4ODk3XX0=
+eyJoaXN0b3J5IjpbOTg0Nzc0NjE0LDE5NzM5Mjg4OTddfQ==
 -->
