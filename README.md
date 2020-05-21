@@ -2,7 +2,7 @@
 
 - [**Directory Sturcture and Contents**](#--directory-sturcture-and-contents--)
 - [**External Model Adapter Workflow**](#--external-model-adapter-workflow--)
-  * [1. **Pre-Adapter**](#1---pre-adapter--)
+  * [**1. **Pre-Adapter**](#1---pre-adapter--)
     + [**1. Read the run information file**](#--1-read-the-run-information-file--)
     + [**2. Read Dam Rating Curve (optional)**](#--2-read-dam-rating-curve--optional---)
     + [**3. Read Control Rules (optional)**](#--3-read-control-rules--optional---)
@@ -10,7 +10,7 @@
     + [**5. Update EPA SWMM Input File**](#--5-update-epa-swmm-input-file--)
     + [**6. Write Rainfall Time Series (EPA SWMM Format)**](#--6-write-rainfall-time-series--epa-swmm-format---)
     + [**7. Write Run Diagnostics File**](#--7-write-model-adapter-messages-to-the-run-diagnostics-file--)
-  * [2. **Model Run**](#2---model-run--)
+  * [**2. **Model Run**](#2---model-run--)
   * [**3. Post-Adapter**](#--3-post-adapter--)
     + [**1. Read EPA SWMM Model Outputs**](#--1-read-epa-swmm-model-outputs--)
     + [**2. Write EPA SWMM Model Outputs in FEWS format**](#--2-write-epa-swmm-model-outputs-in-fews-format--)
@@ -75,7 +75,7 @@ A FEWS simulation is composed of the following components. First, FEWS initiates
 
 _Figure 2 Summary of steps of the model adapter_  
   
- ## 1. **Pre-Adapter**  
+ ## **1. **Pre-Adapter**  
   
 The pre-adapter can be initiated with the following command:  
 
@@ -333,7 +333,7 @@ As described in Section 6 (Model Set-up Considerations), the rainfall format (in
   
 Model adapter warnings and errors messages during the Pre-Adapter steps are written to the run diagnostics file. More details are provided in section 4.4 (Messaging and Error Handling). FEWS will read this file upon completion of the Pre-Adapter execution and will report those to the FEWS interface.  
   
-## 2. **Model Run**  
+## **2. **Model Run**  
   
 Typically, model execution will be initiated by FEWS. However, to facilitate testing of the model adapter, the model may be run with the following command:  
   
@@ -362,7 +362,7 @@ The EPASWM model run generates an output file (e.g. ```DonRiver.rpt```), which i
 ![Link Results ](images/004a.JPG) ![Node Results](images/004b.JPG)
 
   
-### **2. Write EPA SWMM model outputs in FEWS format**  
+### **2. Write EPA SWMM mModel oOutputs in FEWS fFormat**  
   
 The following model results are written to the to NetCDF4 File Format using the CF 1.6 convention as requested by Deltares, for all links and nodes locations with the following variables, respectively:  
   
@@ -516,5 +516,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQyNzY5MDY1XX0=
+eyJoaXN0b3J5IjpbMTAzMzk3ODgzMSw3NDI3NjkwNjVdfQ==
 -->
