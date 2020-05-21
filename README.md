@@ -219,8 +219,7 @@ The &quot; **Controls**&quot; section is updated as follows:
  - If control rules were provided by FEWS but no &quot;Controls&quot; section exists in the model input file, an error is provided prompting the user to setup control rules in the model, and the adapter stops execution. 
  - If control rules were provided by FEWS and a &quot;Controls&quot; section exists in the EPA SWMM input file, the FEWS control rules will be written to the bottom of the control rule section. Existing rules are not modified. 
  - A control rule in EPA SWMM consists of a condition clause and an action clause, for example: 
-	- Condition clause:
-	 ```IF SIMULATION DATE = 04/23/2020``` <br>```AND SIMULATION CLOCKTIME = 15:00:00 ```|
+	- Condition clause:<br>```IF SIMULATION DATE = 04/23/2020``` <br>```AND SIMULATION CLOCKTIME = 15:00:00 ```|
 	- Action clause :
 	```THEN OUTLET OL341 SETTING = 0.5```  
   
@@ -516,5 +515,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjczODk4MzJdfQ==
+eyJoaXN0b3J5IjpbMTA0NDAyMjY1Ml19
 -->
