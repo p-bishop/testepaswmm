@@ -1,12 +1,25 @@
+# Table of Contents 
 
 - [**Directory Sturcture and Contents**](#--directory-sturcture-and-contents--)
 - [**External Model Adapter Workflow**](#--external-model-adapter-workflow--)
   * [1. **Pre-Adapter**](#1---pre-adapter--)
+    + [**1. Read the run information file**](#--1-read-the-run-information-file--)
+    + [**2. Read Dam Rating Curve (optional)**](#--2-read-dam-rating-curve--optional---)
+    + [**3. Read Control Rules (optional)**](#--3-read-control-rules--optional---)
+    + [**4. Read Rainfall Time Series**](#--4-read-rainfall-time-series--)
+    + [**5. Update EPA SWMM Input File**](#--5-update-epa-swmm-input-file--)
+    + [**6. Write Rainfall Time Series (EPA SWMM Format)**](#--6-write-rainfall-time-series--epa-swmm-format---)
+    + [**7. Write Run Diagnostics File**](#--7-write-model-adapter-messages-to-the-run-diagnostics-file--)
   * [2. **Model Run**](#2---model-run--)
   * [**3. Post-Adapter**](#--3-post-adapter--)
+    + [**1. Read EPA SWMM Model Outputs**](#--1-read-epa-swmm-model-outputs--)
+    + [**2. Write EPA SWMM model outputs in FEWS format**](#--2-write-epa-swmm-model-outputs-in-fews-format--)
+    + [**3. Write model adapter and EPA SWMM messages to the run diagnostics file**](#--3-write-model-adapter-and-epa-swmm-messages-to-the-run-diagnostics-file--)
   * [**4. Messaging and Error Handling**](#--4-messaging-and-error-handling--)
-  
-  
+    + [**1. Model Adapter Messaging**](#--1-model-adapter-messaging--)
+    + [**2. Run Diagnostics File**](#--2-run-diagnostics-file--)
+
+
 # **Directory Sturcture and Contents**  
   
 The external model adapter relies on a consistent directory structure, as proposed by Deltares, and shown in Figure 1. The example shows the Don model, however, other models could be added to this directory using the same directory structure.  
@@ -316,7 +329,7 @@ DON_11 2013 7 9 16 40 0
   
 As described in Section 6 (Model Set-up Considerations), the rainfall format (intensity vs. depth) must be configured in the model input file to align with the format exported by FEWS.  
   
-### **7. Write model adapter messages to the run diagnostics file**  
+### **7. Write Run Diagnostics File**  
   
 Model adapter warnings and errors messages during the Pre-Adapter steps are written to the run diagnostics file. More details are provided in section 4.4 (Messaging and Error Handling). FEWS will read this file upon completion of the Pre-Adapter execution and will report those to the FEWS interface.  
   
@@ -503,5 +516,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NzUwODEwMywtMTY0MjQzMTM3OF19
+eyJoaXN0b3J5IjpbODg2MzkwMzk2LC0xNjQyNDMxMzc4XX0=
 -->
