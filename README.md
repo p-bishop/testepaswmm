@@ -199,6 +199,18 @@ The &quot;**Options**&quot; section is updated as follows:
 | REPORT_START_TIME | | REPORT_START_TIME 15:00:00 |  
 | END_DATE | \<endDateTime date=&quot;2020-04-29&quot; time=&quot;15:00:00&quot;/> | END_DATE 04/29/2020 |  
 | END_TIME | |END_TIME 15:00:00 |  
+
+```
+|             |          Grouping           ||
+First Header  | Second Header | Third Header |
+ ------------ | :-----------: | -----------: |
+Content       |          *Long Cell*        ||
+Content       |   **Cell**    |         Cell |
+
+New section   |     More      |         Data |
+And more      | With an escaped '\|'         ||  
+[Prototype table]
+```
   
 The &quot;_ **Controls** _&quot; section is updated as follows:  
   
@@ -563,5 +575,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODQ1Nzg5ODJdfQ==
+eyJoaXN0b3J5IjpbLTIxMjQ3MDIxNjcsLTExODQ1Nzg5ODJdfQ
+==
 -->
