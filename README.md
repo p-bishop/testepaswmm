@@ -1,6 +1,6 @@
 
 ![step 1](./images/123.JPG)
-But in Git, use:  img src="123.JPG" width="500">
+But in Git, use:  img src="123.JPG" width="500"
 teswhduiowdhuwe \<test> erferferfe
 
 # Table of Contents
