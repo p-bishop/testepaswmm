@@ -78,25 +78,25 @@ The run information file contains data relating to the model run, such as model 
 - File path: run_info.xml  
 - File contents (example):  
 
-	
-	  <?xml version="1.0" encoding="UTF-8"?>
-		<Run xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_run.xsd" version="1.5">
-		    <timeZone>-5.0</timeZone>
-		    <startDateTime date="2020-03-29" time="12:00:00"/>
-		    <endDateTime date="2020-03-31" time="12:00:00"/>
-		    <time0 date="2020-03-31" time="12:00:00"/>
-		    <lastObservationDateTime date="2020-03-31" time="12:00:00"/>
-		    <workDir>C:Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull</workDir>
-		    <inputNetcdfFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\input\rain.nc</inputNetcdfFile>
-		    <inputRatingCurveFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\input\Dam_rating_curve.xml</inputRatingCurveFile>
-		    <inputTimeSeriesFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\/DonFull\input\Control_rules.xml</inputTimeSeriesFile>
-		    <outputDiagnosticFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\log\run_diagnostics.xml</outputDiagnosticFile>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<Run xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_run.xsd" version="1.5">
+	<timeZone>-5.0</timeZone>
+	<startDateTime date="2020-03-29" time="12:00:00"/>
+	<endDateTime date="2020-03-31" time="12:00:00"/>
+	<time0 date="2020-03-31" time="12:00:00"/>
+	<lastObservationDateTime date="2020-03-31" time="12:00:00"/>
+<workDir>C:Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull</workDir>
+	<inputNetcdfFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\input\rain.nc</inputNetcdfFile>
+	<inputRatingCurveFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\input\Dam_rating_curve.xml</inputRatingCurveFile>
+	<inputTimeSeriesFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\/DonFull\input\Control_rules.xml</inputTimeSeriesFile>
+	<outputDiagnosticFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\log\run_diagnostics.xml</outputDiagnosticFile>
 			<properties>
 				<string key="model-executable" value="C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\bin\swmm5.exe"/> 
 				<string key="swmm_input_file" value="C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\model\DonFull.inp"/>
 			</properties>
 		</Run>
-			        
+```		        
 		  
 		  
 1. **Read Dam Rating Curve (optional)**  
@@ -506,5 +506,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMzg0MTI4NywtMTY3ODk0NzgxOV19
+eyJoaXN0b3J5IjpbNzYyNzY1NDY5LC02MDM4NDEyODcsLTE2Nz
+g5NDc4MTldfQ==
 -->
