@@ -429,7 +429,7 @@ The model adapter was developed to be generic to permit use with any EPA SWMM mo
   
 - External rainfall time series must be used; the adapter does not support models that have the hyedrographs stored within the model input file itself.  
   
-- The name of the external rainfall time series must be: ```r  
+- The name of the external rainfall time series must be: ```rain.dat```  
 - In EPA SWMM, rainfall time series are associated with rain gauge elements. These are defined in the &quot;Raingage&quot; section in the EPA SWMM model input file. Modification of the &quot;Raingage&quot; section is not currently supported by the model adapter.  
 - In the current FEWS setup, a rainfall time series is exported for each major subcatchment. For example, for the Don River, there are 11 (DON_1, DON_2, ..., DON_11).  
 - The rain gauges in the EPA SWMM model input file should be named after the major subcatchment that they represent, e.g. DON_11.  
@@ -506,6 +506,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDQzNzg0OTAsLTcyMTQzMTYyNiwtMT
-IzODcyMDA5NV19
+eyJoaXN0b3J5IjpbLTE2Nzg5NDc4MTldfQ==
 -->
