@@ -385,27 +385,18 @@ When the model adapter either completes successfully or fails, a run diagnostics
   
 - File path: defined by \<outputDiagnosticFile\> in run_info.xml  
 - File contents (example):  
-  
-<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>  
-  
-<Diag xmlns=&quot;http://www.wldelft.nl/fews/PI&quot;  
-  
-xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;  
-  
-xsi:schemaLocation=&quot;http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_diag.xsd&quot; version=&quot;1.2&quot;>  
-  
-<line level=&quot;3&quot; description=&quot;INFO: External Adapter - ##### Running Pre-Adapter EPA-SWMM Delft-FEWS for C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\Don\run_info.xml ... (2020-05-14 10:50:28,009)&quot;/>  
-  
-<line level=&quot;3&quot; description=&quot;INFO: External Adapter - No rating curve file provided in the run_info.xml. (2020-05-14 10:50:28,012)&quot;/>  
-  
-<line level=&quot;3&quot; description=&quot;INFO: External Adapter - Converted the NetCDF rainfall file to EPA SWMM .DAT format (2020-05-14 10:50:28,164)&quot;/>  
-  
-<line level=&quot;3&quot; description=&quot;INFO: External Adapter - Reading warnings and errors from: pre_adapter.log (2020-05-14 10:50:28,167)&quot;/>  
-  
-<line level=&quot;3&quot; description=&quot;INFO: External Adapter - ##### Completed Pre-Adapter EPA-SWMM Delft-FEWS (2020-05-14 10:50:28,168)&quot;/>  
-  
-</Diag>  
-  
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<Diag xmlns="http://www.wldelft.nl/fews/PI"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_diag.xsd" version="1.2">
+<line level="3" description="INFO: External Adapter - ##### Running Pre-Adapter EPA-SWMM Delft-FEWS for C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\Don\run_info.xml ... (2020-05-14 10:50:28,009)"/>
+<line level="3" description="INFO: External Adapter - No rating curve file provided in the run_info.xml. (2020-05-14 10:50:28,012)"/>
+<line level="3" description="INFO: External Adapter - Converted the NetCDF rainfall file to EPA SWMM .DAT format (2020-05-14 10:50:28,164)"/>
+<line level="3" description="INFO: External Adapter - Reading warnings and errors from: pre_adapter.log (2020-05-14 10:50:28,167)"/>
+<line level="3" description="INFO: External Adapter - ##### Completed Pre-Adapter EPA-SWMM Delft-FEWS (2020-05-14 10:50:28,168)"/>
+</Diag>
+```
 The message text from the model output file and the model adapter logs are transferred to the &quot;description&quot; field in the run diagnostics file, while the message level (e.g. &quot;WARNING&quot;) is mapped to the &quot;level&quot; field, using FEWS&#39;s 0-4 numeric code, as described in Table 1.  
   
 _Table 1 – Mapping of messages from EPA SWMM model output and model adapter logs to FEWS levels_  
@@ -415,11 +406,11 @@ _Table 1 – Mapping of messages from EPA SWMM model output and model adapter lo
 | **Model Output file  
  (e.g. DonRiver.rpt) **|** Model Adapter Log  
  (pre_adapter.log and post_adapter.log)** |  
-| **4** | - | DEBUG |  
-| **3** | - | INFO |  
-| **2** | WARNING | WARNING |  
-| **1** | ERROR | ERROR |  
-| **0** | - | - |  
+| 4 | - | DEBUG |  
+| 3 | - | INFO |  
+| 2 | WARNING | WARNING |  
+| 1 | ERROR | ERROR |  
+| 0 | - | - |  
   
 For example, the following two messages would be converted as follows:  
   
@@ -567,7 +558,7 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTAxMTAxMjUsLTExODQ1Nzg5ODIsNj
-c5OTk1MDQyLC0xNDU0Mzg1NjUwLDE2NzExNTg3OTQsLTE0NzE3
-MTQwMTAsMTExMDY0MTEzNCwyMDE2NzE4NDEwXX0=
+eyJoaXN0b3J5IjpbNjM1NTc3NzIzLC0xMTg0NTc4OTgyLDY3OT
+k5NTA0MiwtMTQ1NDM4NTY1MCwxNjcxMTU4Nzk0LC0xNDcxNzE0
+MDEwLDExMTA2NDExMzQsMjAxNjcxODQxMF19
 -->
