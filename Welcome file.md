@@ -418,30 +418,10 @@ _Table 2 – Examples of model adapter log and EPA SWMM model output messages tr
   
 | **Message** | **Message Location** | **Run Diagnostics Message** |  
 | --- | --- | --- |  
-| **INFO: External Adapter - No rating curve file provided in the run_info.xml.** | Model Adapter Log  
- (pre_adapter.log) | ```<line level="3" description=&quot;INFO: External Adapter - No rating curve file provided in the run_info.xml.&quot;/>```  
- |  
-| **WARNING 03: negative offset ignored for Link C1** | Model Output file  
- (e.g. DonRiver.rpt) | ```<line level="2" description="WARNING 03: negative offset ignored for Link C1"/>```  
- |  
+| ```INFO: External Adapter - No rating curve file provided in the run_info.xml.``` | Model Adapter Log (pre_adapter.log) | ```<line level="3" description="INFO: External Adapter - No rating curve file provided in the run_info.xml."/>```  
+ | ```WARNING 03: negative offset ignored for Link C1``` | Model Output file (e.g. DonRiver.rpt) | ```<line level="2" description="WARNING 03: negative offset ignored for Link C1"/>```  
+ 
   
-1. **Run Time and File Size**  
-  
-Model run time may influence decisions during flood forecasting. The existing Don River model was tested for the following simulation periods: 3, 5 and 8 days. The results are summarized in the table below.  
-  
-_Table 3 - Don River Model Run Times_  
-  
-| **Simulation Duration** | **Output File Size** | **EPA-SWMM 5.1.012 in CMD** | **File Size / Run Day (MB/day)** | **Elapsed Time / Run Period** **(minutes/day)** |  
-| --- | --- | --- | --- | --- |  
-| **Elapsed Time** |  
-| **3 days** | 146MB | 04m34s | 48.7 | 1.5 |  
-| **5 days** | 243MB | 08m58s | 48.6 | 1.8 |  
-| **8 days** | 387MB | 14m17s | 48.4 | 1.8 |  
-| **_Test was performed on computer with following specifications:_**  **_Intel Core i5-8350U CPU @ 1.70 GHz 1.90 GH 16.0GB RAM 64bit Windows 10._** |  
-  
-The approximate model run time was found to be approximately 1.5 – 1.8 minutes per simulation day, and the output file size was approximately 50MB per simulation day.  
-  
-As discussed in section 7, performance improvements may be observed if the EPA SWMM binary output file format is used, but this current version of the adapter is using the ASCII output format.  
   
 1. **Model Set-up Considerations**  
   
@@ -455,17 +435,11 @@ The model adapter was developed to be generic to permit use with any EPA SWMM mo
 - The rain gauges in the EPA SWMM model input file should be named after the major subcatchment that they represent, e.g. DON_11.  
   
 [RAINGAGES]  
-  
 ;; Rain Time Snow Data  
-  
 ;;Name Type Intrvl Catch Source  
-  
 ;;-------------- --------- ------ ------ ----------  
-  
 DON_1 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_1 MM  
-  
 DON_2 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_2 MM  
-  
 DON_3 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_3 MM  
   
 DON_4 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_4 MM  
@@ -558,8 +532,8 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxODM0Mjk3NCwtNzIxNDMxNjI2LC0xMT
-g0NTc4OTgyLDY3OTk5NTA0MiwtMTQ1NDM4NTY1MCwxNjcxMTU4
-Nzk0LC0xNDcxNzE0MDEwLDExMTA2NDExMzQsMjAxNjcxODQxMF
-19
+eyJoaXN0b3J5IjpbODIwMDQ4NzMxLC03MjE0MzE2MjYsLTExOD
+Q1Nzg5ODIsNjc5OTk1MDQyLC0xNDU0Mzg1NjUwLDE2NzExNTg3
+OTQsLTE0NzE3MTQwMTAsMTExMDY0MTEzNCwyMDE2NzE4NDEwXX
+0=
 -->
