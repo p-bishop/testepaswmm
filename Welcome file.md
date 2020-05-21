@@ -335,9 +335,9 @@ Typically, model execution will be initiated by FEWS. However, to facilitate tes
   
 ```C:\[...]\bin\swmm5.exe C:\[...]\model\DonRiver.inp C:\[...]\model\DonRiver.rpt ```
   
-1. Executes the model and write to the diagnostics file . Note that warnings and errors in the EPA SWMM model output file will be read by the post-adapter.  
+2. Executes the model and write to the diagnostics file . Note that warnings and errors in the EPA SWMM model output file will be read by the post-adapter.  
   
- 1. **Post-Adapter**  
+ ## **3. Post-Adapter**  
   
 The post-adapter can be initiated with the following command:  
   
@@ -345,11 +345,11 @@ The post-adapter can be initiated with the following command:
   
 The following steps explain the behavior of the post-adapter.  
   
-1. **Read EPA SWMM Model Outputs**  
+**1. Read EPA SWMM Model Outputs**  
   
 The EPASWM model run generates an output file (e.g. ```DonRiver.rpt```), which is converted to FEWS format by the Post Adapter. The following sections are read from the output file: ```Link Results``` and ```Node Results```, as shown in the examples below. Model errors and warnings will also be read, if present.  
   
-1. **Write EPA SWMM model outputs in FEWS format**  
+**2. Write EPA SWMM model outputs in FEWS format**  
   
 The following model results are written to the to NetCDF4 File Format using the CF 1.6 convention as requested by Deltares, for all links and nodes locations with the following variables, respectively:  
   
@@ -360,7 +360,7 @@ To respect the CF 1.6 convention, the units in the EPA SWMM model output file (e
   
 The association between location in Delft-FEWS (e.g. stream gauge) and location in the EPA SWMM model (e.g. Link ID) was configured in the Delft-FEWS interface. No geographical information is currently passed to FEWS in the metadata section, assuming this information will be handled by FEWS, through the Link ID.  
   
-1. **Write model adapter and EPA SWMM messages to the run diagnostics file**  
+**3. Write model adapter and EPA SWMM messages to the run diagnostics file**  
   
 Model adapter messages and EPA SWMM model output errors and warnings are written to the run diagnostics log, as described in section 4.4 (Messaging and Error Handling).  
   
@@ -502,7 +502,7 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNjE2OTU1MywtNjAzODQxMjg3LC03Mj
+eyJoaXN0b3J5IjpbMTI1NzU4MTg1NywtNjAzODQxMjg3LC03Mj
 E0MzE2MjYsLTExODQ1Nzg5ODIsNjc5OTk1MDQyLC0xNDU0Mzg1
 NjUwLDE2NzExNTg3OTQsLTE0NzE3MTQwMTAsMTExMDY0MTEzNC
 wyMDE2NzE4NDEwXX0=
