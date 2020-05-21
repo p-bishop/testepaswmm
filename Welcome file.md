@@ -210,12 +210,11 @@ The &quot; **Controls**&quot; section is updated as follows:
  - If no control rules were provided by FEWS, no change to the &quot;Controls&quot; section of the model input file is made. 
  - If control rules were provided by FEWS but no &quot;Controls&quot; section exists in the model input file, an error is provided prompting the user to setup control rules in the model, and the adapter stops execution. 
  - If control rules were provided by FEWS and a &quot;Controls&quot; section exists in the EPA SWMM input file, the FEWS control rules will be written to the bottom of the control rule section. Existing rules are not modified. 
- - A control rule in EPA SWMM consists of a condition clause and an action clause, for example:  
- 
- 
- - Condition clause  ```IF SIMULATION DATE = 04/23/2020``` <br>```AND SIMULATION CLOCKTIME = 15:00:00 ```|  
-| Action clause | ```THEN OUTLET OL341 SETTING = 0.5``` |  
-  
+ - A control rule in EPA SWMM consists of a condition clause and an action clause, for example: 
+	- Condition clause:
+	 ```IF SIMULATION DATE = 04/23/2020``` <br>```AND SIMULATION CLOCKTIME = 15:00:00 ```|
+	- Action clause :
+	```THEN OUTLET OL341 SETTING = 0.5```  
   
  - The condition clause of the control rule is built from the ```<event date>``` and ```<event time>``` variables of the control rules file (```Control_rules.xml```), with the following format:  
 ```IF SIMULATION DATE = <event date>``` 
@@ -509,9 +508,9 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMjg5MzQ0MSwxMDkyNzM0NzY5LC0xMj
-kxNzY1NTE0LC0xODMyMTQ3NzM2LC02MDM4NDEyODcsLTcyMTQz
-MTYyNiwtMTE4NDU3ODk4Miw2Nzk5OTUwNDIsLTE0NTQzODU2NT
-AsMTY3MTE1ODc5NCwtMTQ3MTcxNDAxMCwxMTEwNjQxMTM0LDIw
-MTY3MTg0MTBdfQ==
+eyJoaXN0b3J5IjpbMzkyOTc0NDE0LDEwOTI3MzQ3NjksLTEyOT
+E3NjU1MTQsLTE4MzIxNDc3MzYsLTYwMzg0MTI4NywtNzIxNDMx
+NjI2LC0xMTg0NTc4OTgyLDY3OTk5NTA0MiwtMTQ1NDM4NTY1MC
+wxNjcxMTU4Nzk0LC0xNDcxNzE0MDEwLDExMTA2NDExMzQsMjAx
+NjcxODQxMF19
 -->
