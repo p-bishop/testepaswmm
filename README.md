@@ -221,9 +221,9 @@ The &quot; **Controls**&quot; section is updated as follows:
   
 ```THEN <parameterId> <locationId> SETTING = <event value> ``` 
   
-- Other types of action clauses (e.g. THEN PUMP STATUS = ON) are not currently supported.  
+- Other types of action clauses (e.g. ```THEN PUMP STATUS = ON```) are not currently supported.  
   
-- One rule is added for each line in the control rules file (Control_rules.xml). If rules for multiple locations exist (i.e. multiple <series> exist), the pre-fix of the control rule&#39;s number is incremented, e.g. AdapterRule1.1, AdapterRule1.2, ..., AdapterRule2.1, AdapterRule2.2, ...) in the EPA SWMM input file.  
+- One rule is added for each line in the control rules file (Control_rules.xml). If rules for multiple locations exist (i.e. multiple \<series\> exist), the pre-fix of the control rule&#39;s number is incremented, e.g. ```AdapterRule1.1, AdapterRule1.2, ..., AdapterRule2.1, AdapterRule2.2, ...```) in the EPA SWMM input file.  
 	- The format of each control rule added is as follows:  
 ```
 Rule AdapterRule<[RULE#>  
@@ -243,11 +243,15 @@ IF SIMULATION DATE = 04/23/2020
 AND SIMULATION CLOCKTIME = 16:00:00  
 THEN OUTLET OL341 SETTING = 0.2  
   ```
-One rule is added for each line in the control rules file (Control_rules.xml). If rules for multiple locations exist (i.e. multiple <series> exist), the pre-fix of the control rule&#39;s number is incremented, e.g. AdapterRule1.1, AdapterRule1.2, ..., AdapterRule2.1, AdapterRule2.2, ...) in the EPA SWMM input file.  
-  
+
 The &quot; **Curves**&quot; section is updated as follows:  
   
- - A curve in the EPA SWMM model input file will be updated if its curve type is &quot;Rating&quot; and its curve name has a matching <locationID> in the XML file provided by FEWS. Other curve types (e.g. Storage) are currently not supported. - Only one curve per location (<locationID>) is supported. - Only curves existing in the EPA SWMM model input file will be updated (adding a new curve is not supported). This ensures that the user intentionally adds the curve to the model and understands its behavior before automating the procedure of updating the curve. - Curve temporal validity (e.g. the <startDate>) is not considered; therefore curves are always active. - If no rating curves are provided by FEWS, no change to the curves section of the model input file is made.  
+ - A curve in the EPA SWMM model input file will be updated if its curve type is &quot;Rating&quot; and its curve name has a matching <locationID> in the XML file provided by FEWS. Other curve types (e.g. Storage) are currently not supported.
+ - Only one curve per location (<locationID>) is supported. 
+ - Only curves existing in the EPA SWMM model input file will be updated (adding a new curve is not supported). This ensures that the user intentionally adds the curve to the model and understands its behavior before automating the procedure of updating the curve. 
+ - Curve temporal validity (e.g. the <startDate>) is not considered; therefore curves are always active. 
+ - If no rating curves are provided by FEWS, no change to the curves section of the model input file is made.  
+
 For example:  
 - Before Update:   
 ```
@@ -302,7 +306,7 @@ LocationX                      6            40
   
 The rainfall data that was imported in step 4 is written to the rainfall file (rain.dat), with the following format:  
   
- ;Rainfall (mm) \<RAINGAGE ID\> \<YYYY\> \<M\> \<D\> \<H\> \<M\> \<QUANTITY\>   
+``` ;Rainfall (mm) \<RAINGAGE ID\> \<YYYY\> \<M\> \<D\> \<H\> \<M\> \<QUANTITY\>   ```
   
 A sample of the time series is shown here:  
 ```
@@ -554,5 +558,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMTQzMTYyNiwtMTIzODcyMDA5NV19
+eyJoaXN0b3J5IjpbLTQ3OTAyODUxMiwtNzIxNDMxNjI2LC0xMj
+M4NzIwMDk1XX0=
 -->
