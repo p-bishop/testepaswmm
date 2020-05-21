@@ -28,29 +28,29 @@ Folder and file contents are specified below, and the workflow is described in t
   
 **Don** : all files relating to a specific EPA SWMM model (i.e. Don River Model).  
   
-- Run Information (run\_info.xml) in FEWS XML format  
+- Run Information (run_info.xml) in FEWS XML format  
 - **dump** : zipped folders of the model folder when the model run fails  
 - **input** : model inputs, exported by FEWS:  
   - Rainfall Timeseries (e.g. rain.nc) in FEWS NetCDF Format  
-  - Rating Curves (e.g. dam\_rating\_curve.xml) in FEWS XML format (optional)  
-  - Control Rules (e.g. control\_rules.xml) in FEWS XML format (optional)  
+  - Rating Curves (e.g. dam_rating_curve.xml) in FEWS XML format (optional)  
+  - Control Rules (e.g. control_rules.xml) in FEWS XML format (optional)  
 - **inputStates** : placeholder directory for potential handling of hotstarts  
 - **log** :  
   - Model adapter logs:  
-    - Pre-adapter (pre\_adapter.log)  
-    - Post-adapter (post\_adapter.log)  
-    - Model run (run\_adapter.log)  
+    - Pre-adapter (pre_adapter.log)  
+    - Post-adapter (post_adapter.log)  
+    - Model run (run_adapter.log)  
   - Output diagnostic file to be imported by FEWS (e.g. diag.xml)  
 - **model** : EPA SWMM model files  
   - Model input file (e.g. DonRiver.inp)  
   - Model rainfall data file(e.g. rain.dat)  
   - Model output file(e.g. DonRiver.rpt)  
-  - Model run batch file (run\_model.bat)  
-  - Unit conversion look-up (UDUNITS\_lookup.csv)  
+  - Model run batch file (run_model.bat)  
+  - Unit conversion look-up (UDUNITS_lookup.csv)  
 - **output** : output from the model adapter (converted output for FEWS)  
   - EPA SWMM Model output in NetCDF format  
-    - Node (e.g. depths) results (e.g. DonRiver\_outputswmm\_nodes.nc)  
-    - Link (e.g. hydrographs) results (e.g. DonRiver\_outputswmm\_nodes.nc)  
+    - Node (e.g. depths) results (e.g. DonRiver_outputswmm_nodes.nc)  
+    - Link (e.g. hydrographs) results (e.g. DonRiver_outputswmm_nodes.nc)  
 - **outputStates** : placeholder directory for potential handling of hotstarts for future versions  
   
 # **External Model Adapter Workflow**  
@@ -75,7 +75,7 @@ The following steps explain the behavior of this pre-adapter.
   
 The run information file contains data relating to the model run, such as model start time.  
   
-- File path: run\_info.xml  
+- File path: run_info.xml  
 - File contents (example):  
 
 	
@@ -101,9 +101,9 @@ The run information file contains data relating to the model run, such as model 
 		  
 1. **Read Dam Rating Curve (optional)**  
   
-FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. If an \&lt;inputRatingCurveFile\&gt; is provided in the run information file, the adapter recognizes this as a dam rating curve, and proceeds to update the &quot;Curves&quot; section of the EPASWM model input file (see step 5). Only a single rating curve for each location (\&lt;locationID\&gt;) is allowed.  
+FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. If an <inputRatingCurveFile> is provided in the run information file, the adapter recognizes this as a dam rating curve, and proceeds to update the &quot;Curves&quot; section of the EPASWM model input file (see step 5). Only a single rating curve for each location (<locationID>) is allowed.  
   
-- File path: Defined by \&lt;inputRatingCurveFile\&gt; in run\_info.xml  
+- File path: Defined by <inputRatingCurveFile> in run_info.xml  
   
 - File contents (example):  
 
@@ -129,11 +129,11 @@ FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. 
 		</ratingCurve>
 		</RatingCurves>
   
-Note that the validity period (use of the \&lt;startDate\&gt; attribute) of the rating curve is not currently supported by the model adapter; this parameter is ignored.  
+Note that the validity period (use of the <startDate> attribute) of the rating curve is not currently supported by the model adapter; this parameter is ignored.  
   
 1. **Read Control Rules (optional)**  
   
-FEWS can export time-dependent control rules in XML format. The model adapter does not currently support other types of control rules (e.g. rules dependent on a node water level or a link discharge). If an \&lt;InputTimeSeriesFile\&gt; with the name &quot;Control\_rules.xml&quot; is provided in the Run Information file, the adapter recognizes this as control rules, and proceeds to update the &quot;Controls&quot; section of the EPA SWMMS WMM model input file (see step 5).  
+FEWS can export time-dependent control rules in XML format. The model adapter does not currently support other types of control rules (e.g. rules dependent on a node water level or a link discharge). If an <InputTimeSeriesFile> with the name &quot;Control_rules.xml&quot; is provided in the Run Information file, the adapter recognizes this as control rules, and proceeds to update the &quot;Controls&quot; section of the EPA SWMMS WMM model input file (see step 5).  
   
 - File path: defined by <inputTimeSeriesFile> in run_info.xml  
 - File Name: Control_rules.xml  
@@ -168,9 +168,9 @@ EPA SWMM control rules may also use a &quot;priority&quot; level at the end of t
   
 1. **Read Rainfall Time Series**  
   
-Delft-FEWS exports a rainfall time series file in NetCDF format. The station\_id and station\_names (e.g. DON\_1) in this file correspond to the rain gage name in the &quot;Raingages&quot; section of the EPA SWMM input file. The station\_name field is ignored by the model adapter as this is for display purposes within the FEWS interface.  
+Delft-FEWS exports a rainfall time series file in NetCDF format. The station_id and station_names (e.g. DON_1) in this file correspond to the rain gage name in the &quot;Raingages&quot; section of the EPA SWMM input file. The station_name field is ignored by the model adapter as this is for display purposes within the FEWS interface.  
   
-- File path: defined by \&lt;inputNetcdfFile\&gt; in the run\_info.xml file  
+- File path: defined by <inputNetcdfFile> in the run_info.xml file  
 - File contents (example, showing a sample of rowsfirst and last rows):  
   
 _Figure 3 - Example rainfall time series file contents_  
@@ -179,7 +179,7 @@ _Figure 3 - Example rainfall time series file contents_
   
 The EPA SWMM input file contains some sections with constant values (e.g. subcatchment parameters). Other sections contain data that needs to be updated for the model run. This step explains how these sections are updated.  
   
-- File path: defined by the swmm\_input\_file in the \&lt;properties\&gt; section of the run\_info.xml file. (e.g. Don/model/DonRiver\_template.inp)  
+- File path: defined by the swmm_input_file in the <properties> section of the run_info.xml file. (e.g. Don/model/DonRiver_template.inp)  
   
 The model adapter reads in EPA SWMM Input file, and updates:  
   
@@ -194,13 +194,13 @@ The &quot;_ **Options** _&quot; section is updated as follows:
   
 | **Parameter in EPA SWMM model input file** | **FEWS parameter in the run information file** | **Result in EPA SWMM model input file** |  
 | --- | --- | --- |  
-| **START\_DATE** | \&lt;startDateTime date=&quot;2020-04-23&quot; time=&quot;15:00:00&quot;/\&gt;  
+| **START_DATE** | <startDateTime date=&quot;2020-04-23&quot; time=&quot;15:00:00&quot;/>  
  | START DATE 04/23/2020 |  
-| **START\_TIME** | START\_TIME 15:00:00 |  
-| **REPORT\_START\_DATE** | REPORT\_START\_DATE 04/23/2020 |  
-| **REPORT\_START\_TIME** | REPORT\_START\_TIME 15:00:00 |  
-| **END\_DATE** | \<endDateTime date=&quot;2020-04-29&quot; time=&quot;15:00:00&quot;/\&gt; | END\_DATE 04/29/2020 |  
-| **END\_TIME** | END\_TIME 15:00:00 |  
+| **START_TIME** | START_TIME 15:00:00 |  
+| **REPORT_START_DATE** | REPORT_START_DATE 04/23/2020 |  
+| **REPORT_START_TIME** | REPORT_START_TIME 15:00:00 |  
+| **END_DATE** | \<endDateTime date=&quot;2020-04-29&quot; time=&quot;15:00:00&quot;/> | END_DATE 04/29/2020 |  
+| **END_TIME** | END_TIME 15:00:00 |  
   
 The &quot;_ **Controls** _&quot; section is updated as follows:  
   
@@ -209,28 +209,28 @@ The &quot;_ **Controls** _&quot; section is updated as follows:
 | --- | --- |  
 | Action clause | THEN OUTLET OL341 SETTING = 0.5 |  
   
- - The condition clause of the control rule is built from the \&lt;event date\&gt; and \&lt;event time\&gt; variables of the control rules file (Control\_rules.xml), with the following format:  
-IF SIMULATION DATE = \&lt;event date\&gt;  
+ - The condition clause of the control rule is built from the <event date> and <event time> variables of the control rules file (Control_rules.xml), with the following format:  
+IF SIMULATION DATE = <event date>  
   
-AND SIMULATION CLOCKTIME = \&lt;event time\&gt;  
+AND SIMULATION CLOCKTIME = <event time>  
   
- - Only time-based condition clauses are supported. Other condition clauses (e.g. IF NODE D123 \&gt; 1) are not supported.- The action clause of the control rule is built from the \&lt;locationID\&gt;, \&lt;parameterID\&gt; and \&lt;event value\&gt;, with the following format:  
+ - Only time-based condition clauses are supported. Other condition clauses (e.g. IF NODE D123 > 1) are not supported.- The action clause of the control rule is built from the <locationID>, <parameterID> and <event value>, with the following format:  
   
-THEN \&lt;parameterId\&gt; \&lt;locationId\&gt; SETTING = \&lt;event value\&gt;  
+THEN <parameterId> <locationId> SETTING = <event value>  
   
 - Other types of action clauses (e.g. THEN PUMP STATUS = ON) are not currently supported.  
   
-- One rule is added for each line in the control rules file (Control\_rules.xml). If rules for multiple locations exist (i.e. multiple \&lt;series\&gt; exist), the pre-fix of the control rule&#39;s number is incremented, e.g. AdapterRule1.1, AdapterRule1.2, ..., AdapterRule2.1, AdapterRule2.2, ...) in the EPA SWMM input file.  
+- One rule is added for each line in the control rules file (Control_rules.xml). If rules for multiple locations exist (i.e. multiple <series> exist), the pre-fix of the control rule&#39;s number is incremented, e.g. AdapterRule1.1, AdapterRule1.2, ..., AdapterRule2.1, AdapterRule2.2, ...) in the EPA SWMM input file.  
   
           - The format of each control rule added is as follows:  
   
-Rule AdapterRule\&lt;[RULE#\&gt;  
+Rule AdapterRule<[RULE#>  
   
-IF SIMULATION DATE = \&lt;event date\&gt;  
+IF SIMULATION DATE = <event date>  
   
-AND SIMULATION CLOCKTIME = \&lt;event time\&gt;  
+AND SIMULATION CLOCKTIME = <event time>  
   
-THEN \&lt;parameterId\&gt; \&lt;locationId\&gt; SETTING = \&lt;event time\&gt;  
+THEN <parameterId> <locationId> SETTING = <event time>  
   
  - For example, the control rule file provided in step 3 would be appended to the bottom of the &quot;Controls&quot; section as follows:  
 Rule AdapterRule1.1  
@@ -249,11 +249,11 @@ AND SIMULATION CLOCKTIME = 16:00:00
   
 THEN OUTLET OL341 SETTING = 0.2  
   
-One rule is added for each line in the control rules file (Control\_rules.xml). If rules for multiple locations exist (i.e. multiple \&lt;series\&gt; exist), the pre-fix of the control rule&#39;s number is incremented, e.g. AdapterRule1.1, AdapterRule1.2, ..., AdapterRule2.1, AdapterRule2.2, ...) in the EPA SWMM input file.  
+One rule is added for each line in the control rules file (Control_rules.xml). If rules for multiple locations exist (i.e. multiple <series> exist), the pre-fix of the control rule&#39;s number is incremented, e.g. AdapterRule1.1, AdapterRule1.2, ..., AdapterRule2.1, AdapterRule2.2, ...) in the EPA SWMM input file.  
   
 The &quot;_ **Curves** _&quot; section is updated as follows:  
   
- - A curve in the EPA SWMM model input file will be updated if its curve type is &quot;Rating&quot; and its curve name has a matching \&lt;locationID\&gt; in the XML file provided by FEWS. Other curve types (e.g. Storage) are currently not supported. - Only one curve per location (\&lt;locationID\&gt;) is supported. - Only curves existing in the EPA SWMM model input file will be updated (adding a new curve is not supported). This ensures that the user intentionally adds the curve to the model and understands its behavior before automating the procedure of updating the curve. - Curve temporal validity (e.g. the \&lt;startDate\&gt;) is not considered; therefore curves are always active. - If no rating curves are provided by FEWS, no change to the curves section of the model input file is made.  
+ - A curve in the EPA SWMM model input file will be updated if its curve type is &quot;Rating&quot; and its curve name has a matching <locationID> in the XML file provided by FEWS. Other curve types (e.g. Storage) are currently not supported. - Only one curve per location (<locationID>) is supported. - Only curves existing in the EPA SWMM model input file will be updated (adding a new curve is not supported). This ensures that the user intentionally adds the curve to the model and understands its behavior before automating the procedure of updating the curve. - Curve temporal validity (e.g. the <startDate>) is not considered; therefore curves are always active. - If no rating curves are provided by FEWS, no change to the curves section of the model input file is made.  
 For example:  
 - Before Update:   
                 [CURVES]  
@@ -326,10 +326,10 @@ Model adapter warnings and errors messages during the Pre-Adapter steps are writ
   
 Typically, model execution will be initiated by FEWS. However, to facilitate testing of the model adapter, the model may be run with the following command:  
   
-_epaswmm.exe --run\_info \&lt;path to run\_info.xml file\&gt; run_  
+_epaswmm.exe --run_info <path to run_info.xml file> run_  
   
 1. Writes a batch file for manual model runs:  
- - File Path: model/run\_model.bat  
+ - File Path: model/run_model.bat  
  - File contents (example):  
   
 C:\[...]\bin\swmm5.exe C:\[...]\model\DonRiver.inp C:\[...]\model\DonRiver.rpt  
@@ -340,7 +340,7 @@ C:\[...]\bin\swmm5.exe C:\[...]\model\DonRiver.inp C:\[...]\model\DonRiver.rpt
   
 The post-adapter can be initiated with the following command:  
   
-_epaswmm.exe --run\_info \&lt;path to run\_info.xml file\&gt; post_  
+_epaswmm.exe --run_info <path to run_info.xml file> post_  
   
 The following steps explain the behavior of the post-adapter.  
   
@@ -355,7 +355,7 @@ The following model results are written to the to NetCDF4 File Format using the 
 - Links: Date, Time, Flow CMS, Velocity m/sec, Depth m, Capacity/Setting  
 - Nodes: Date, Time, Inflow CMS, Flooding CMS, Depth m, Head m  
   
-To respect the CF 1.6 convention, the units in the EPA SWMM model output file (e.g. CMS; cubic metres per second) must be translated to a corresponding name for the NetCDF4 file (e.g. cubic\_meter\_per\_second). For flexibility, this lookup can be customized in the units lookup file (model/UDUNITS\_lookup.csv) if new unit conversions are required. All unit lookups required for the current model configuration have been provided.  
+To respect the CF 1.6 convention, the units in the EPA SWMM model output file (e.g. CMS; cubic metres per second) must be translated to a corresponding name for the NetCDF4 file (e.g. cubic_meter_per_second). For flexibility, this lookup can be customized in the units lookup file (model/UDUNITS_lookup.csv) if new unit conversions are required. All unit lookups required for the current model configuration have been provided.  
   
 The association between location in Delft-FEWS (e.g. stream gauge) and location in the EPA SWMM model (e.g. Link ID) was configured in the Delft-FEWS interface. No geographical information is currently passed to FEWS in the metadata section, assuming this information will be handled by FEWS, through the Link ID.  
   
@@ -366,13 +366,13 @@ Model adapter messages and EPA SWMM model output errors and warnings are written
  1. **Messaging and Error Handling**  
   1. **Model Adapter Messaging**  
   
-Pre- and post-adapter errors, warnings, and informational messages are written to log/pre\_adapter.log, log/run\_adapter.log and and log/post\_adapter.log, respectively, with the following format:  
+Pre- and post-adapter errors, warnings, and informational messages are written to log/pre_adapter.log, log/run_adapter.log and and log/post_adapter.log, respectively, with the following format:  
   
-\&lt;LEVEL\&gt;: External Adapter - \&lt;Message\&gt; (\&lt;TIME\&gt;)  
+<LEVEL>: External Adapter - <Message> (<TIME>)  
   
 For example:  
   
-INFO: External Adapter - No rating curve file provided in the run\_info.xml. (2020-05-13 09:01:51,501)  
+INFO: External Adapter - No rating curve file provided in the run_info.xml. (2020-05-13 09:01:51,501)  
   
 Two messaging levels are used: INFO and ERROR. If an error occurs, model execution stops after the error message is written to the log.  
   
@@ -381,28 +381,28 @@ These messages are transferred to FEWS using the run diagnostics file as describ
  1. **Run Diagnostics File**  
 When the model adapter either completes successfully or fails, a run diagnostics file is written for import by FEWS. This file includes all messages in the model adapter logs and all errors and warnings in the EPA SWMM output file.  
   
-- File path: defined by \&lt;outputDiagnosticFile\&gt; in run\_info.xml  
+- File path: defined by <outputDiagnosticFile> in run_info.xml  
 - File contents (example):  
   
-\&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?\&gt;  
+<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>  
   
-\&lt;Diag xmlns=&quot;http://www.wldelft.nl/fews/PI&quot;  
+<Diag xmlns=&quot;http://www.wldelft.nl/fews/PI&quot;  
   
 xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;  
   
-xsi:schemaLocation=&quot;http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi\_diag.xsd&quot; version=&quot;1.2&quot;\&gt;  
+xsi:schemaLocation=&quot;http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_diag.xsd&quot; version=&quot;1.2&quot;>  
   
-\&lt;line level=&quot;3&quot; description=&quot;INFO: External Adapter - ##### Running Pre-Adapter EPA-SWMM Delft-FEWS for C:\Users\pbishop\Documents\0\_WORKING\30900\_DelftFEWsPilot\epa-swmm-adaptor\tests\module\_adapter\_deploy\Don\run\_info.xml ... (2020-05-14 10:50:28,009)&quot;/\&gt;  
+<line level=&quot;3&quot; description=&quot;INFO: External Adapter - ##### Running Pre-Adapter EPA-SWMM Delft-FEWS for C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\Don\run_info.xml ... (2020-05-14 10:50:28,009)&quot;/>  
   
-\&lt;line level=&quot;3&quot; description=&quot;INFO: External Adapter - No rating curve file provided in the run\_info.xml. (2020-05-14 10:50:28,012)&quot;/\&gt;  
+<line level=&quot;3&quot; description=&quot;INFO: External Adapter - No rating curve file provided in the run_info.xml. (2020-05-14 10:50:28,012)&quot;/>  
   
-\&lt;line level=&quot;3&quot; description=&quot;INFO: External Adapter - Converted the NetCDF rainfall file to EPA SWMM .DAT format (2020-05-14 10:50:28,164)&quot;/\&gt;  
+<line level=&quot;3&quot; description=&quot;INFO: External Adapter - Converted the NetCDF rainfall file to EPA SWMM .DAT format (2020-05-14 10:50:28,164)&quot;/>  
   
-\&lt;line level=&quot;3&quot; description=&quot;INFO: External Adapter - Reading warnings and errors from: pre\_adapter.log (2020-05-14 10:50:28,167)&quot;/\&gt;  
+<line level=&quot;3&quot; description=&quot;INFO: External Adapter - Reading warnings and errors from: pre_adapter.log (2020-05-14 10:50:28,167)&quot;/>  
   
-\&lt;line level=&quot;3&quot; description=&quot;INFO: External Adapter - ##### Completed Pre-Adapter EPA-SWMM Delft-FEWS (2020-05-14 10:50:28,168)&quot;/\&gt;  
+<line level=&quot;3&quot; description=&quot;INFO: External Adapter - ##### Completed Pre-Adapter EPA-SWMM Delft-FEWS (2020-05-14 10:50:28,168)&quot;/>  
   
-\&lt;/Diag\&gt;  
+</Diag>  
   
 The message text from the model output file and the model adapter logs are transferred to the &quot;description&quot; field in the run diagnostics file, while the message level (e.g. &quot;WARNING&quot;) is mapped to the &quot;level&quot; field, using FEWS&#39;s 0-4 numeric code, as described in Table 1.  
   
@@ -412,7 +412,7 @@ _Table 1 – Mapping of messages from EPA SWMM model output and model adapter lo
 | --- | --- |  
 | **Model Output file  
  (e.g. DonRiver.rpt) **|** Model Adapter Log  
- (pre\_adapter.log and post\_adapter.log)** |  
+ (pre_adapter.log and post_adapter.log)** |  
 | **4** | - | DEBUG |  
 | **3** | - | INFO |  
 | **2** | WARNING | WARNING |  
@@ -425,11 +425,11 @@ _Table 2 – Examples of model adapter log and EPA SWMM model output messages tr
   
 | **Message** | **Message Location** | **Run Diagnostics Message** |  
 | --- | --- | --- |  
-| **INFO: External Adapter - No rating curve file provided in the run\_info.xml.** | Model Adapter Log  
- (pre\_adapter.log) | \&lt;line level=&quot;3&quot; description=&quot;INFO: External Adapter - No rating curve file provided in the run\_info.xml.&quot;/\&gt;  
+| **INFO: External Adapter - No rating curve file provided in the run_info.xml.** | Model Adapter Log  
+ (pre_adapter.log) | <line level=&quot;3&quot; description=&quot;INFO: External Adapter - No rating curve file provided in the run_info.xml.&quot;/>  
  |  
 | **WARNING 03: negative offset ignored for Link C1** | Model Output file  
- (e.g. DonRiver.rpt) | \&lt;line level=&quot;2&quot; description=&quot;WARNING 03: negative offset ignored for Link C1&quot;/\&gt;  
+ (e.g. DonRiver.rpt) | <line level=&quot;2&quot; description=&quot;WARNING 03: negative offset ignored for Link C1&quot;/>  
  |  
   
 1. **Run Time and File Size**  
@@ -458,8 +458,8 @@ The model adapter was developed to be generic to permit use with any EPA SWMM mo
   
 - The name of the external rainfall time series must be: &quot;rain.dat&quot;  
 - In EPA SWMM, rainfall time series are associated with rain gauge elements. These are defined in the &quot;Raingage&quot; section in the EPA SWMM model input file. Modification of the &quot;Raingage&quot; section is not currently supported by the model adapter.  
-- In the current FEWS setup, a rainfall time series is exported for each major subcatchment. For example, for the Don River, there are 11 (DON\_1, DON\_2, ..., DON\_11).  
-- The rain gauges in the EPA SWMM model input file should be named after the major subcatchment that they represent, e.g. DON\_11.  
+- In the current FEWS setup, a rainfall time series is exported for each major subcatchment. For example, for the Don River, there are 11 (DON_1, DON_2, ..., DON_11).  
+- The rain gauges in the EPA SWMM model input file should be named after the major subcatchment that they represent, e.g. DON_11.  
   
 [RAINGAGES]  
   
@@ -469,39 +469,39 @@ The model adapter was developed to be generic to permit use with any EPA SWMM mo
   
 ;;-------------- --------- ------ ------ ----------  
   
-DON\_1 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON\_1 MM  
+DON_1 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_1 MM  
   
-DON\_2 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON\_2 MM  
+DON_2 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_2 MM  
   
-DON\_3 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON\_3 MM  
+DON_3 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_3 MM  
   
-DON\_4 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON\_4 MM  
+DON_4 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_4 MM  
   
-DON\_5 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON\_5 MM  
+DON_5 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_5 MM  
   
-DON\_6 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON\_6 MM  
+DON_6 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_6 MM  
   
-DON\_7 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON\_7 MM  
+DON_7 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_7 MM  
   
-DON\_8 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON\_8 MM  
+DON_8 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_8 MM  
   
-DON\_9 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON\_9 MM  
+DON_9 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_9 MM  
   
-DON\_10 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON\_10 MM  
+DON_10 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_10 MM  
   
-DON\_11 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON\_11 MM  
+DON_11 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_11 MM  
   
-- In the above example, the rain gauge DON\_6 will be assigned all rainfall amounts in the rainfall time series file (rain.dat) that have the identifier &quot;DON\_6&quot; at the beginning of the line:  
+- In the above example, the rain gauge DON_6 will be assigned all rainfall amounts in the rainfall time series file (rain.dat) that have the identifier &quot;DON_6&quot; at the beginning of the line:  
   
 ;Rainfall(mm)  
   
-DON\_6 2020 3 29 17 0 0.0  
+DON_6 2020 3 29 17 0 0.0  
   
-DON\_6 2020 3 29 18 0 0.0  
+DON_6 2020 3 29 18 0 0.0  
   
-DON\_6 2020 3 29 19 0 0.0  
+DON_6 2020 3 29 19 0 0.0  
   
-- Each subcatchment must be associated with its corresponding rain gauge, to represent its major subcatchment. For example, subcatchment S001 is in major subcatchment DON\_6, and so is defined as follows in the &quot;Subcatchments&quot; section  
+- Each subcatchment must be associated with its corresponding rain gauge, to represent its major subcatchment. For example, subcatchment S001 is in major subcatchment DON_6, and so is defined as follows in the &quot;Subcatchments&quot; section  
   
 [SUBCATCHMENTS]  
   
@@ -511,7 +511,7 @@ DON\_6 2020 3 29 19 0 0.0
   
 ;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- --------  
   
-S001 DON\_6 J001 40.29 11.42 3230.643 5.6 0  
+S001 DON_6 J001 40.29 11.42 3230.643 5.6 0  
   
 - The rain type (e.g. intensity) and interval (e.g. 1:00) must correspond to the type and interval of rainfall exported from FEWS.  
 - If FEWS is to be used to update the &quot;Controls&quot; section, an existing control rule must be defined, for example;  
@@ -544,7 +544,7 @@ NODES ALL
 LINKS ALL  
   
 - Other than the sections described in this document, no other parameters in the model input file are modified by the model adapter. Ensure all other parameters are configured as required in the model input filesetup as required, such as the hydrologic parameters and storage node water levels.  
-- As described in Section 4.1 step 2, unit look-ups between EPA SWMM unit names and the NetCDF4-compliant unit names (Unidata, 2020) must be defined in the model/UDUNITS\_lookup.csv file. For the current model configuration, all required units have been provided.  
+- As described in Section 4.1 step 2, unit look-ups between EPA SWMM unit names and the NetCDF4-compliant unit names (Unidata, 2020) must be defined in the model/UDUNITS_lookup.csv file. For the current model configuration, all required units have been provided.  
   
 1. **Potential Additions**  
   
@@ -565,6 +565,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDk5NTA3MDEsLTE0NzE3MTQwMTAsMT
-AxNTc2MTEwMF19
+eyJoaXN0b3J5IjpbMTY3MTE1ODc5NCwtMTQ3MTcxNDAxMCwxMD
+E1NzYxMTAwXX0=
 -->
