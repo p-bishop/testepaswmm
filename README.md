@@ -31,7 +31,7 @@ Folder and file contents are specified below, and the workflow is described in t
 - Run Information (run_info.xml) in FEWS XML format  
 - **dump** : zipped folders of the model folder when the model run fails  
 - **input** : model inputs, exported by FEWS:  
-  - Rainfall Timeseries (e.g. rain.nc) in FEWS NetCDF Format  
+  - Rainfall Timeseries (e.g. rain.nc ) in FEWS NetCDF Format  
   - Rating Curves (e.g. dam_rating_curve.xml) in FEWS XML format (optional)  
   - Control Rules (e.g. control_rules.xml) in FEWS XML format (optional)  
 - **inputStates** : placeholder directory for potential handling of hotstarts  
@@ -364,10 +364,11 @@ The association between location in Delft-FEWS (e.g. stream gauge) and location 
   
 Model adapter messages and EPA SWMM model output errors and warnings are written to the run diagnostics log, as described in section 4.4 (Messaging and Error Handling).  
   
- 1. **Messaging and Error Handling**  
-  1. **Model Adapter Messaging**  
+## **4. Messaging and Error Handling**  
   
-Pre- and post-adapter errors, warnings, and informational messages are written to log/pre_adapter.log, log/run_adapter.log and and log/post_adapter.log, respectively, with the following format:  
+  **1. Model Adapter Messaging**  
+  
+Pre- and post-adapter errors, warnings, and informational messages are written to log/pre_adapter.log, log/run_adapter.log and log/post_adapter.log, respectively, with the following format:  
   
 ```<LEVEL>: External Adapter - <Message> (<TIME>)```  
   
@@ -379,7 +380,7 @@ Two messaging levels are used: INFO and ERROR. If an error occurs, model executi
   
 These messages are transferred to FEWS using the run diagnostics file as described in the following section.  
   
- 1. **Run Diagnostics File**  
+ **2. Run Diagnostics File**  
 When the model adapter either completes successfully or fails, a run diagnostics file is written for import by FEWS. This file includes all messages in the model adapter logs and all errors and warnings in the EPA SWMM output file.  
   
 - File path: defined by ```<outputDiagnosticFile>``` in ```run_info.xml ``` 
@@ -502,6 +503,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NzU4MTg1NywtMTAwODMwNDIzMCwxOT
-czOTI4ODk3XX0=
+eyJoaXN0b3J5IjpbLTQ2NDk3NzAwLC0xMDA4MzA0MjMwLDE5Nz
+M5Mjg4OTddfQ==
 -->
