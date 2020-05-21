@@ -251,10 +251,10 @@ The &quot; **Curves**&quot; section is updated as follows:
  - A curve in the EPA SWMM model input file will be updated if its curve type is &quot;Rating&quot; and its curve name has a matching <locationID> in the XML file provided by FEWS. Other curve types (e.g. Storage) are currently not supported. - Only one curve per location (<locationID>) is supported. - Only curves existing in the EPA SWMM model input file will be updated (adding a new curve is not supported). This ensures that the user intentionally adds the curve to the model and understands its behavior before automating the procedure of updating the curve. - Curve temporal validity (e.g. the <startDate>) is not considered; therefore curves are always active. - If no rating curves are provided by FEWS, no change to the curves section of the model input file is made.  
 For example:  
 - Before Update:   
+
 | before | text | after |
 | --- | --- | --- |
-
-                [CURVES]  
+|  [CURVES] 
   ;;Name           Type       X-Value    Y-Value     
                 ;;-------------- ---------- ---------- ----------  
                 ;  
@@ -262,7 +262,7 @@ For example:
                 ;Rating Curve  
                 LocationX     Rating      2        0  
                 LocationX                      4         5  
-                LocationX                      10     10  
+                LocationX                      10     10  |
 - Sample of Rating Curve XML file  
                 <ratingCurve>  
                 <header>  
@@ -563,5 +563,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2OTExODI2Niw1NTg5MDgxMTBdfQ==
+eyJoaXN0b3J5IjpbLTE0Njc1NDMwMTgsNTU4OTA4MTEwXX0=
 -->
