@@ -223,7 +223,7 @@ The &quot; **Controls**&quot; section is updated as follows:
   
 - Other types of action clauses (e.g. ```THEN PUMP STATUS = ON```) are not currently supported.  
   
-- One rule is added for each line in the control rules file (```Control_rules.xml```). If rules for multiple locations exist (i.e. multiple \<series\> exist), the pre-fix of the control rule&#39;s number is incremented, e.g. ```AdapterRule1.1, AdapterRule1.2, ..., AdapterRule2.1, AdapterRule2.2, ...```) in the EPA SWMM input file.  
+- One rule is added for each line in the control rules file (```Control_rules.xml```). If rules for multiple locations exist (i.e. multiple ```<series>``` exist), the pre-fix of the control rule&#39;s number is incremented, e.g. ```AdapterRule1.1, AdapterRule1.2, ..., AdapterRule2.1, AdapterRule2.2, ...```) in the EPA SWMM input file.  
 	- The format of each control rule added is as follows:  
 ```
 Rule AdapterRule<[RULE#>  
@@ -253,7 +253,7 @@ The &quot; **Curves**&quot; section is updated as follows:
  - If no rating curves are provided by FEWS, no change to the curves section of the model input file is made.  
 
 For example:  
-- Before Update:   
+- Before update of **Curves** section:   
 ```
 [CURVES] 
 ;;Name           Type       X-Value    Y-Value     
@@ -287,7 +287,8 @@ LocationX                     10        10
                 </table>  
                 </ratingCurve>  
 ```
- - After Update:   
+
+- After update of **Curves** section:   
 ```
 ;;Name           Type       X-Value    Y-Value     
 ;;-------------- ---------- ---------- ----------  
@@ -334,7 +335,7 @@ Typically, model execution will be initiated by FEWS. However, to facilitate tes
 	epaswmm.exe --run_info <path to run_info.xml file> run_  
   
 1. Writes a batch file for manual model runs:  
- - File Path: model/run_model.bat  
+ - File Path: ```model/run_model.bat```  
  - File contents (example):  
   
 ```C:\[...]\bin\swmm5.exe C:\[...]\model\DonRiver.inp C:\[...]\model\DonRiver.rpt ```
@@ -506,6 +507,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzc1OTk3NTksLTYwMzg0MTI4NywtMT
+eyJoaXN0b3J5IjpbLTIwMDEwOTM2OTUsLTYwMzg0MTI4NywtMT
 Y3ODk0NzgxOV19
 -->
