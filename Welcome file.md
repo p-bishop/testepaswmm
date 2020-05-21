@@ -509,16 +509,16 @@ LINKS ALL
 
 **REFERENCES**  
   
-Deltares. n.d. _Python model adapters within FEWS__._ Accessed March 26, 2020.https://publicwiki.deltares.nl/display/FEWSDOC/  
+Deltares. n.d. Python model adapters within FEWS. Accessed March 26, 2020.https://publicwiki.deltares.nl/display/FEWSDOC/  
  Python+model+adapters+within+FEWS  
   
 Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accessed May 15, 2020. [https://www.unidata.ucar.edu/software/udunits/](https://www.unidata.ucar.edu/software/udunits/)  
   
-Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
+Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyODkxNDUyLDg4NjM5MDM5NiwxMDkyNz
-M0NzY5LC0xMjkxNzY1NTE0LC0xODMyMTQ3NzM2LC02MDM4NDEy
-ODcsLTcyMTQzMTYyNiwtMTE4NDU3ODk4Miw2Nzk5OTUwNDIsLT
-E0NTQzODU2NTAsMTY3MTE1ODc5NCwtMTQ3MTcxNDAxMCwxMTEw
-NjQxMTM0LDIwMTY3MTg0MTBdfQ==
+eyJoaXN0b3J5IjpbLTE5NTg4NzU5NzYsODg2MzkwMzk2LDEwOT
+I3MzQ3NjksLTEyOTE3NjU1MTQsLTE4MzIxNDc3MzYsLTYwMzg0
+MTI4NywtNzIxNDMxNjI2LC0xMTg0NTc4OTgyLDY3OTk5NTA0Mi
+wtMTQ1NDM4NTY1MCwxNjcxMTU4Nzk0LC0xNDcxNzE0MDEwLDEx
+MTA2NDExMzQsMjAxNjcxODQxMF19
 -->
