@@ -194,11 +194,10 @@ The &quot;**Options**&quot; section is updated as follows:
   
 | **Parameter i n EPA SWMM model input file** | **FEWS parameter in the run information file** | **Result in EPA SWMM model input file** |  
 | --- | --- | --- |  
-| START_DATE | <startDateTime date=&quot;2020-04-23&quot; time=&quot;15:00:00&quot;/>  
- | START DATE 04/23/2020 |  
-| START_TIME | START_TIME 15:00:00 |  
-| REPORT_START_DATE | REPORT_START_DATE 04/23/2020 |  
-| REPORT_START_TIME | REPORT_START_TIME 15:00:00 |  
+| START_DATE | <startDateTime date=&quot;2020-04-23&quot;time=&quot;15:00:00&quot;/>  
+ | START DATE 04/23/2020 |  START_TIME | START_TIME 15:00:00 |  
+| REPORT_START_DATE | |REPORT_START_DATE 04/23/2020 |  
+| REPORT_START_TIME | | REPORT_START_TIME 15:00:00 |  
 | END_DATE | \<endDateTime date=&quot;2020-04-29&quot; time=&quot;15:00:00&quot;/> | END_DATE 04/29/2020 |  
 | **END_TIME** | END_TIME 15:00:00 |  
   
@@ -565,7 +564,7 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUyOTIwNDU2LC0xNDU0Mzg1NjUwLDE2Nz
+eyJoaXN0b3J5IjpbNjc5OTk1MDQyLC0xNDU0Mzg1NjUwLDE2Nz
 ExNTg3OTQsLTE0NzE3MTQwMTAsMTExMDY0MTEzNCwyMDE2NzE4
 NDEwXX0=
 -->
