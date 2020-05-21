@@ -198,7 +198,7 @@ The &quot;**Options**&quot; section is updated as follows:
 ```START_TIME``` | ""  |```START_TIME 15:00:00``` |  
 | ```REPORT_START_DATE``` |""|```REPORT_START_DATE 04/23/2020``` |  
 | ```REPORT_START_TIME``` |""| ```REPORT_START_TIME 15:00:00``` |  
-| ```END_DATE``` | ```<endDateTime date="2020-04-29" time=&quot;15:00:00&quot;/>``` | ```END_DATE = 04/29/2020``` |  
+| ```END_DATE``` | ```<endDateTime date="2020-04-29" time="15:00:00"/>``` | ```END_DATE = 04/29/2020``` |  
 | ```END_TIME``` | ""|```END_TIME 15:00:00``` |  
 
 
@@ -214,13 +214,12 @@ The &quot; **Controls**&quot; section is updated as follows:
   
   
  - The condition clause of the control rule is built from the <event date> and <event time> variables of the control rules file (Control_rules.xml), with the following format:  
-IF SIMULATION DATE = \<event date\>  
-  
-AND SIMULATION CLOCKTIME = \<event time\>  
+```IF SIMULATION DATE = <event date>``` 
+```AND SIMULATION CLOCKTIME = <event time>```  
   
  - Only time-based condition clauses are supported. Other condition clauses (e.g. IF NODE D123 \> 1) are not supported.- The action clause of the control rule is built from the \<locationID\>, \<parameterID\> and <event value>, with the following format:  
   
-THEN \<parameterId\> \<locationId\> SETTING = \<event value\>  
+```THEN <parameterId> <locationId> SETTING = <event value> ``` 
   
 - Other types of action clauses (e.g. THEN PUMP STATUS = ON) are not currently supported.  
   
@@ -555,5 +554,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyMDAwNzMyOCwtMTIzODcyMDA5NV19
+eyJoaXN0b3J5IjpbLTcyMTQzMTYyNiwtMTIzODcyMDA5NV19
 -->
