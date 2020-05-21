@@ -434,38 +434,32 @@ The model adapter was developed to be generic to permit use with any EPA SWMM mo
 - In the current FEWS setup, a rainfall time series is exported for each major subcatchment. For example, for the Don River, there are 11 (DON_1, DON_2, ..., DON_11).  
 - The rain gauges in the EPA SWMM model input file should be named after the major subcatchment that they represent, e.g. DON_11.  
   
+```
 [RAINGAGES]  
 ;; Rain Time Snow Data  
 ;;Name Type Intrvl Catch Source  
 ;;-------------- --------- ------ ------ ----------  
-DON_1 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_1 MM  
-DON_2 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_2 MM  
-DON_3 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_3 MM  
-DON_4 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_4 MM  
-  
-DON_5 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_5 MM  
-  
-DON_6 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_6 MM  
-  
-DON_7 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_7 MM  
-  
-DON_8 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_8 MM  
-  
-DON_9 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_9 MM  
-  
-DON_10 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_10 MM  
-  
-DON_11 INTENSITY 1:00 1 FILE &quot;rain.dat&quot; DON_11 MM  
-  
+DON_1 INTENSITY 1:00 1 FILE "rain.dat" DON_1 MM  
+DON_2 INTENSITY 1:00 1 FILE "rain.dat" DON_2 MM  
+DON_3 INTENSITY 1:00 1 FILE "rain.dat" DON_3 MM  
+DON_4 INTENSITY 1:00 1 FILE "rain.dat" DON_4 MM  
+DON_5 INTENSITY 1:00 1 FILE "rain.dat" DON_5 MM  
+DON_6 INTENSITY 1:00 1 FILE "rain.dat" DON_6 MM  
+DON_7 INTENSITY 1:00 1 FILE "rain.dat" DON_7 MM  
+DON_8 INTENSITY 1:00 1 FILE "rain.dat" DON_8 MM   
+DON_9 INTENSITY 1:00 1 FILE "rain.dat" DON_9 MM  
+DON_10 INTENSITY 1:00 1 FILE "rain.dat" DON_10 MM  
+DON_11 INTENSITY 1:00 1 FILE "rain.dat" DON_11 MM  
+```
+
 - In the above example, the rain gauge DON_6 will be assigned all rainfall amounts in the rainfall time series file (rain.dat) that have the identifier &quot;DON_6&quot; at the beginning of the line:  
-  
+ 
+```
 ;Rainfall(mm)  
-  
 DON_6 2020 3 29 17 0 0.0  
-  
 DON_6 2020 3 29 18 0 0.0  
-  
 DON_6 2020 3 29 19 0 0.0  
+```
   
 - Each subcatchment must be associated with its corresponding rain gauge, to represent its major subcatchment. For example, subcatchment S001 is in major subcatchment DON_6, and so is defined as follows in the &quot;Subcatchments&quot; section  
   
@@ -531,6 +525,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDE5NTY4MTksLTcyMTQzMTYyNiwtMT
-IzODcyMDA5NV19
+eyJoaXN0b3J5IjpbOTM4ODI5NjI3LC03MjE0MzE2MjYsLTEyMz
+g3MjAwOTVdfQ==
 -->
