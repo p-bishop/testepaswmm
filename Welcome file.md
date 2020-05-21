@@ -207,14 +207,16 @@ The &quot; **Controls**&quot; section is updated as follows:
  - If no control rules were provided by FEWS, no change to the &quot;Controls&quot; section of the model input file is made. - If control rules were provided by FEWS but no &quot;Controls&quot; section exists in the model input file, an error is provided prompting the user to setup control rules in the model, and the adapter stops execution. - If control rules were provided by FEWS and a &quot;Controls&quot; section exists in the EPA SWMM input file, the FEWS control rules will be written to the bottom of the control rule section. Existing rules are not modified. - A control rule in EPA SWMM consists of a condition clause and an action clause, for example:  
  
  
-| Condition clause | IF SIMULATION DATE = 04/23/2020AND SIMULATION CLOCKTIME = 15:00:00 |  
-| --- | --- |  
+| Clause Type | Example |
+| :-- |  :-- |  
+| Condition clause | IF SIMULATION DATE = 04/23/2020 <br>AND SIMULATION CLOCKTIME = 15:00:00 |  
 | Action clause | THEN OUTLET OL341 SETTING = 0.5 |  
   
- - The condition clause of the control rule is built from the <event date> and <event time> variables of the control rules file (Control_rules.xml), with the following format:  
-IF SIMULATION DATE = <event date>  
   
-AND SIMULATION CLOCKTIME = <event time>  
+ - The condition clause of the control rule is built from the <event date> and <event time> variables of the control rules file (Control_rules.xml), with the following format:  
+IF SIMULATION DATE = < event date >  
+  
+AND SIMULATION CLOCKTIME = < vent time>  
   
  - Only time-based condition clauses are supported. Other condition clauses (e.g. IF NODE D123 > 1) are not supported.- The action clause of the control rule is built from the <locationID>, <parameterID> and <event value>, with the following format:  
   
@@ -567,7 +569,7 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc5MjExMzc2LC0xMTg0NTc4OTgyLDY3OT
-k5NTA0MiwtMTQ1NDM4NTY1MCwxNjcxMTU4Nzk0LC0xNDcxNzE0
-MDEwLDExMTA2NDExMzQsMjAxNjcxODQxMF19
+eyJoaXN0b3J5IjpbOTAyNTMyNjIsLTExODQ1Nzg5ODIsNjc5OT
+k1MDQyLC0xNDU0Mzg1NjUwLDE2NzExNTg3OTQsLTE0NzE3MTQw
+MTAsMTExMDY0MTEzNCwyMDE2NzE4NDEwXX0=
 -->
