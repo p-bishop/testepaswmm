@@ -316,7 +316,7 @@ DON_11 2013 7 8 6 25 0
 DON_11 2013 7 9 16 30 0  
 DON_11 2013 7 9 16 35 0  
 DON_11 2013 7 9 16 40 0  
-  
+```
   
 As described in Section 6 (Model Set-up Considerations), the rainfall format (intensity vs. depth) must be configured in the model input file to align with the format exported by FEWS.  
   
@@ -328,13 +328,13 @@ Model adapter warnings and errors messages during the Pre-Adapter steps are writ
   
 Typically, model execution will be initiated by FEWS. However, to facilitate testing of the model adapter, the model may be run with the following command:  
   
-_epaswmm.exe --run_info <path to run_info.xml file> run_  
+	epaswmm.exe --run_info <path to run_info.xml file> run_  
   
 1. Writes a batch file for manual model runs:  
  - File Path: model/run_model.bat  
  - File contents (example):  
   
-C:\[...]\bin\swmm5.exe C:\[...]\model\DonRiver.inp C:\[...]\model\DonRiver.rpt  
+```C:\[...]\bin\swmm5.exe C:\[...]\model\DonRiver.inp C:\[...]\model\DonRiver.rpt ```
   
 1. Executes the model and write to the diagnostics file . Note that warnings and errors in the EPA SWMM model output file will be read by the post-adapter.  
   
@@ -342,7 +342,7 @@ C:\[...]\bin\swmm5.exe C:\[...]\model\DonRiver.inp C:\[...]\model\DonRiver.rpt
   
 The post-adapter can be initiated with the following command:  
   
-_epaswmm.exe --run_info <path to run_info.xml file> post_  
+	epaswmm.exe --run_info <path to run_info.xml file> post_  
   
 The following steps explain the behavior of the post-adapter.  
   
@@ -370,7 +370,7 @@ Model adapter messages and EPA SWMM model output errors and warnings are written
   
 Pre- and post-adapter errors, warnings, and informational messages are written to log/pre_adapter.log, log/run_adapter.log and and log/post_adapter.log, respectively, with the following format:  
   
-<LEVEL>: External Adapter - <Message> (<TIME>)  
+\<LEVEL\>: External Adapter - \<Message\> (\<TIME\>)  
   
 For example:  
   
@@ -383,7 +383,7 @@ These messages are transferred to FEWS using the run diagnostics file as describ
  1. **Run Diagnostics File**  
 When the model adapter either completes successfully or fails, a run diagnostics file is written for import by FEWS. This file includes all messages in the model adapter logs and all errors and warnings in the EPA SWMM output file.  
   
-- File path: defined by <outputDiagnosticFile> in run_info.xml  
+- File path: defined by \<outputDiagnosticFile\> in run_info.xml  
 - File contents (example):  
   
 <?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>  
@@ -567,7 +567,7 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4OTAxNjM1NywtMTE4NDU3ODk4Miw2Nz
-k5OTUwNDIsLTE0NTQzODU2NTAsMTY3MTE1ODc5NCwtMTQ3MTcx
-NDAxMCwxMTEwNjQxMTM0LDIwMTY3MTg0MTBdfQ==
+eyJoaXN0b3J5IjpbLTE4OTAxMTAxMjUsLTExODQ1Nzg5ODIsNj
+c5OTk1MDQyLC0xNDU0Mzg1NjUwLDE2NzExNTg3OTQsLTE0NzE3
+MTQwMTAsMTExMDY0MTEzNCwyMDE2NzE4NDEwXX0=
 -->
