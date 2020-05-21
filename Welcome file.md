@@ -217,7 +217,7 @@ The &quot; **Controls**&quot; section is updated as follows:
 ```IF SIMULATION DATE = <event date>``` 
 ```AND SIMULATION CLOCKTIME = <event time>```  
   
- - Only time-based condition clauses are supported. Other condition clauses (e.g. ```IF NODE D123 > 1```) are not supported.- The action clause of the control rule is built from the ```<locationID>```, ```<parameterID>``` and ```<event value>```, with the following format:  
+ - Only time-based condition clauses are supported. Other condition clauses (e.g. ```IF NODE D123 \> 1```) are not supported.- The action clause of the control rule is built from the \```<locationID\>, \>```, ```<parameterID\>``` and ```<event value>```, with the following format:  
   
 ```THEN <parameterId> <locationId> SETTING = <event value> ``` 
   
@@ -386,7 +386,7 @@ These messages are transferred to FEWS using the run diagnostics file as describ
  1. **Run Diagnostics File**  
 When the model adapter either completes successfully or fails, a run diagnostics file is written for import by FEWS. This file includes all messages in the model adapter logs and all errors and warnings in the EPA SWMM output file.  
   
-- File path: defined by ```<outputDiagnosticFile>``` in ```run_info.xml``` 
+- File path: defined by \```<outputDiagnosticFile\>``` in ```run_info.xml ``` 
 - File contents (example):  
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -506,7 +506,7 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNDk2NzEyNywtNzIxNDMxNjI2LC0xMT
+eyJoaXN0b3J5IjpbLTYwMzg0MTI4NywtNzIxNDMxNjI2LC0xMT
 g0NTc4OTgyLDY3OTk5NTA0MiwtMTQ1NDM4NTY1MCwxNjcxMTU4
 Nzk0LC0xNDcxNzE0MDEwLDExMTA2NDExMzQsMjAxNjcxODQxMF
 19
