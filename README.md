@@ -16,7 +16,7 @@ From git
   
 The external model adapter relies on a consistent directory structure, as proposed by Deltares, and shown in Figure 1. The example shows the Don model, however, other models could be added to this directory using the same directory structure.  
   
-  ![EPA SWMM External Model Adaptor - Directory structure](https://github.com/p-bishop/testepaswmm/tree/master/images/001.JPG)
+  ![EPA SWMM External Model Adaptor - Directory structure](images/001.JPG)
   
 _Figure 1 - EPA SWMM External Model Adaptor - Directory structure_  
   
@@ -504,5 +504,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM3NDc2MzE5XX0=
+eyJoaXN0b3J5IjpbMTA5MjczNDc2OSwzMzc0NzYzMTldfQ==
 -->
