@@ -137,9 +137,27 @@ FEWS can export time-dependent control rules in XML format. The model adapter do
 - File path: defined by <inputTimeSeriesFile> in run_info.xml  
 - File Name: Control_rules.xml  
 - File Contents (example):  
-  
-                <?xml version="1.0" encoding="UTF-8"?>  
- <TimeSeries xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_timeseries.xsd" version="1.5"> <timeZone>-5.0</timeZone> <series> <header> <type>accumulative</type> <locationId>OL341</locationId> <parameterId>OUTLET</parameterId> <timeStep unit="second" multiplier="3600"/> <startDate date="2020-04-23" time="15:00:00"/> <endDate date="2020-04-29" time="15:00:00"/> <missVal>NaN</missVal> <stationName>G Ross Dam</stationName> <units>m</units> </header> <event date="2020-04-23" time="15:00:00" value="0.5" flag="8"/> <event date="2020-04-23" time="16:00:00" value="0.2" flag="8"/> </series> </TimeSeries>  
+
+				<?xml version="1.0" encoding="UTF-8"?>
+				<TimeSeries xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_timeseries.xsd" version="1.5">
+
+				<timeZone>-5.0</timeZone>
+				<series>
+				<header>
+					<type>accumulative</type>
+					<locationId>OL341</locationId>
+					<parameterId>OUTLET</parameterId>
+					<timeStep unit="second" multiplier="3600"/>
+					<startDate date="2020-04-23" time="15:00:00"/>
+					<endDate date="2020-04-29" time="15:00:00"/>
+					<missVal>NaN</missVal>
+					<stationName>G Ross Dam</stationName>
+					<units>m</units>
+				</header>
+				<event date="2020-04-23" time="15:00:00" value="0.5" flag="8"/>
+				<event date="2020-04-23" time="16:00:00" value="0.2" flag="8"/>
+				</series>
+				</TimeSeries> 
   
 Additional information on how this information is written to control rules in the model input file is included in step 5.  
   
@@ -546,6 +564,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzMzQwMzY2OCwtMTQ3MTcxNDAxMCwxMD
-E1NzYxMTAwXX0=
+eyJoaXN0b3J5IjpbNTM1ODk3MDUyLC0xNDcxNzE0MDEwLDEwMT
+U3NjExMDBdfQ==
 -->
