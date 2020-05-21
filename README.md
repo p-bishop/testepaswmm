@@ -429,7 +429,7 @@ The model adapter was developed to be generic to permit use with any EPA SWMM mo
   
 - External rainfall time series must be used; the adapter does not support models that have the hyedrographs stored within the model input file itself.  
   
-- The name of the external rainfall time series must be: &quot;rain.dat&quot;  
+- The name of the external rainfall time series must be: ```r  
 - In EPA SWMM, rainfall time series are associated with rain gauge elements. These are defined in the &quot;Raingage&quot; section in the EPA SWMM model input file. Modification of the &quot;Raingage&quot; section is not currently supported by the model adapter.  
 - In the current FEWS setup, a rainfall time series is exported for each major subcatchment. For example, for the Don River, there are 11 (DON_1, DON_2, ..., DON_11).  
 - The rain gauges in the EPA SWMM model input file should be named after the major subcatchment that they represent, e.g. DON_11.  
@@ -462,60 +462,41 @@ DON_6 2020 3 29 19 0 0.0
 ```
   
 - Each subcatchment must be associated with its corresponding rain gauge, to represent its major subcatchment. For example, subcatchment S001 is in major subcatchment DON_6, and so is defined as follows in the &quot;Subcatchments&quot; section  
-  
+ 
+```
 [SUBCATCHMENTS]  
-  
 ;; Total Pcnt. Pcnt. Curb Snow  
-  
 ;;Name Raingage Outlet Area Imperv Width Slope Length Pack  
-  
-;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- --------  
-  
+;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- -------- 
 S001 DON_6 J001 40.29 11.42 3230.643 5.6 0  
-  
+```
 - The rain type (e.g. intensity) and interval (e.g. 1:00) must correspond to the type and interval of rainfall exported from FEWS.  
 - If FEWS is to be used to update the &quot;Controls&quot; section, an existing control rule must be defined, for example;  
   
-[CONTROLS]  
-  
+```[CONTROLS]  
 Rule GatesClosed  
-  
 IF SIMULATION TIME = 00:00:00  
-  
-THEN OUTLET OL341 SETTING = 0  
-  
+THEN OUTLET OL341 SETTING = 0
+```  
+
+
 - If FEWS is to be used to update the &quot;Curves&quot; section, an existing curve must exist in the EPA SWMM input file, with type &quot;Rating&quot;. Updating &quot;Storage&quot; curves is not currently supported.  
 - Nodes and links must set to &quot;ALL&quot; in the &quot;Report:&quot; section:  
-  
-[REPORT]  
-  
+ 
+ ```[REPORT] 
 ;;Reporting Options  
-  
 INPUT YES  
-  
 CONTROLS YES  
-  
 AVERAGES YES  
-  
 SUBCATCHMENTS ALL  
-  
 NODES ALL  
-  
 LINKS ALL  
-  
+```
+
 - Other than the sections described in this document, no other parameters in the model input file are modified by the model adapter. Ensure all other parameters are configured as required in the model input filesetup as required, such as the hydrologic parameters and storage node water levels.  
 - As described in Section 4.1 step 2, unit look-ups between EPA SWMM unit names and the NetCDF4-compliant unit names (Unidata, 2020) must be defined in the model/UDUNITS_lookup.csv file. For the current model configuration, all required units have been provided.  
   
-1. **Potential Additions**  
-  
-The first phase of the external model adapter workflow is limited to the Don River hydrology model, and considers only rainfall, control rules, and rating curves as inputs, with no hotstart capabilities. The purpose of this is to focus on building a robust framework, and to gain confidence in the current model adapter to meet project&#39;s objectives. Possible future additions include: representation of dam operations, use of a model hot start file, the configuration of additional watersheds, and the updating of additional parameters (e.g. hydrologic, starting water levels).  
-  
-The inclusion of a hot start would improve model run time. We would like to emphasize that the Don River hydrology model was built as an event-based model and does not include evapotranspiration. Consequently, the ability to represent antecedent conditions is limited. Nonetheless, there is the potential to use hot starts. For example, Delft-FEWS could be configured to run daily with historic (e.g. previous 5 days) observed rain data, creating a hotstart file to be used by the other scheduled runs.  
-  
-The workflow in this memorandum is intended to be flexible as it allows for the configuration of additional watersheds. Each watershed would require a separate template input file, reflecting the EPA SWMM model of the watershed. Additional configuration within the Delft-FEWS interface would also be required.  
-  
-Finally, it is noted that the model simulation results are in the order of 50MB per simulation day in the ASCII output format. Reading the simulation results from a binary file format could be implemented, which would inevitably reduce EPA SWMM model output file size and potentially the model adaptor run time to convert results into FEWS NetCDF format.  
-  
+
 **REFERENCES**  
   
 Deltares. n.d. _Python model adapters within FEWS__._ Accessed March 26, 2020.https://publicwiki.deltares.nl/display/FEWSDOC/  
@@ -525,6 +506,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM4ODI5NjI3LC03MjE0MzE2MjYsLTEyMz
-g3MjAwOTVdfQ==
+eyJoaXN0b3J5IjpbLTEyNDQzNzg0OTAsLTcyMTQzMTYyNiwtMT
+IzODcyMDA5NV19
 -->
