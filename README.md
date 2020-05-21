@@ -135,27 +135,28 @@ FEWS can export time-dependent control rules in XML format. The model adapter do
 - File Name: Control_rules.xml  
 - File Contents (example):  
 
-				<?xml version="1.0" encoding="UTF-8"?>
-				<TimeSeries xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_timeseries.xsd" version="1.5">
-`
-				<timeZone>-5.0</timeZone>
-				<series>
-				<header>
-					<type>accumulative</type>
-					<locationId>OL341</locationId>
-					<parameterId>OUTLET</parameterId>
-					<timeStep unit="second" multiplier="3600"/>
-					<startDate date="2020-04-23" time="15:00:00"/>
-					<endDate date="2020-04-29" time="15:00:00"/>
-					<missVal>NaN</missVal>
-					<stationName>G Ross Dam</stationName>
-					<units>m</units>
-				</header>
-				<event date="2020-04-23" time="15:00:00" value="0.5" flag="8"/>
-				<event date="2020-04-23" time="16:00:00" value="0.2" flag="8"/>
-				</series>
-				</TimeSeries> 
-  
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeSeries xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_timeseries.xsd" version="1.5">
+
+<timeZone>-5.0</timeZone>
+<series>
+<header>
+	<type>accumulative</type>
+	<locationId>OL341</locationId>
+	<parameterId>OUTLET</parameterId>
+	<timeStep unit="second" multiplier="3600"/>
+	<startDate date="2020-04-23" time="15:00:00"/>
+	<endDate date="2020-04-29" time="15:00:00"/>
+	<missVal>NaN</missVal>
+	<stationName>G Ross Dam</stationName>
+	<units>m</units>
+</header>
+<event date="2020-04-23" time="15:00:00" value="0.5" flag="8"/>
+<event date="2020-04-23" time="16:00:00" value="0.2" flag="8"/>
+</series>
+</TimeSeries> 
+  ```
 Additional information on how this information is written to control rules in the model input file is included in step 5.  
   
 The <parameterID> refers to the EPA SWMM object to which the rule will apply. As such, this parameter should be one of the following EPA SWMM object types: pump, orifice, weir or outlet.  
@@ -166,7 +167,7 @@ EPA SWMM control rules may also use a &quot;priority&quot; level at the end of t
   
 Delft-FEWS exports a rainfall time series file in NetCDF format. The station_id and station_names (e.g. DON_1) in this file correspond to the rain gage name in the &quot;Raingages&quot; section of the EPA SWMM input file. The station_name field is ignored by the model adapter as this is for display purposes within the FEWS interface.  
   
-- File path: defined by <inputNetcdfFile> in the run_info.xml file  
+- File path: defined by ```<inputNetcdfFile>``` in the ```run_info.xml``` file  
 - File contents (example, showing a sample of rowsfirst and last rows):  
   
 _Figure 3 - Example rainfall time series file contents_  
@@ -175,7 +176,7 @@ _Figure 3 - Example rainfall time series file contents_
   
 The EPA SWMM input file contains some sections with constant values (e.g. subcatchment parameters). Other sections contain data that needs to be updated for the model run. This step explains how these sections are updated.  
   
-- File path: defined by the swmm_input_file in the <properties> section of the run_info.xml file. (e.g. Don/model/DonRiver_template.inp)  
+- File path: defined by the swmm_input_file in the ```<properties>``` section of the ```run_info.xml``` file. (e.g. ```Don/model/DonRiver_template.inp```)  
   
 The model adapter reads in EPA SWMM Input file, and updates:  
   
@@ -502,6 +503,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk2Mjk2NzcxLC02MDM4NDEyODcsLTE2Nz
-g5NDc4MTldfQ==
+eyJoaXN0b3J5IjpbLTk5Nzk2NTM4MSwtNjAzODQxMjg3LC0xNj
+c4OTQ3ODE5XX0=
 -->
