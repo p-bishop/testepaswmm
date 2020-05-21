@@ -67,7 +67,7 @@ _Figure 2 Summary of steps of the model adapter_
   
 The pre-adapter can be initiated with the following command:  
 
-				epaswmm.exe --run_info <path to run_info.xml file> pre  
+		epaswmm.exe --run_info <path to run_info.xml file> pre  
 The following steps explain the behavior of this pre-adapter.  
   
 1. **Read the run information file**  
@@ -76,7 +76,8 @@ The run information file contains data relating to the model run, such as model 
   
 - File path: run\_info.xml  
 - File contents (example):  
-  <?xml version="1.0" encoding="UTF-8"?>
+
+	  <?xml version="1.0" encoding="UTF-8"?>
 		<Run xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_run.xsd" version="1.5">
 		    <timeZone>-5.0</timeZone>
 		    <startDateTime date="2020-03-29" time="12:00:00"/>
@@ -570,6 +571,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNTc2MTEwMCwxMTEwNjQxMTM0LDIwMT
-Y3MTg0MTBdfQ==
+eyJoaXN0b3J5IjpbLTE0NzE3MTQwMTAsMTExMDY0MTEzNCwyMD
+E2NzE4NDEwXX0=
 -->
