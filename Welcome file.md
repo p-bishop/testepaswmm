@@ -387,7 +387,7 @@ These messages are transferred to FEWS using the run diagnostics file as describ
  1. **Run Diagnostics File**  
 When the model adapter either completes successfully or fails, a run diagnostics file is written for import by FEWS. This file includes all messages in the model adapter logs and all errors and warnings in the EPA SWMM output file.  
   
-- File path: defined by \```<outputDiagnosticFile\>``` in ```run_info.xml ``` 
+- File path: defined by ```<outputDiagnosticFile>``` in ```run_info.xml ``` 
 - File contents (example):  
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -507,8 +507,8 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDEwOTM2OTUsLTYwMzg0MTI4NywtNz
-IxNDMxNjI2LC0xMTg0NTc4OTgyLDY3OTk5NTA0MiwtMTQ1NDM4
-NTY1MCwxNjcxMTU4Nzk0LC0xNDcxNzE0MDEwLDExMTA2NDExMz
-QsMjAxNjcxODQxMF19
+eyJoaXN0b3J5IjpbMTk3MzkyODg5NywtNjAzODQxMjg3LC03Mj
+E0MzE2MjYsLTExODQ1Nzg5ODIsNjc5OTk1MDQyLC0xNDU0Mzg1
+NjUwLDE2NzExNTg3OTQsLTE0NzE3MTQwMTAsMTExMDY0MTEzNC
+wyMDE2NzE4NDEwXX0=
 -->
