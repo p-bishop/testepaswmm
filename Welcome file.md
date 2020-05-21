@@ -401,8 +401,8 @@ The message text from the model output file and the model adapter logs are trans
   
 _Table 1 – Mapping of messages from EPA SWMM model output and model adapter logs to FEWS levels_  
   
-| **FEWS Message Level (run diagnostics file) | Corresponding Message Level: <br>Model Output file (e.g. DonRiver.rpt) | Corresponding Message Level: <br>Model Adapter Log  (pre_adapter.log and post_adapter.log)** |  
- | --- | --- |  --- |
+| FEWS Message Level (run diagnostics file) | Corresponding Message Level: <br><br>Model Output file (e.g. DonRiver.rpt) | Corresponding Message Level: <br><br>Model Adapter Log  (pre_adapter.log and post_adapter.log) |  
+ | :-- | :-: |  :-: |
 | 4 | - | DEBUG |  
 | 3 | - | INFO |  
 | 2 | WARNING | WARNING |  
@@ -555,7 +555,7 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMTM1NzI5MiwtMTE4NDU3ODk4Miw2Nz
-k5OTUwNDIsLTE0NTQzODU2NTAsMTY3MTE1ODc5NCwtMTQ3MTcx
-NDAxMCwxMTEwNjQxMTM0LDIwMTY3MTg0MTBdfQ==
+eyJoaXN0b3J5IjpbLTEyMzg3MjAwOTUsLTExODQ1Nzg5ODIsNj
+c5OTk1MDQyLC0xNDU0Mzg1NjUwLDE2NzExNTg3OTQsLTE0NzE3
+MTQwMTAsMTExMDY0MTEzNCwyMDE2NzE4NDEwXX0=
 -->
