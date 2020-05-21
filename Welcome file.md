@@ -14,7 +14,7 @@
   * [**3. Post-Adapter**](#--3-post-adapter--)
     + [**1. Read EPA SWMM Model Outputs**](#--1-read-epa-swmm-model-outputs--)
     + [**2. Write EPA SWMM Model Outputs in FEWS format**](#--2-write-epa-swmm-model-outputs-in-fews-format--)
-    + [**3. Write Run Diagnostics File**](#--3-write-model-adapter-and-epa-swmm-messages-to-the-run-diagnostics-file--)
+    + [**3. Write Run Diagnostics File**](#--3-write-run-diagnostics-file--)
   * [**4. Messaging and Error Handling**](#--4-messaging-and-error-handling--)
     + [**1. Model Adapter Messaging**](#--1-model-adapter-messaging--)
     + [**2. Run Diagnostics File**](#--2-run-diagnostics-file--)
@@ -75,7 +75,7 @@ A FEWS simulation is composed of the following components. First, FEWS initiates
 
 _Figure 2 Summary of steps of the model adapter_  
   
- ## **1. Pre-Adapter**  
+ ## **1. **Pre-Adapter**  
   
 The pre-adapter can be initiated with the following command:  
 
@@ -515,7 +515,7 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mjk3MDMxMDgsLTE5NTg4NzU5NzYsOD
+eyJoaXN0b3J5IjpbLTE5MzU3MDEyODksLTE5NTg4NzU5NzYsOD
 g2MzkwMzk2LDEwOTI3MzQ3NjksLTEyOTE3NjU1MTQsLTE4MzIx
 NDc3MzYsLTYwMzg0MTI4NywtNzIxNDMxNjI2LC0xMTg0NTc4OT
 gyLDY3OTk5NTA0MiwtMTQ1NDM4NTY1MCwxNjcxMTU4Nzk0LC0x
