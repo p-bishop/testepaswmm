@@ -373,7 +373,7 @@ To respect the CF 1.6 convention, the units in the EPA SWMM model output file (e
   
 The association between location in Delft-FEWS (e.g. stream gauge) and location in the EPA SWMM model (e.g. Link ID) was configured in the Delft-FEWS interface. No geographical information is currently passed to FEWS in the metadata section, assuming this information will be handled by FEWS, through the Link ID.  
   
-### **3. Write model adapter and EPA SWMM messages to the run diagnostics file**  
+### **3. Write Run Diagnostics File**  
   
 Model adapter messages and EPA SWMM model output errors and warnings are written to the run diagnostics log, as described in section 4.4 (Messaging and Error Handling).  
   
@@ -516,5 +516,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMzk3ODgzMSw3NDI3NjkwNjVdfQ==
+eyJoaXN0b3J5IjpbMjAyODkxNDUyXX0=
 -->
