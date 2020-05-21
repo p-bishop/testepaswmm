@@ -103,53 +103,54 @@ FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. 
 - File path: Defined by \&lt;inputRatingCurveFile\&gt; in run\_info.xml  
   
 - File contents (example):  
-	<?xml version="1.0" encoding="UTF-8"?>
 
-	<RatingCurves xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		<?xml version="1.0" encoding="UTF-8"?>
 
-	xmlns="http://www.wldelft.nl/fews/PI"
+		<RatingCurves xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
-	xsi:schemaLocation="http://www.wldelft.nl/fews/PI
+		xmlns="http://www.wldelft.nl/fews/PI"
 
-	http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_run.xsd" version="1.5">
+		xsi:schemaLocation="http://www.wldelft.nl/fews/PI
 
-	<ratingCurve>
+		http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_run.xsd" version="1.5">
 
-	<header>
+		<ratingCurve>
 
-	<locationId>LocationX</locationId>
+		<header>
 
-	<startDate date="2018-01-01" time="00:00:00"/>
+		<locationId>LocationX</locationId>
 
-	<stageUnit>m</stageUnit>
+		<startDate date="2018-01-01" time="00:00:00"/>
 
-	</header>
+		<stageUnit>m</stageUnit>
 
-	<table>
+		</header>
 
-	<interpolationMethod>linear</interpolationMethod>
+		<table>
 
-	<minStage>1</minStage>
+		<interpolationMethod>linear</interpolationMethod>
 
-	<maxStage>6</maxStage>
+		<minStage>1</minStage>
 
-	<row stage="1" discharge="0"/>
+		<maxStage>6</maxStage>
 
-	<row stage="2" discharge="0"/>
+		<row stage="1" discharge="0"/>
 
-	<row stage="3" discharge="10"/>
+		<row stage="2" discharge="0"/>
 
-	<row stage="4" discharge="15"/>
+		<row stage="3" discharge="10"/>
 
-	<row stage="5" discharge="20"/>
+		<row stage="4" discharge="15"/>
 
-	<row stage="6" discharge="40"/>
+		<row stage="5" discharge="20"/>
 
-	</table>
+		<row stage="6" discharge="40"/>
 
-	</ratingCurve>
+		</table>
 
-	</RatingCurves>
+		</ratingCurve>
+
+		</RatingCurves>
   
 Note that the validity period (use of the \&lt;startDate\&gt; attribute) of the rating curve is not currently supported by the model adapter; this parameter is ignored.  
   
@@ -569,5 +570,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMDY0MTEzNCwyMDE2NzE4NDEwXX0=
+eyJoaXN0b3J5IjpbMTAxNTc2MTEwMCwxMTEwNjQxMTM0LDIwMT
+Y3MTg0MTBdfQ==
 -->
