@@ -183,23 +183,23 @@ The EPA SWMM input file contains some sections with constant values (e.g. subcat
   
 The model adapter reads in EPA SWMM Input file, and updates:  
   
-- the &quot;_ **Options** _&quot; section using variables read from the run information file  
-- the &quot;_ **Curves** _&quot; section with the rating curves provided by FEWS  
-- the &quot;_ **Controls** _&quot; section with the control rules provided by FEWS  
+- the &quot;**Options**&quot; section using variables read from the run information file  
+- the &quot;**Curves**&quot; section with the rating curves provided by FEWS  
+- the &quot;**Controls**&quot; section with the control rules provided by FEWS  
   
 The rainfall time series is written to an external file in step 6.  
   
   
-The &quot;_ **Options** _&quot; section is updated as follows:  
+The &quot;**Options**&quot; section is updated as follows:  
   
 | **Parameter in EPA SWMM model input file** | **FEWS parameter in the run information file** | **Result in EPA SWMM model input file** |  
 | --- | --- | --- |  
-| **START_DATE** | <startDateTime date=&quot;2020-04-23&quot; time=&quot;15:00:00&quot;/>  
+| START_DATE | <startDateTime date=&quot;2020-04-23&quot; time=&quot;15:00:00&quot;/>  
  | START DATE 04/23/2020 |  
-| **START_TIME** | START_TIME 15:00:00 |  
-| **REPORT_START_DATE** | REPORT_START_DATE 04/23/2020 |  
-| **REPORT_START_TIME** | REPORT_START_TIME 15:00:00 |  
-| **END_DATE** | \<endDateTime date=&quot;2020-04-29&quot; time=&quot;15:00:00&quot;/> | END_DATE 04/29/2020 |  
+| START_TIME | START_TIME 15:00:00 |  
+| REPORT_START_DATE | REPORT_START_DATE 04/23/2020 |  
+| REPORT_START_TIME | REPORT_START_TIME 15:00:00 |  
+| END_DATE | \<endDateTime date=&quot;2020-04-29&quot; time=&quot;15:00:00&quot;/> | END_DATE 04/29/2020 |  
 | **END_TIME** | END_TIME 15:00:00 |  
   
 The &quot;_ **Controls** _&quot; section is updated as follows:  
@@ -565,6 +565,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MTE1ODc5NCwtMTQ3MTcxNDAxMCwxMD
-E1NzYxMTAwXX0=
+eyJoaXN0b3J5IjpbLTE0NTQzODU2NTAsMTY3MTE1ODc5NCwtMT
+Q3MTcxNDAxMCwxMDE1NzYxMTAwXX0=
 -->
