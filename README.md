@@ -200,18 +200,17 @@ The &quot;**Options**&quot; section is updated as follows:
 | END_DATE | \<endDateTime date=&quot;2020-04-29&quot; time=&quot;15:00:00&quot;/> | END_DATE 04/29/2020 |  
 | END_TIME | |END_TIME 15:00:00 |  
 
-```
-|             |          Grouping           ||
-First Header  | Second Header | Third Header |
- ------------ | :-----------: | -----------: |
-Content       |          *Long Cell*        ||
-Content       |   **Cell**    |         Cell |
+[cols="^.^,^.^,^.^"]
+|===
+|Layer1 |Layer2 |Layer3
 
-New section   |     More      |         Data |
-And more      | With an escaped '\|'         ||  
-[Prototype table]
-```
-  
+.4+|L1 Name .2+|L2 Name A |L3 Name A
+|L3 Name B
+.2+|L2 Name B |L3 Name C
+|L3 Name D
+|===
+
+
 The &quot;_ **Controls** _&quot; section is updated as follows:  
   
  - If no control rules were provided by FEWS, no change to the &quot;Controls&quot; section of the model input file is made. - If control rules were provided by FEWS but no &quot;Controls&quot; section exists in the model input file, an error is provided prompting the user to setup control rules in the model, and the adapter stops execution. - If control rules were provided by FEWS and a &quot;Controls&quot; section exists in the EPA SWMM input file, the FEWS control rules will be written to the bottom of the control rule section. Existing rules are not modified. - A control rule in EPA SWMM consists of a condition clause and an action clause, for example:  
@@ -575,6 +574,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjQ3MDIxNjcsLTExODQ1Nzg5ODJdfQ
-==
+eyJoaXN0b3J5IjpbLTk4ODMxMDU0OV19
 -->
