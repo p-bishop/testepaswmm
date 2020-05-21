@@ -97,9 +97,9 @@ The run information file contains data relating to the model run, such as model 
 		  
 **2. Read Dam Rating Curve (optional)**  
   
-FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. If an <inputRatingCurveFile> is provided in the run information file, the adapter recognizes this as a dam rating curve, and proceeds to update the &quot;Curves&quot; section of the EPASWM model input file (see step 5). Only a single rating curve for each location (<locationID>) is allowed.  
+FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. If an <inputRatingCurveFile> is provided in the run information file, the adapter recognizes this as a dam rating curve, and proceeds to update the &quot;Curves&quot; section of the EPASWM model input file (see step 5). Only a single rating curve for each location (```<locationID>```) is allowed.  
   
-- File path: Defined by <inputRatingCurveFile> in run_info.xml  
+- File path: Defined by ```<inputRatingCurveFile>``` in ```run_info.xml ``` 
   
 - File contents (example):  
 ```
@@ -263,24 +263,24 @@ LocationX                     10        10
 
 - Sample of Rating Curve XML file  
 ```
-                <ratingCurve>  
-                <header>  
-                <locationId>LocationX</locationId>  
-                <startDate date="2018-01-01" time="00:00:00"/>  
-                <stageUnit>m</stageUnit>  
-                </header>  
-                <table>  
-                <interpolationMethod>linear</interpolationMethod>  
-                <minStage>1</minStage>  
-                <maxStage>6</maxStage>  
-                <row stage="1" discharge="0"/>  
-                <row stage="2" discharge="0"/>  
-                <row stage="3" discharge="10"/>  
-                <row stage="4" discharge="15"/>  
-                <row stage="5" discharge="20"/>  
-                <row stage="6" discharge="40"/>  
-                </table>  
-                </ratingCurve>  
+<ratingCurve>  
+<header>  
+	<locationId>LocationX</locationId>  
+	<startDate date="2018-01-01" time="00:00:00"/>  
+	<stageUnit>m</stageUnit>  
+</header>  
+<table>  
+	<interpolationMethod>linear</interpolationMethod>  
+	<minStage>1</minStage>  
+	<maxStage>6</maxStage>  
+	<row stage="1" discharge="0"/>  
+	<row stage="2" discharge="0"/>  
+	<row stage="3" discharge="10"/>  
+	<row stage="4" discharge="15"/>  
+	<row stage="5" discharge="20"/>  
+	<row stage="6" discharge="40"/>  
+</table>  
+</ratingCurve>  
 ```
 
 - After update of **Curves** section:   
@@ -503,8 +503,8 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzIxNDc3MzYsLTYwMzg0MTI4NywtNz
-IxNDMxNjI2LC0xMTg0NTc4OTgyLDY3OTk5NTA0MiwtMTQ1NDM4
-NTY1MCwxNjcxMTU4Nzk0LC0xNDcxNzE0MDEwLDExMTA2NDExMz
-QsMjAxNjcxODQxMF19
+eyJoaXN0b3J5IjpbLTEyOTE3NjU1MTQsLTE4MzIxNDc3MzYsLT
+YwMzg0MTI4NywtNzIxNDMxNjI2LC0xMTg0NTc4OTgyLDY3OTk5
+NTA0MiwtMTQ1NDM4NTY1MCwxNjcxMTU4Nzk0LC0xNDcxNzE0MD
+EwLDExMTA2NDExMzQsMjAxNjcxODQxMF19
 -->
