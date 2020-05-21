@@ -191,7 +191,23 @@ The rainfall time series is written to an external file in step 6.
   
   
 The &quot;**Options**&quot; section is updated as follows:  
-  
+  <table>
+ <tr>
+  <td colspan="2">wdedwedd</td>
+  <td>ddweedw</td>
+ </tr>
+ <tr>
+  <td>dwedwe</td>
+  <td>dwe</td>
+  <td>wedewd</td>
+ </tr>
+ <tr>
+  <td>wedwedwe;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+ </tr>
+</table>
+
 | **Parameter i n EPA SWMM model input file** | **FEWS parameter in the run information file** | **Result in EPA SWMM model input file** |  
 | --- | --- | --- |  
 | START_DATE | <startDateTime date=&quot;2020-04-23&quot;time=&quot;15:00:00&quot;/>  
@@ -564,7 +580,7 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA_._ May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc5OTk1MDQyLC0xNDU0Mzg1NjUwLDE2Nz
-ExNTg3OTQsLTE0NzE3MTQwMTAsMTExMDY0MTEzNCwyMDE2NzE4
-NDEwXX0=
+eyJoaXN0b3J5IjpbMjA1NjA4NTY2MCw2Nzk5OTUwNDIsLTE0NT
+QzODU2NTAsMTY3MTE1ODc5NCwtMTQ3MTcxNDAxMCwxMTEwNjQx
+MTM0LDIwMTY3MTg0MTBdfQ==
 -->
