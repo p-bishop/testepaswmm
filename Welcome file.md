@@ -1,6 +1,6 @@
 # Table of Contents 
 
-- [**1. Directory Structure and Contents**](#--1-directory-structure-and-contents--)
+- [1. Directory Structure and Contents](#1-directory-structure-and-contents)
 - [**2. External Model Adapter Workflow**](#--2-external-model-adapter-workflow--)
   * [**2.1 Pre-Adapter**](#--21-pre-adapter--)
     + [**1. Read Run Information File**](#--1-read-run-information-file--)
@@ -21,11 +21,11 @@
   * [**1.4 Messaging and Error Handling**](#--14-messaging-and-error-handling--)
     + [**1. Model Adapter Messaging**](#--1-model-adapter-messaging--)
     + [**2. Run Diagnostics File**](#--2-run-diagnostics-file--)
-- [**3. Model Set-up Considerations**](#--2-model-set-up-considerations--)
+- [**3. Model Set-up Considerations**](#--3-model-set-up-considerations--)
 - [**References**](#--references--)
 
 
-# **1. Directory Structure and Contents**  
+# 1. Directory Structure and Contents  
   
 The external model adapter relies on a consistent directory structure, as proposed by Deltares, and shown in Figure 1. The example shows the Don model, however, other models could be added to this directory using the same directory structure.  
   
@@ -67,7 +67,7 @@ Folder and file contents are specified below, and the workflow is described in t
     - Link (e.g. hydrographs) results (e.g. ```DonRiver_outputswmm_nodes.nc```)  
 - **outputStates** : placeholder directory for potential handling of hotstarts for future versions  
   
-# **2. External Model Adapter Workflow**  
+# 2. External Model Adapter Workflow  
   
 The model adapter consists of two principal components:  
   
@@ -86,7 +86,7 @@ The pre-adapter can be initiated with the following command:
 		epaswmm.exe --run_info <path to run_info.xml file> pre  
 The following steps explain the behavior of this pre-adapter.  
   
-### **1. Read Run Information File**  
+### 1. Read Run Information File 
   
 The run information file contains data relating to the model run, such as model start time.  
   
@@ -114,7 +114,7 @@ The run information file contains data relating to the model run, such as model 
 ```		        
 		  
 		  
-### **2. Read Dam Rating Curve (optional)**  
+### 2. Read Dam Rating Curve (optional)  
   
 FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. If an <inputRatingCurveFile> is provided in the run information file, the adapter recognizes this as a dam rating curve, and proceeds to update the &quot;Curves&quot; section of the EPASWM model input file (see step 5). Only a single rating curve for each location (```<locationID>```) is allowed.  
   
@@ -146,7 +146,7 @@ FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. 
  ``` 
 Note that the validity period (use of the ```<startDate>``` attribute) of the rating curve is not currently supported by the model adapter; this parameter is ignored.  
   
-### **3. Read Control Rules (optional)**  
+### 3. Read Control Rules (optional) 
   
 FEWS can export time-dependent control rules in XML format. The model adapter does not currently support other types of control rules (e.g. rules dependent on a node water level or a link discharge). If an ```<InputTimeSeriesFile>``` with the name ```Control_rules.xml``` is provided in the Run Information file, the adapter recognizes this as control rules, and proceeds to update the &quot;Controls&quot; section of the EPA SWMMS WMM model input file (see step 5).  
   
@@ -183,7 +183,7 @@ The ```<parameterID>``` refers to the EPA SWMM object to which the rule will app
   
 EPA SWMM control rules may also use a “priority” level at the end of the rule. While there is potential to use the “flag” attribute (e.g. flag = “8”) to set priority levels of control rules in the model, this feature is not currently implemented and the “flag” attribute is ignored by the model adapter.  
   
- ### **4. Read Rainfall Time Series**  
+ ### 4. Read Rainfall Time Series
   
 Delft-FEWS exports a rainfall time series file in NetCDF format. The ```station_id```  (e.g. DON_1) in this file correspond to the rain gage name in the &quot;Raingages&quot; section of the EPA SWMM input file. The ```station_name``` field is ignored by the model adapter as this is for display purposes within the FEWS interface.  
   
@@ -194,7 +194,7 @@ Delft-FEWS exports a rainfall time series file in NetCDF format. The ```station_
   
 _Figure 3 - Example rainfall time series file contents_  
   
-### **5. Update EPA SWMM Input File**  
+### 5. Update EPA SWMM Input File 
   
 The EPA SWMM input file contains some sections with constant values (e.g. subcatchment parameters). Other sections contain data that needs to be updated for the model run. This step explains how these sections are updated.  
   
@@ -448,7 +448,7 @@ _Table 2 – Examples of model adapter log and EPA SWMM model output messages tr
  
   
   
-# **2. Model Set-up Considerations**  
+# **3. Model Set-up Considerations**  
   
 The model adapter was developed to be generic to permit use with any EPA SWMM model. Nonetheless, there are some considerations to be made when setting up a model for use with the adapter. These are outlined in this section.  
   
@@ -531,7 +531,7 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjM5NzMyMTAsLTM3ODIyOTM0MCwxMD
+eyJoaXN0b3J5IjpbLTE1OTY0NjAzMjQsLTM3ODIyOTM0MCwxMD
 Q1Mzk3ODA4LDg5NzIwMzI1NSwtNTA3MDYxODA0LDYzNDY0NDYx
 LC0xOTM1NzAxMjg5LC0xOTU4ODc1OTc2LDg4NjM5MDM5NiwxMD
 kyNzM0NzY5LC0xMjkxNzY1NTE0LC0xODMyMTQ3NzM2LC02MDM4
