@@ -20,7 +20,7 @@
     + [**2. Run Diagnostics File**](#--2-run-diagnostics-file--)
 
 
-# **Directory Sturucture and Contents**  
+# **1. Directory Structure and Contents**  
   
 The external model adapter relies on a consistent directory structure, as proposed by Deltares, and shown in Figure 1. The example shows the Don model, however, other models could be added to this directory using the same directory structure.  
   
@@ -62,7 +62,7 @@ Folder and file contents are specified below, and the workflow is described in t
     - Link (e.g. hydrographs) results (e.g. ```DonRiver_outputswmm_nodes.nc```)  
 - **outputStates** : placeholder directory for potential handling of hotstarts for future versions  
   
-# **1. External Model Adapter Workflow**  
+# **2. External Model Adapter Workflow**  
   
 The model adapter consists of two principal components:  
   
@@ -74,7 +74,7 @@ A FEWS simulation is composed of the following components. First, FEWS initiates
 <img src="images/002.png" width="400">
 _Figure 2 Summary of steps of the model adapter_  
   
- ## **1.1 Pre-Adapter**  
+ ## **2.1 Pre-Adapter**  
   
 The pre-adapter can be initiated with the following command:  
 
@@ -331,7 +331,7 @@ As described in Section 6 (Model Set-up Considerations), the rainfall format (in
   
 Model adapter warnings and errors messages during the Pre-Adapter steps are written to the run diagnostics file. More details are provided in section 4.4 (Messaging and Error Handling). FEWS will read this file upon completion of the Pre-Adapter execution and will report those to the FEWS interface.  
   
-## **1.2 Model Run**  
+## **2.2 Model Run**  
   
 Typically, model execution will be initiated by FEWS. However, to facilitate testing of the model adapter, the model may be run with the following command:  
   
@@ -353,7 +353,7 @@ The model adapter executes the EPA SWMM model.
 
 Model adapter warnings and errors messages during the Model Run are written to the run diagnostics file.  More details are provided in **section 4.4** (Messaging and Error  Handling). Note that warnings and errors in the EPA SWMM model output file will be read by the post-adapter.
 
- ## **1.3 Post-Adapter**  
+ ## **2.3 Post-Adapter**  
   
 The post-adapter can be initiated with the following command:  
   
@@ -439,7 +439,7 @@ _Table 2 – Examples of model adapter log and EPA SWMM model output messages tr
  
   
   
-# **2Model Set-up Considerations**  
+# **2. Model Set-up Considerations**  
   
 The model adapter was developed to be generic to permit use with any EPA SWMM model. Nonetheless, there are some considerations to be made when setting up a model for use with the adapter. These are outlined in this section.  
   
@@ -522,5 +522,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQyNjI0OTgwLDg5NzIwMzI1NV19
+eyJoaXN0b3J5IjpbMTA0NTM5NzgwOF19
 -->
