@@ -97,10 +97,10 @@ The run information file contains data relating to the model run, such as model 
 	<time0 date="2020-03-31" time="12:00:00"/>
 	<lastObservationDateTime date="2020-03-31" time="12:00:00"/>		<workDir>C:Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull</workDir>	<inputNetcdfFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\input\rain.nc</inputNetcdfFile><inputRatingCurveFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\input\Dam_rating_curve.xml</inputRatingCurveFile>	<inputTimeSeriesFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\/DonFull\input\Control_rules.xml</inputTimeSeriesFile>
 	<outputDiagnosticFile>C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\log\run_diagnostics.xml</outputDiagnosticFile>
-			<properties>
-				<string key="model-executable" value="C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\bin\swmm5.exe"/> 
-				<string key="swmm_input_file" value="C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\model\DonFull.inp"/>
-			</properties>
+	<properties>
+		<string key="model-executable" value="C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\bin\swmm5.exe"/> 
+		<string key="swmm_input_file" value="C:\Users\pbishop\Documents\0_WORKING\30900_DelftFEWsPilot\epa-swmm-adaptor\tests\module_adapter_deploy\DonFull\model\DonFull.inp"/>
+	</properties>
 </Run>
 ```		        
 		  
@@ -179,9 +179,9 @@ EPA SWMM control rules may also use a “priority” level at the end of the rul
 Delft-FEWS exports a rainfall time series file in NetCDF format. The ```station_id```  (e.g. DON_1) in this file correspond to the rain gage name in the &quot;Raingages&quot; section of the EPA SWMM input file. The ```station_name``` field is ignored by the model adapter as this is for display purposes within the FEWS interface.  
   
 - File path: defined by ```<inputNetcdfFile>``` in the ```run_info.xml``` file  
-- File contents (example, showing a sample of rows):  
+- File contents (example, showing a sample of rowsfirst and last rows):  
 
-  <img src="images/003.JPG" width="300">
+  <img src="images/003.jpg" width="650">
   
 _Figure 3 - Example rainfall time series file contents_  
   
@@ -522,7 +522,7 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE0NzE5ODQ4LDEwNDUzOTc4MDgsODk3Mj
+eyJoaXN0b3J5IjpbOTc1NTk3NDE2LDEwNDUzOTc4MDgsODk3Mj
 AzMjU1LC01MDcwNjE4MDQsNjM0NjQ0NjEsLTE5MzU3MDEyODks
 LTE5NTg4NzU5NzYsODg2MzkwMzk2LDEwOTI3MzQ3NjksLTEyOT
 E3NjU1MTQsLTE4MzIxNDc3MzYsLTYwMzg0MTI4NywtNzIxNDMx
