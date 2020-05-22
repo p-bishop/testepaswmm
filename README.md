@@ -369,7 +369,7 @@ The EPASWM model run generates an output file (e.g. ```DonRiver.rpt```), which i
 ![Link Results ](images/004a.JPG) ![Node Results](images/004b.JPG)
 
   
-### **2. Write EPA SWMM Model Outputs in FEWS Format**  
+### **2. Write EPA SWMM Model Outputs (FEWS Format)**  
   
 The following model results are written to the to NetCDF4 File Format using the CF 1.6 convention as requested by Deltares, for all links and nodes locations with the following variables, respectively:  
   
@@ -523,5 +523,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM0NjQ0NjEsLTE5MzU3MDEyODldfQ==
+eyJoaXN0b3J5IjpbMzcyNzcwNDE5LDYzNDY0NDYxLC0xOTM1Nz
+AxMjg5XX0=
 -->
