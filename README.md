@@ -21,7 +21,7 @@
   * [**1.4 Messaging and Error Handling**](#--14-messaging-and-error-handling--)
     + [**1. Model Adapter Messaging**](#--1-model-adapter-messaging--)
     + [**2. Run Diagnostics File**](#--2-run-diagnostics-file--)
-- [**3. Model Set-up Considerations**](#--2-model-set-up-considerations--)
+- [**3. Model Set-up Considerations**](#--3-model-set-up-considerations--)
 - [**References**](#--references--)
 
 
@@ -448,7 +448,7 @@ _Table 2 – Examples of model adapter log and EPA SWMM model output messages tr
  
   
   
-# **2. Model Set-up Considerations**  
+# **3. Model Set-up Considerations**  
   
 The model adapter was developed to be generic to permit use with any EPA SWMM model. Nonetheless, there are some considerations to be made when setting up a model for use with the adapter. These are outlined in this section.  
   
@@ -531,6 +531,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjM5NzMyMTAsLTM3ODIyOTM0MCw5OD
-AwNzQzOTBdfQ==
+eyJoaXN0b3J5IjpbMTk1NDgwMzIwNl19
 -->
