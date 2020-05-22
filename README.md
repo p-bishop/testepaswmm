@@ -181,7 +181,7 @@ Delft-FEWS exports a rainfall time series file in NetCDF format. The ```station_
 - File path: defined by ```<inputNetcdfFile>``` in the ```run_info.xml``` file  
 - File contents (example, showing a sample of rowsfirst and last rows):  
 
-  <img src="images/003.jpg" width="300">
+  <img src="images/003.jpg" width="500">
   
 _Figure 3 - Example rainfall time series file contents_  
   
@@ -522,5 +522,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNzIyMDI2XX0=
+eyJoaXN0b3J5IjpbMTAwODc3MTc1Nl19
 -->
