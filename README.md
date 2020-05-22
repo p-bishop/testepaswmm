@@ -1,23 +1,28 @@
 # Table of Contents 
 
-- [**Directory Sturucture and Contents**](#--directory-sturucture-and-contents--)
-- [**External Model Adapter Workflow**](#--external-model-adapter-workflow--)
-  * [**1. Pre-Adapter**](#1---pre-adapter--)
-    + [**1. Read the run information file**](#--1-read-the-run-information-file--)
+- [**1. Directory Structure and Contents**](#--1-directory-structure-and-contents--)
+- [**2. External Model Adapter Workflow**](#--2-external-model-adapter-workflow--)
+  * [**2.1 Pre-Adapter**](#--21-pre-adapter--)
+    + [**1. Read Run Information File**](#--1-read-run-information-file--)
     + [**2. Read Dam Rating Curve (optional)**](#--2-read-dam-rating-curve--optional---)
     + [**3. Read Control Rules (optional)**](#--3-read-control-rules--optional---)
     + [**4. Read Rainfall Time Series**](#--4-read-rainfall-time-series--)
     + [**5. Update EPA SWMM Input File**](#--5-update-epa-swmm-input-file--)
     + [**6. Write Rainfall Time Series (EPA SWMM Format)**](#--6-write-rainfall-time-series--epa-swmm-format---)
-    + [**7. Write Run Diagnostics File**](#--7-write-model-adapter-messages-to-the-run-diagnostics-file--)
-  * [**2. Model Run**](#2---model-run--)
-  * [**3. Post-Adapter**](#--3-post-adapter--)
+    + [**7. Write Model Adapter Messages to the Run Diagnostics File**](#--7-write-model-adapter-messages-to-the-run-diagnostics-file--)
+  * [**2.2 Model Run**](#--22-model-run--)
+    + [**1. Write Batch File**](#1-write-batch-file)
+    + [**2. Execute Model**](#2-execute-model)
+    + [**3. Write Run Diagnostics File**](#3-write-run-diagnostics-file)
+  * [**2.3 Post-Adapter**](#--23-post-adapter--)
     + [**1. Read EPA SWMM Model Outputs**](#--1-read-epa-swmm-model-outputs--)
-    + [**2. Write EPA SWMM Model Outputs in FEWS format**](#--2-write-epa-swmm-model-outputs-in-fews-format--)
+    + [**2. Write EPA SWMM Model Outputs (FEWS Format)**](#--2-write-epa-swmm-model-outputs--fews-format---)
     + [**3. Write Run Diagnostics File**](#--3-write-run-diagnostics-file--)
-  * [**4. Messaging and Error Handling**](#--4-messaging-and-error-handling--)
+  * [**1.4 Messaging and Error Handling**](#--14-messaging-and-error-handling--)
     + [**1. Model Adapter Messaging**](#--1-model-adapter-messaging--)
     + [**2. Run Diagnostics File**](#--2-run-diagnostics-file--)
+- [**3. Model Set-up Considerations**](#--2-model-set-up-considerations--)
+- [**References**](#--references--)
 
 
 # **1. Directory Structure and Contents**  
@@ -341,7 +346,7 @@ Typically, model execution will be initiated by FEWS. However, to facilitate tes
   
 	epaswmm.exe --run_info <path to run_info.xml file> run  
   
-### 1. Write Batch File
+### **1. Write Batch File**
 
 A batch file is written, which can be used to optionally execute the model manually for testing purposes.
  - File Path: ```model/run_model.bat```  
@@ -349,11 +354,11 @@ A batch file is written, which can be used to optionally execute the model manua
   
 ```C:\[...]\bin\swmm5.exe C:\[...]\model\DonRiver.inp C:\[...]\model\DonRiver.rpt ```
   
-### 2. Execute Model 
+### **2. Execute Model**
 
 The model adapter executes the EPA SWMM model.
 
-### 3. Write Run Diagnostics File
+### **3. Write Run Diagnostics File**
 
 Model adapter warnings and errors messages during the Model Run are written to the run diagnostics file.  More details are provided in **section 4.4** (Messaging and Error  Handling). Note that warnings and errors in the EPA SWMM model output file will be read by the post-adapter.
 
@@ -517,7 +522,7 @@ LINKS ALL
 - As described in the pre-adapter section, unit look-ups between EPA SWMM unit names and the NetCDF4-compliant unit names (Unidata, 2020) must be defined in the model/UDUNITS_lookup.csv file. For the current model configuration, all required units have been provided.  
   
 
-**REFERENCES**  
+# **References**  
   
 Deltares. n.d. Python model adapters within FEWS. Accessed March 26, 2020.https://publicwiki.deltares.nl/display/FEWSDOC/  
  Python+model+adapters+within+FEWS  
@@ -526,5 +531,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3ODIyOTM0MCw5ODAwNzQzOTBdfQ==
+eyJoaXN0b3J5IjpbLTE3NjM5NzMyMTAsLTM3ODIyOTM0MCw5OD
+AwNzQzOTBdfQ==
 -->
