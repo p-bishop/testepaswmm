@@ -1,6 +1,6 @@
 # Table of Contents 
 
-- [**Directory Sturcture and Contents**](#--directory-sturcture-and-contents--)
+- [**Directory Sturucture and Contents**](#--directory-sturucture-and-contents--)
 - [**External Model Adapter Workflow**](#--external-model-adapter-workflow--)
   * [**1. Pre-Adapter**](#1---pre-adapter--)
     + [**1. Read the run information file**](#--1-read-the-run-information-file--)
@@ -20,7 +20,7 @@
     + [**2. Run Diagnostics File**](#--2-run-diagnostics-file--)
 
 
-# **Directory Sturcture and Contents**  
+# **Directory Sturucture and Contents**  
   
 The external model adapter relies on a consistent directory structure, as proposed by Deltares, and shown in Figure 1. The example shows the Don model, however, other models could be added to this directory using the same directory structure.  
   
@@ -522,5 +522,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjA2NDcxNTRdfQ==
+eyJoaXN0b3J5IjpbODk3MjAzMjU1LC0xNjYwNjQ3MTU0XX0=
 -->
