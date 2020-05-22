@@ -179,9 +179,9 @@ EPA SWMM control rules may also use a “priority” level at the end of the rul
 Delft-FEWS exports a rainfall time series file in NetCDF format. The ```station_id```  (e.g. DON_1) in this file correspond to the rain gage name in the &quot;Raingages&quot; section of the EPA SWMM input file. The ```station_name``` field is ignored by the model adapter as this is for display purposes within the FEWS interface.  
   
 - File path: defined by ```<inputNetcdfFile>``` in the ```run_info.xml``` file  
-- File contents (example, showing a sample of rowsfirst and last rows):  
+- File contents (example, showing a sample of rows):  
 
-  ![Example rainfall time series file contents ](images/003.JPG)
+  <img src="images/003.JPG" width="300">
   
 _Figure 3 - Example rainfall time series file contents_  
   
@@ -510,7 +510,7 @@ LINKS ALL
 ```
 
 - Other than the sections described in this document, no other parameters in the model input file are modified by the model adapter. Ensure all other parameters are configured as required in the model input filesetup as required, such as the hydrologic parameters and storage node water levels.  
-- As described in the pre-Section 4.1 step 2, unit look-ups between EPA SWMM unit names and the NetCDF4-compliant unit names (Unidata, 2020) must be defined in the model/UDUNITS_lookup.csv file. For the current model configuration, all required units have been provided.  
+- As described in the pre-adapter section, unit look-ups between EPA SWMM unit names and the NetCDF4-compliant unit names (Unidata, 2020) must be defined in the model/UDUNITS_lookup.csv file. For the current model configuration, all required units have been provided.  
   
 
 **REFERENCES**  
@@ -522,11 +522,11 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzM5OTI1NTcsMTA0NTM5NzgwOCw4OT
-cyMDMyNTUsLTUwNzA2MTgwNCw2MzQ2NDQ2MSwtMTkzNTcwMTI4
-OSwtMTk1ODg3NTk3Niw4ODYzOTAzOTYsMTA5MjczNDc2OSwtMT
-I5MTc2NTUxNCwtMTgzMjE0NzczNiwtNjAzODQxMjg3LC03MjE0
-MzE2MjYsLTExODQ1Nzg5ODIsNjc5OTk1MDQyLC0xNDU0Mzg1Nj
-UwLDE2NzExNTg3OTQsLTE0NzE3MTQwMTAsMTExMDY0MTEzNCwy
-MDE2NzE4NDEwXX0=
+eyJoaXN0b3J5IjpbNzE0NzE5ODQ4LDEwNDUzOTc4MDgsODk3Mj
+AzMjU1LC01MDcwNjE4MDQsNjM0NjQ0NjEsLTE5MzU3MDEyODks
+LTE5NTg4NzU5NzYsODg2MzkwMzk2LDEwOTI3MzQ3NjksLTEyOT
+E3NjU1MTQsLTE4MzIxNDc3MzYsLTYwMzg0MTI4NywtNzIxNDMx
+NjI2LC0xMTg0NTc4OTgyLDY3OTk5NTA0MiwtMTQ1NDM4NTY1MC
+wxNjcxMTU4Nzk0LC0xNDcxNzE0MDEwLDExMTA2NDExMzQsMjAx
+NjcxODQxMF19
 -->
