@@ -350,9 +350,9 @@ A batch file is written, which can be used to optionally execute the model manua
 
 The model adapter executes the EPA SWMM model.
 
-### 3. Write Model Adapter Messages to the Run Diagnostics File
+### 3. Write Run Diagnostics File
 
-Model adapter warnings and errors messages during the Pre-Adapter steps are written to the run diagnostics file.  More details are provided in **section 4.4** (Messaging and Error  Handling). FEWS will read this file upon completion of the Pre-Adapter execution and will report those to the FEWS interface.
+Model adapter warnings and errors messages during the model run are written to the run diagnostics file.  More details are provided in **section 4.4** (Messaging and Error  Handling). FEWS will read this file upon completion of the Pre-Adapter execution and will report those to the FEWS interface.
   
  ## **3. Post-Adapter**  
   
@@ -523,6 +523,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDg3MjY0NTYsLTE5MzU3MDEyODldfQ
-==
+eyJoaXN0b3J5IjpbMzI5MjAwNDA4LC0xOTM1NzAxMjg5XX0=
 -->
