@@ -1,6 +1,6 @@
 # Table of Contents 
 
-- [**Directory Sturcture and Contents**](#--directory-sturcture-and-contents--)
+- [**Directory Structureand Contents**](#--directory-structure-and-contents--)
 - [**External Model Adapter Workflow**](#--external-model-adapter-workflow--)
   * [**1. Pre-Adapter**](#1---pre-adapter--)
     + [**1. Read the run information file**](#--1-read-the-run-information-file--)
@@ -20,7 +20,7 @@
     + [**2. Run Diagnostics File**](#--2-run-diagnostics-file--)
 
 
-# **Directory Sturcture and Contents**  
+# **Directory Structure and Contents**  
   
 The external model adapter relies on a consistent directory structure, as proposed by Deltares, and shown in Figure 1. The example shows the Don model, however, other models could be added to this directory using the same directory structure.  
   
@@ -74,7 +74,7 @@ A FEWS simulation is composed of the following components. First, FEWS initiates
 <img src="images/002.png" width="400">
 _Figure 2 Summary of steps of the model adapter_  
   
- ## **1. **Pre-Adapter**  
+ ## **1. Pre-Adapter**  
   
 The pre-adapter can be initiated with the following command:  
 
@@ -522,10 +522,10 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODk0MjEyOTgsLTUwNzA2MTgwNCw2Mz
-Q2NDQ2MSwtMTkzNTcwMTI4OSwtMTk1ODg3NTk3Niw4ODYzOTAz
-OTYsMTA5MjczNDc2OSwtMTI5MTc2NTUxNCwtMTgzMjE0NzczNi
-wtNjAzODQxMjg3LC03MjE0MzE2MjYsLTExODQ1Nzg5ODIsNjc5
-OTk1MDQyLC0xNDU0Mzg1NjUwLDE2NzExNTg3OTQsLTE0NzE3MT
-QwMTAsMTExMDY0MTEzNCwyMDE2NzE4NDEwXX0=
+eyJoaXN0b3J5IjpbMTkzMDIwNDQyNCwtNTA3MDYxODA0LDYzND
+Y0NDYxLC0xOTM1NzAxMjg5LC0xOTU4ODc1OTc2LDg4NjM5MDM5
+NiwxMDkyNzM0NzY5LC0xMjkxNzY1NTE0LC0xODMyMTQ3NzM2LC
+02MDM4NDEyODcsLTcyMTQzMTYyNiwtMTE4NDU3ODk4Miw2Nzk5
+OTUwNDIsLTE0NTQzODU2NTAsMTY3MTE1ODc5NCwtMTQ3MTcxND
+AxMCwxMTEwNjQxMTM0LDIwMTY3MTg0MTBdfQ==
 -->
