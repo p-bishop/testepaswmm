@@ -82,7 +82,7 @@ The pre-adapter can be initiated with the following command:
 		epaswmm.exe --run_info <path to run_info.xml file> pre  
 The following steps explain the behavior of this pre-adapter.  
   
-### **1. Read the run information file**  
+### **1. Read Run Information File**  
   
 The run information file contains data relating to the model run, such as model start time.  
   
@@ -523,6 +523,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzcyNzcwNDE5LDYzNDY0NDYxLC0xOTM1Nz
-AxMjg5XX0=
+eyJoaXN0b3J5IjpbMTA1OTcxMzczMCw2MzQ2NDQ2MSwtMTkzNT
+cwMTI4OV19
 -->
