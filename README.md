@@ -74,7 +74,7 @@ A FEWS simulation is composed of the following components. First, FEWS initiates
 <img src="images/002.png" width="400">
 _Figure 2 Summary of steps of the model adapter_  
   
- ## **1. **Pre-Adapter**  
+ ## **1. Pre-Adapter**  
   
 The pre-adapter can be initiated with the following command:  
 
@@ -522,5 +522,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODk0MjEyOThdfQ==
+eyJoaXN0b3J5IjpbLTE2NjA2NDcxNTRdfQ==
 -->
