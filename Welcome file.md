@@ -79,14 +79,14 @@ A FEWS simulation is composed of the following components. First, FEWS initiates
 <img src="images/002.png" width="400">
 _Figure 2 Summary of steps of the model adapter_  
   
- ## **2.1 Pre-Adapter**  
+ ## 2.1 Pre-Adapter  
   
 The pre-adapter can be initiated with the following command:  
 
 		epaswmm.exe --run_info <path to run_info.xml file> pre  
 The following steps explain the behavior of this pre-adapter.  
   
-### 1. Read Run Information File 
+### 1. Read Run Information File  
   
 The run information file contains data relating to the model run, such as model start time.  
   
@@ -146,7 +146,7 @@ FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. 
  ``` 
 Note that the validity period (use of the ```<startDate>``` attribute) of the rating curve is not currently supported by the model adapter; this parameter is ignored.  
   
-### 3. Read Control Rules (optional) 
+### 3. Read Control Rules (optional)  
   
 FEWS can export time-dependent control rules in XML format. The model adapter does not currently support other types of control rules (e.g. rules dependent on a node water level or a link discharge). If an ```<InputTimeSeriesFile>``` with the name ```Control_rules.xml``` is provided in the Run Information file, the adapter recognizes this as control rules, and proceeds to update the &quot;Controls&quot; section of the EPA SWMMS WMM model input file (see step 5).  
   
@@ -183,7 +183,7 @@ The ```<parameterID>``` refers to the EPA SWMM object to which the rule will app
   
 EPA SWMM control rules may also use a “priority” level at the end of the rule. While there is potential to use the “flag” attribute (e.g. flag = “8”) to set priority levels of control rules in the model, this feature is not currently implemented and the “flag” attribute is ignored by the model adapter.  
   
- ### 4. Read Rainfall Time Series
+ ### 4. Read Rainfall Time Series  
   
 Delft-FEWS exports a rainfall time series file in NetCDF format. The ```station_id```  (e.g. DON_1) in this file correspond to the rain gage name in the &quot;Raingages&quot; section of the EPA SWMM input file. The ```station_name``` field is ignored by the model adapter as this is for display purposes within the FEWS interface.  
   
@@ -194,7 +194,7 @@ Delft-FEWS exports a rainfall time series file in NetCDF format. The ```station_
   
 _Figure 3 - Example rainfall time series file contents_  
   
-### 5. Update EPA SWMM Input File 
+### 5. Update EPA SWMM Input File
   
 The EPA SWMM input file contains some sections with constant values (e.g. subcatchment parameters). Other sections contain data that needs to be updated for the model run. This step explains how these sections are updated.  
   
@@ -315,7 +315,7 @@ LocationX                      5            20
 LocationX                      6            40  
   ```
   
-### **6. Write Rainfall Time Series (EPA SWMM Format)**  
+### 6. Write Rainfall Time Series (EPA SWMM Format)
   
 The rainfall data that was imported in step 4 is written to the rainfall file (rain.dat), with the following format:  
   
@@ -336,17 +336,17 @@ DON_11 2013 7 9 16 40 0
   
 As described in Section 6 (Model Set-up Considerations), the rainfall format (intensity vs. depth) must be configured in the model input file to align with the format exported by FEWS.  
   
-### **7. Write Model Adapter Messages to the Run Diagnostics File**
+### 7. Write Model Adapter Messages to the Run Diagnostics File
   
 Model adapter warnings and errors messages during the Pre-Adapter steps are written to the run diagnostics file. More details are provided in section 4.4 (Messaging and Error Handling). FEWS will read this file upon completion of the Pre-Adapter execution and will report those to the FEWS interface.  
   
-## **2.2 Model Run**  
+## 2.2 Model Run  
   
 Typically, model execution will be initiated by FEWS. However, to facilitate testing of the model adapter, the model may be run with the following command:  
   
 	epaswmm.exe --run_info <path to run_info.xml file> run  
   
-### **1. Write Batch File**
+### 1. Write Batch File
 
 A batch file is written, which can be used to optionally execute the model manually for testing purposes.
  - File Path: ```model/run_model.bat```  
@@ -354,15 +354,15 @@ A batch file is written, which can be used to optionally execute the model manua
   
 ```C:\[...]\bin\swmm5.exe C:\[...]\model\DonRiver.inp C:\[...]\model\DonRiver.rpt ```
   
-### **2. Execute Model**
+### 2. Execute Model
 
 The model adapter executes the EPA SWMM model.
 
-### **3. Write Run Diagnostics File**
+### 3. Write Run Diagnostics File
 
 Model adapter warnings and errors messages during the Model Run are written to the run diagnostics file.  More details are provided in **section 4.4** (Messaging and Error  Handling). Note that warnings and errors in the EPA SWMM model output file will be read by the post-adapter.
 
- ## **2.3 Post-Adapter**  
+ ## 2.3 Post-Adapter  
   
 The post-adapter can be initiated with the following command:  
   
@@ -370,14 +370,14 @@ The post-adapter can be initiated with the following command:
   
 The following steps explain the behavior of the post-adapter.  
   
-### **1. Read EPA SWMM Model Outputs**  
+### 1. Read EPA SWMM Model Outputs  
   
 The EPASWM model run generates an output file (e.g. ```DonRiver.rpt```), which is converted to FEWS format by the Post Adapter. The following sections are read from the output file: ```Link Results``` and ```Node Results```, as shown in the examples below. Model errors and warnings will also be read, if present.  
 
 <img src="images/004a.JPG" width="400"><img src="images/004b.JPG" width="400">
 
   
-### **2. Write EPA SWMM Model Outputs (FEWS Format)**  
+### 2. Write EPA SWMM Model Outputs (FEWS Format)
   
 The following model results are written to the to NetCDF4 File Format using the CF 1.6 convention as requested by Deltares, for all links and nodes locations with the following variables, respectively:  
   
@@ -388,13 +388,13 @@ To respect the CF 1.6 convention, the units in the EPA SWMM model output file (e
   
 The association between location in Delft-FEWS (e.g. stream gauge) and location in the EPA SWMM model (e.g. Link ID) was configured in the Delft-FEWS interface. No geographical information is currently passed to FEWS in the metadata section, assuming this information will be handled by FEWS, through the Link ID.  
   
-### **3. Write Run Diagnostics File**  
+### 3. Write Run Diagnostics File
   
 Model adapter messages and EPA SWMM model output errors and warnings are written to the run diagnostics log, as described in section 4.4 (Messaging and Error Handling).  
   
-## **1.4 Messaging and Error Handling**  
+## 1.4 Messaging and Error Handling  
   
- ###  **1. Model Adapter Messaging**  
+ ###  1. Model Adapter Messaging  
   
 Pre- and post-adapter errors, warnings, and informational messages are written to log/pre_adapter.log, log/run_adapter.log and log/post_adapter.log, respectively, with the following format:  
   
@@ -408,7 +408,7 @@ Two messaging levels are used: INFO and ERROR. If an error occurs, model executi
   
 These messages are transferred to FEWS using the run diagnostics file as described in the following section.  
   
-### **2. Run Diagnostics File**  
+### 2. Run Diagnostics File  
 When the model adapter either completes successfully or fails, a run diagnostics file is written for import by FEWS. This file includes all messages in the model adapter logs and all errors and warnings in the EPA SWMM output file.  
   
 - File path: defined by ```<outputDiagnosticFile>``` in ```run_info.xml ``` 
@@ -448,7 +448,7 @@ _Table 2 – Examples of model adapter log and EPA SWMM model output messages tr
  
   
   
-# **3. Model Set-up Considerations**  
+# 3. Model Set-up Considerations  
   
 The model adapter was developed to be generic to permit use with any EPA SWMM model. Nonetheless, there are some considerations to be made when setting up a model for use with the adapter. These are outlined in this section.  
   
@@ -522,7 +522,7 @@ LINKS ALL
 - As described in the pre-adapter section, unit look-ups between EPA SWMM unit names and the NetCDF4-compliant unit names (Unidata, 2020) must be defined in the model/UDUNITS_lookup.csv file. For the current model configuration, all required units have been provided.  
   
 
-# **References**  
+# References  
   
 Deltares. n.d. Python model adapters within FEWS. Accessed March 26, 2020.https://publicwiki.deltares.nl/display/FEWSDOC/  
  Python+model+adapters+within+FEWS  
@@ -531,11 +531,11 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTY0NjAzMjQsLTM3ODIyOTM0MCwxMD
-Q1Mzk3ODA4LDg5NzIwMzI1NSwtNTA3MDYxODA0LDYzNDY0NDYx
-LC0xOTM1NzAxMjg5LC0xOTU4ODc1OTc2LDg4NjM5MDM5NiwxMD
-kyNzM0NzY5LC0xMjkxNzY1NTE0LC0xODMyMTQ3NzM2LC02MDM4
-NDEyODcsLTcyMTQzMTYyNiwtMTE4NDU3ODk4Miw2Nzk5OTUwND
-IsLTE0NTQzODU2NTAsMTY3MTE1ODc5NCwtMTQ3MTcxNDAxMCwx
-MTEwNjQxMTM0XX0=
+eyJoaXN0b3J5IjpbNDIyMTc2MTk4LC0zNzgyMjkzNDAsMTA0NT
+M5NzgwOCw4OTcyMDMyNTUsLTUwNzA2MTgwNCw2MzQ2NDQ2MSwt
+MTkzNTcwMTI4OSwtMTk1ODg3NTk3Niw4ODYzOTAzOTYsMTA5Mj
+czNDc2OSwtMTI5MTc2NTUxNCwtMTgzMjE0NzczNiwtNjAzODQx
+Mjg3LC03MjE0MzE2MjYsLTExODQ1Nzg5ODIsNjc5OTk1MDQyLC
+0xNDU0Mzg1NjUwLDE2NzExNTg3OTQsLTE0NzE3MTQwMTAsMTEx
+MDY0MTEzNF19
 -->
