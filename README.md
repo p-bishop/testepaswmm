@@ -1,29 +1,29 @@
 # Table of Contents 
 
+- [Table of Contents](#table-of-contents)
 - [1. Directory Structure and Contents](#1-directory-structure-and-contents)
-- [**2. External Model Adapter Workflow**](#--2-external-model-adapter-workflow--)
-  * [**2.1 Pre-Adapter**](#--21-pre-adapter--)
-    + [**1. Read Run Information File**](#--1-read-run-information-file--)
-    + [**2. Read Dam Rating Curve (optional)**](#--2-read-dam-rating-curve--optional---)
-    + [**3. Read Control Rules (optional)**](#--3-read-control-rules--optional---)
-    + [**4. Read Rainfall Time Series**](#--4-read-rainfall-time-series--)
-    + [**5. Update EPA SWMM Input File**](#--5-update-epa-swmm-input-file--)
-    + [**6. Write Rainfall Time Series (EPA SWMM Format)**](#--6-write-rainfall-time-series--epa-swmm-format---)
-    + [**7. Write Model Adapter Messages to the Run Diagnostics File**](#--7-write-model-adapter-messages-to-the-run-diagnostics-file--)
-  * [**2.2 Model Run**](#--22-model-run--)
-    + [**1. Write Batch File**](#1-write-batch-file)
-    + [**2. Execute Model**](#2-execute-model)
-    + [**3. Write Run Diagnostics File**](#3-write-run-diagnostics-file)
-  * [**2.3 Post-Adapter**](#--23-post-adapter--)
-    + [**1. Read EPA SWMM Model Outputs**](#--1-read-epa-swmm-model-outputs--)
-    + [**2. Write EPA SWMM Model Outputs (FEWS Format)**](#--2-write-epa-swmm-model-outputs--fews-format---)
-    + [**3. Write Run Diagnostics File**](#--3-write-run-diagnostics-file--)
-  * [**1.4 Messaging and Error Handling**](#--14-messaging-and-error-handling--)
-    + [**1. Model Adapter Messaging**](#--1-model-adapter-messaging--)
-    + [**2. Run Diagnostics File**](#--2-run-diagnostics-file--)
-- [**3. Model Set-up Considerations**](#--3-model-set-up-considerations--)
-- [**References**](#--references--)
-
+- [2. External Model Adapter Workflow](#2-external-model-adapter-workflow)
+  * [2.1 Pre-Adapter](#21-pre-adapter)
+    + [1. Read Run Information File](#1-read-run-information-file)
+    + [2. Read Dam Rating Curve (optional)](#2-read-dam-rating-curve--optional-)
+    + [3. Read Control Rules (optional)](#3-read-control-rules--optional-)
+    + [4. Read Rainfall Time Series](#4-read-rainfall-time-series)
+    + [5. Update EPA SWMM Input File](#5-update-epa-swmm-input-file)
+    + [6. Write Rainfall Time Series (EPA SWMM Format)](#6-write-rainfall-time-series--epa-swmm-format-)
+    + [7. Write Model Adapter Messages to the Run Diagnostics File](#7-write-model-adapter-messages-to-the-run-diagnostics-file)
+  * [2.2 Model Run](#22-model-run)
+    + [1. Write Batch File](#1-write-batch-file)
+    + [2. Execute Model](#2-execute-model)
+    + [3. Write Run Diagnostics File](#3-write-run-diagnostics-file)
+  * [2.3 Post-Adapter](#23-post-adapter)
+    + [1. Read EPA SWMM Model Outputs](#1-read-epa-swmm-model-outputs)
+    + [2. Write EPA SWMM Model Outputs (FEWS Format)](#2-write-epa-swmm-model-outputs--fews-format-)
+    + [3. Write Run Diagnostics File](#3-write-run-diagnostics-file-1)
+  * [1.4 Messaging and Error Handling](#14-messaging-and-error-handling)
+    + [1. Model Adapter Messaging](#1-model-adapter-messaging)
+    + [2. Run Diagnostics File](#2-run-diagnostics-file)
+- [3. Model Set-up Considerations](#3-model-set-up-considerations)
+- [References](#references)
 
 # 1. Directory Structure and Contents  
   
@@ -531,5 +531,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIyMTc2MTk4LDY4MDM2NjY2Ml19
+eyJoaXN0b3J5IjpbMjAyNTM3NzM3MV19
 -->
