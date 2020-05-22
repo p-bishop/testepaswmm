@@ -346,7 +346,7 @@ A batch file is written, which can be used to optionally execute the model manua
   
 ```C:\[...]\bin\swmm5.exe C:\[...]\model\DonRiver.inp C:\[...]\model\DonRiver.rpt ```
   
-### 2. Execute the Model 
+### 2. Execute Model 
 
 The model adapter executes the EPA SWMM model.
 
@@ -523,6 +523,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU5MDY1MjUxLDYzNDY0NDYxLC0xOTM1Nz
-AxMjg5XX0=
+eyJoaXN0b3J5IjpbLTUwNzA2MTgwNCw2MzQ2NDQ2MSwtMTkzNT
+cwMTI4OV19
 -->
