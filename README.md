@@ -332,19 +332,24 @@ As described in Section 6 (Model Set-up Considerations), the rainfall format (in
   
 Model adapter warnings and errors messages during the Pre-Adapter steps are written to the run diagnostics file. More details are provided in section 4.4 (Messaging and Error Handling). FEWS will read this file upon completion of the Pre-Adapter execution and will report those to the FEWS interface.  
   
-## **2. **Model Run**  
+## **2. Model Run**  
   
 Typically, model execution will be initiated by FEWS. However, to facilitate testing of the model adapter, the model may be run with the following command:  
   
 	epaswmm.exe --run_info <path to run_info.xml file> run  
   
-1. Writes a batch file for manual model runs:  
+### 1. Write a Batch File
+
+A batch file is written, which can be used to optionally execute the model manually for testing purposes.
  - File Path: ```model/run_model.bat```  
  - File contents (example):  
   
 ```C:\[...]\bin\swmm5.exe C:\[...]\model\DonRiver.inp C:\[...]\model\DonRiver.rpt ```
   
-2. Executes the model and write to the diagnostics file . Note that warnings and errors in the EPA SWMM model output file will be read by the post-adapter.  
+### 2. Execute the Model 
+The model adapter executes the EPA SWMM model.
+
+3. and write to the diagnostics file . Note that warnings and errors in the EPA SWMM model output file will be read by the post-adapter.  
   
  ## **3. Post-Adapter**  
   
@@ -515,5 +520,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzU3MDEyODldfQ==
+eyJoaXN0b3J5IjpbMzQzNjk0MDcwLC0xOTM1NzAxMjg5XX0=
 -->
