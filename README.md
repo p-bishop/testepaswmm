@@ -338,7 +338,7 @@ Typically, model execution will be initiated by FEWS. However, to facilitate tes
   
 	epaswmm.exe --run_info <path to run_info.xml file> run  
   
-### 1. Write a Batch File
+### 1. Write Batch File
 
 A batch file is written, which can be used to optionally execute the model manually for testing purposes.
  - File Path: ```model/run_model.bat```  
@@ -523,6 +523,6 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1OTcxMzczMCw2MzQ2NDQ2MSwtMTkzNT
-cwMTI4OV19
+eyJoaXN0b3J5IjpbMzU5MDY1MjUxLDYzNDY0NDYxLC0xOTM1Nz
+AxMjg5XX0=
 -->
