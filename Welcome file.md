@@ -1,29 +1,29 @@
 # Table of Contents 
 
+- [Table of Contents](#table-of-contents)
 - [1. Directory Structure and Contents](#1-directory-structure-and-contents)
-- [**2. External Model Adapter Workflow**](#--2-external-model-adapter-workflow--)
-  * [**2.1 Pre-Adapter**](#--21-pre-adapter--)
-    + [**1. Read Run Information File**](#--1-read-run-information-file--)
-    + [**2. Read Dam Rating Curve (optional)**](#--2-read-dam-rating-curve--optional---)
-    + [**3. Read Control Rules (optional)**](#--3-read-control-rules--optional---)
-    + [**4. Read Rainfall Time Series**](#--4-read-rainfall-time-series--)
-    + [**5. Update EPA SWMM Input File**](#--5-update-epa-swmm-input-file--)
-    + [**6. Write Rainfall Time Series (EPA SWMM Format)**](#--6-write-rainfall-time-series--epa-swmm-format---)
-    + [**7. Write Model Adapter Messages to the Run Diagnostics File**](#--7-write-model-adapter-messages-to-the-run-diagnostics-file--)
-  * [**2.2 Model Run**](#--22-model-run--)
-    + [**1. Write Batch File**](#1-write-batch-file)
-    + [**2. Execute Model**](#2-execute-model)
-    + [**3. Write Run Diagnostics File**](#3-write-run-diagnostics-file)
-  * [**2.3 Post-Adapter**](#--23-post-adapter--)
-    + [**1. Read EPA SWMM Model Outputs**](#--1-read-epa-swmm-model-outputs--)
-    + [**2. Write EPA SWMM Model Outputs (FEWS Format)**](#--2-write-epa-swmm-model-outputs--fews-format---)
-    + [**3. Write Run Diagnostics File**](#--3-write-run-diagnostics-file--)
-  * [**1.4 Messaging and Error Handling**](#--14-messaging-and-error-handling--)
-    + [**1. Model Adapter Messaging**](#--1-model-adapter-messaging--)
-    + [**2. Run Diagnostics File**](#--2-run-diagnostics-file--)
-- [**3. Model Set-up Considerations**](#--3-model-set-up-considerations--)
-- [**References**](#--references--)
-
+- [2. External Model Adapter Workflow](#2-external-model-adapter-workflow)
+  * [2.1 Pre-Adapter](#21-pre-adapter)
+    + [1. Read Run Information File](#1-read-run-information-file)
+    + [2. Read Dam Rating Curve (optional)](#2-read-dam-rating-curve--optional-)
+    + [3. Read Control Rules (optional)](#3-read-control-rules--optional-)
+    + [4. Read Rainfall Time Series](#4-read-rainfall-time-series)
+    + [5. Update EPA SWMM Input File](#5-update-epa-swmm-input-file)
+    + [6. Write Rainfall Time Series (EPA SWMM Format)](#6-write-rainfall-time-series--epa-swmm-format-)
+    + [7. Write Model Adapter Messages to the Run Diagnostics File](#7-write-model-adapter-messages-to-the-run-diagnostics-file)
+  * [2.2 Model Run](#22-model-run)
+    + [1. Write Batch File](#1-write-batch-file)
+    + [2. Execute Model](#2-execute-model)
+    + [3. Write Run Diagnostics File](#3-write-run-diagnostics-file)
+  * [2.3 Post-Adapter](#23-post-adapter)
+    + [1. Read EPA SWMM Model Outputs](#1-read-epa-swmm-model-outputs)
+    + [2. Write EPA SWMM Model Outputs (FEWS Format)](#2-write-epa-swmm-model-outputs--fews-format-)
+    + [3. Write Run Diagnostics File](#3-write-run-diagnostics-file-1)
+  * [1.4 Messaging and Error Handling](#14-messaging-and-error-handling)
+    + [1. Model Adapter Messaging](#1-model-adapter-messaging)
+    + [2. Run Diagnostics File](#2-run-diagnostics-file)
+- [3. Model Set-up Considerations](#3-model-set-up-considerations)
+- [References](#references)
 
 # 1. Directory Structure and Contents  
   
@@ -77,8 +77,8 @@ The model adapter consists of two principal components:
 A FEWS simulation is composed of the following components. First, FEWS initiates the  **Pre-Adapter**. Next, FEWS initiates the model run using the updated EPA SWMM input files. Finally, FEWS initiates the **Post-Adapter** to retrieve model output files. The main steps of the EPA SWMM model adapter workflow are summarized in Figure 2 below and explained in more detail in the following sections. As a complement of information, the adapter messaging and error handling is described in section 4.4.  
 
 <img src="images/002.png" width="400">
+
 _Figure 2 Summary of steps of the model adapter_  
-  
  ## 2.1 Pre-Adapter  
   
 The pre-adapter can be initiated with the following command:  
@@ -366,7 +366,7 @@ Model adapter warnings and errors messages during the Model Run are written to t
   
 The post-adapter can be initiated with the following command:  
   
-	epaswmm.exe --run_info <path to run_info.xml file> post_  
+	epaswmm.exe --run_info <path to run_info.xml file> post  
   
 The following steps explain the behavior of the post-adapter.  
   
@@ -531,11 +531,11 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIyMTc2MTk4LC0zNzgyMjkzNDAsMTA0NT
-M5NzgwOCw4OTcyMDMyNTUsLTUwNzA2MTgwNCw2MzQ2NDQ2MSwt
-MTkzNTcwMTI4OSwtMTk1ODg3NTk3Niw4ODYzOTAzOTYsMTA5Mj
-czNDc2OSwtMTI5MTc2NTUxNCwtMTgzMjE0NzczNiwtNjAzODQx
-Mjg3LC03MjE0MzE2MjYsLTExODQ1Nzg5ODIsNjc5OTk1MDQyLC
-0xNDU0Mzg1NjUwLDE2NzExNTg3OTQsLTE0NzE3MTQwMTAsMTEx
-MDY0MTEzNF19
+eyJoaXN0b3J5IjpbLTE1OTY3MTY4NzAsLTM3ODIyOTM0MCwxMD
+Q1Mzk3ODA4LDg5NzIwMzI1NSwtNTA3MDYxODA0LDYzNDY0NDYx
+LC0xOTM1NzAxMjg5LC0xOTU4ODc1OTc2LDg4NjM5MDM5NiwxMD
+kyNzM0NzY5LC0xMjkxNzY1NTE0LC0xODMyMTQ3NzM2LC02MDM4
+NDEyODcsLTcyMTQzMTYyNiwtMTE4NDU3ODk4Miw2Nzk5OTUwND
+IsLTE0NTQzODU2NTAsMTY3MTE1ODc5NCwtMTQ3MTcxNDAxMCwx
+MTEwNjQxMTM0XX0=
 -->
