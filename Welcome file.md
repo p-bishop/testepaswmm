@@ -365,7 +365,9 @@ The following steps explain the behavior of the post-adapter.
   
 The EPASWM model run generates an output file (e.g. ```DonRiver.rpt```), which is converted to FEWS format by the Post Adapter. The following sections are read from the output file: ```Link Results``` and ```Node Results```, as shown in the examples below. Model errors and warnings will also be read, if present.  
 
-![Link Results ](images/004a.JPG) ![Node Results](images/004b.JPG)
+![Link Results ](images/004a.JPG) 
+
+![Node Results](images/004b.JPG)
 
   
 ### **2. Write EPA SWMM Model Outputs (FEWS Format)**  
@@ -522,11 +524,11 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NTM5NzgwOCw4OTcyMDMyNTUsLTUwNz
-A2MTgwNCw2MzQ2NDQ2MSwtMTkzNTcwMTI4OSwtMTk1ODg3NTk3
-Niw4ODYzOTAzOTYsMTA5MjczNDc2OSwtMTI5MTc2NTUxNCwtMT
-gzMjE0NzczNiwtNjAzODQxMjg3LC03MjE0MzE2MjYsLTExODQ1
-Nzg5ODIsNjc5OTk1MDQyLC0xNDU0Mzg1NjUwLDE2NzExNTg3OT
-QsLTE0NzE3MTQwMTAsMTExMDY0MTEzNCwyMDE2NzE4NDEwXX0=
-
+eyJoaXN0b3J5IjpbLTIxNDAyMjI3MDgsMTA0NTM5NzgwOCw4OT
+cyMDMyNTUsLTUwNzA2MTgwNCw2MzQ2NDQ2MSwtMTkzNTcwMTI4
+OSwtMTk1ODg3NTk3Niw4ODYzOTAzOTYsMTA5MjczNDc2OSwtMT
+I5MTc2NTUxNCwtMTgzMjE0NzczNiwtNjAzODQxMjg3LC03MjE0
+MzE2MjYsLTExODQ1Nzg5ODIsNjc5OTk1MDQyLC0xNDU0Mzg1Nj
+UwLDE2NzExNTg3OTQsLTE0NzE3MTQwMTAsMTExMDY0MTEzNCwy
+MDE2NzE4NDEwXX0=
 -->
