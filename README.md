@@ -366,7 +366,7 @@ Model adapter warnings and errors messages during the Model Run are written to t
   
 The post-adapter can be initiated with the following command:  
   
-	epaswmm.exe --run_info <path to run_info.xml file> post_  
+	epaswmm.exe --run_info <path to run_info.xml file> post  
   
 The following steps explain the behavior of the post-adapter.  
   
@@ -531,5 +531,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU1MzMyMzE1XX0=
+eyJoaXN0b3J5IjpbLTE1OTY3MTY4NzBdfQ==
 -->
