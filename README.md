@@ -181,7 +181,7 @@ Delft-FEWS exports a rainfall time series file in NetCDF format. The ```station_
 - File path: defined by ```<inputNetcdfFile>``` in the ```run_info.xml``` file  
 - File contents (example, showing a sample of rowsfirst and last rows):  
 
-  ![Example rainfall time series file contents ](images/003.JPG)
+  <img src="images/003.JPG" width="300">
   
 _Figure 3 - Example rainfall time series file contents_  
   
@@ -510,7 +510,7 @@ LINKS ALL
 ```
 
 - Other than the sections described in this document, no other parameters in the model input file are modified by the model adapter. Ensure all other parameters are configured as required in the model input filesetup as required, such as the hydrologic parameters and storage node water levels.  
-- As described in the pre-adaoSection 4.1 step 2, unit look-ups between EPA SWMM unit names and the NetCDF4-compliant unit names (Unidata, 2020) must be defined in the model/UDUNITS_lookup.csv file. For the current model configuration, all required units have been provided.  
+- As described in the pre-adapter section, unit look-ups between EPA SWMM unit names and the NetCDF4-compliant unit names (Unidata, 2020) must be defined in the model/UDUNITS_lookup.csv file. For the current model configuration, all required units have been provided.  
   
 
 **REFERENCES**  
@@ -522,5 +522,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxODk4NDAzMCwtMTE2MTE3NzMwMF19
+eyJoaXN0b3J5IjpbLTU0NTgwMzQyXX0=
 -->
