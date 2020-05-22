@@ -5,11 +5,11 @@
 - [2. External Model Adapter Workflow](#2-external-model-adapter-workflow)
   * [2.1 Pre-Adapter](#21-pre-adapter)
     + [1. Read Run Information File](#1-read-run-information-file)
-    + [2. Read Dam Rating Curve (optional)](#2-read-dam-rating-curve--optional-)
-    + [3. Read Control Rules (optional)](#3-read-control-rules--optional-)
+    + [2. Read Dam Rating Curve (optional)](#2-read-dam-rating-curve)
+    + [3. Read Control Rules (optional)](#3-read-control-rules)
     + [4. Read Rainfall Time Series](#4-read-rainfall-time-series)
     + [5. Update EPA SWMM Input File](#5-update-epa-swmm-input-file)
-    + [6. Write Rainfall Time Series (EPA SWMM Format)](#6-write-rainfall-time-series--epa-swmm-format-)
+    + [6. Write Rainfall Time Series (EPA SWMM Format)](#6-write-rainfall-time-series)
     + [7. Write Model Adapter Messages to the Run Diagnostics File](#7-write-model-adapter-messages-to-the-run-diagnostics-file)
   * [2.2 Model Run](#22-model-run)
     + [1. Write Batch File](#1-write-batch-file)
@@ -17,7 +17,7 @@
     + [3. Write Run Diagnostics File](#3-write-run-diagnostics-file)
   * [2.3 Post-Adapter](#23-post-adapter)
     + [1. Read EPA SWMM Model Outputs](#1-read-epa-swmm-model-outputs)
-    + [2. Write EPA SWMM Model Outputs (FEWS Format)](#2-write-epa-swmm-model-outputs--fews-format-)
+    + [2. Write EPA SWMM Model Outputs (FEWS Format)](#2-write-epa-swmm-model-outputs)
     + [3. Write Run Diagnostics File](#3-write-run-diagnostics-file-1)
   * [1.4 Messaging and Error Handling](#14-messaging-and-error-handling)
     + [1. Model Adapter Messaging](#1-model-adapter-messaging)
@@ -114,7 +114,7 @@ The run information file contains data relating to the model run, such as model 
 ```		        
 		  
 		  
-### 2. Read Dam Rating Curve (optional)  
+### 2. Read Dam Rating Curve
   
 FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. If an <inputRatingCurveFile> is provided in the run information file, the adapter recognizes this as a dam rating curve, and proceeds to update the &quot;Curves&quot; section of the EPASWM model input file (see step 5). Only a single rating curve for each location (```<locationID>```) is allowed.  
   
@@ -146,7 +146,7 @@ FEWS can export a dam rating curve in XML format as stage-discharge flow pairs. 
  ``` 
 Note that the validity period (use of the ```<startDate>``` attribute) of the rating curve is not currently supported by the model adapter; this parameter is ignored.  
   
-### 3. Read Control Rules (optional)  
+### 3. Read Control Rules
   
 FEWS can export time-dependent control rules in XML format. The model adapter does not currently support other types of control rules (e.g. rules dependent on a node water level or a link discharge). If an ```<InputTimeSeriesFile>``` with the name ```Control_rules.xml``` is provided in the Run Information file, the adapter recognizes this as control rules, and proceeds to update the &quot;Controls&quot; section of the EPA SWMMS WMM model input file (see step 5).  
   
@@ -315,7 +315,7 @@ LocationX                      5            20
 LocationX                      6            40  
   ```
   
-### 6. Write Rainfall Time Series (EPA SWMM Format)
+### 6. Write Rainfall Time Series
   
 The rainfall data that was imported in step 4 is written to the rainfall file (rain.dat), with the following format:  
   
@@ -531,5 +531,5 @@ Unidata. 2020. Uni Data Data Services and Tools for Geoscience: UDUNITS. Accesse
   
 Matrix Solutions Inc. (Matrix). 2020. _Developer Setup of EPA SWMM FEWS Model._ Prepared for Deltares USA. May, 2020.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTY3MTY4NzBdfQ==
+eyJoaXN0b3J5IjpbMTMwMzk4NjExNCwtMTU5NjcxNjg3MF19
 -->
